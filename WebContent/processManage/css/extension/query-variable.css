@@ -1,0 +1,28 @@
+#extension-query-variable-dialog{
+	display:none;
+}
+
+#extension-query-variable-dialog p{
+	font-size:13px;
+	font-weight:bold;
+	margin:0px;
+	padding:0px;
+}
+
+#extension-query-variable-dialog ul{
+	border:1px solid #666666;
+	list-style-type:none;
+	padding:12px;
+}
+
+#extension-query-variable-dialog li{
+	font-size:12px;
+	font-family:Consolas;
+	line-height:20px;
+	margin:0px;
+	padding:0px;
+}
+
+#extension-query-variable-dialog span{
+	padding-left:8px;
+}

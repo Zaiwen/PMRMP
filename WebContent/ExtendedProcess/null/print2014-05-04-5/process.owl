@@ -1,0 +1,749 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:process="http://www.daml.org/services/owl-s/1.1/Process.owl#"
+    xmlns:service="http://www.daml.org/services/owl-s/1.1/Service.owl#"
+    xmlns:list="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#"
+    xmlns:j.0="http://www.ifi.unizh.ch/ddis/ont/owl-s/OWLSExtensions.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:profile="http://www.daml.org/services/owl-s/1.1/Profile.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:grounding="http://www.daml.org/services/owl-s/1.1/Grounding.owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:expression="http://www.daml.org/services/owl-s/1.1/generic/Expression.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <service:Service rdf:nodeID="A0">
+    <service:presents>
+      <profile:Profile>
+        <profile:hasInput>
+          <process:Input rdf:about="http://www.example.com/process.owl#GoodsName_1">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://www.owl-ontologies.com/Ontology1383443266.owl#GoodsName</process:parameterType>
+          </process:Input>
+        </profile:hasInput>
+        <profile:hasOutput>
+          <process:Output rdf:about="http://www.example.com/process.owl#sendCourier_1">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://www.owl-ontologies.com/Ontology1383393827.owl#SendCourier</process:parameterType>
+          </process:Output>
+        </profile:hasOutput>
+        <profile:hasInput>
+          <process:Input rdf:about="http://www.example.com/process.owl#GoodsWeight_1">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://www.owl-ontologies.com/Ontology1383443266.owl#Weight</process:parameterType>
+          </process:Input>
+        </profile:hasInput>
+        <service:presentedBy rdf:nodeID="A0"/>
+        <profile:hasOutput>
+          <process:Output rdf:about="http://www.example.com/process.owl#ReceiveTime_1">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://www.owl-ontologies.com/Ontology1383393827.owl#ReceiveTime</process:parameterType>
+          </process:Output>
+        </profile:hasOutput>
+        <profile:hasInput>
+          <process:Input rdf:about="http://www.example.com/process.owl#customerName_1">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://www.owl-ontologies.com/Ontology1383393827.owl#CustomerName</process:parameterType>
+          </process:Input>
+        </profile:hasInput>
+        <profile:hasInput>
+          <process:Input rdf:about="http://www.example.com/process.owl#recieveAddress_1">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://www.owl-ontologies.com/Ontology1383393827.owl#ReceiverAddress</process:parameterType>
+          </process:Input>
+        </profile:hasInput>
+        <profile:hasInput>
+          <process:Input rdf:about="http://www.example.com/process.owl#sendAddress_2">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://www.owl-ontologies.com/Ontology1383393827.owl#SendAddress</process:parameterType>
+          </process:Input>
+        </profile:hasInput>
+        <profile:hasInput>
+          <process:Input rdf:about="http://www.example.com/process.owl#Order_3"/>
+        </profile:hasInput>
+        <profile:hasOutput>
+          <process:Output rdf:about="http://www.example.com/process.owl#GetCourier_1">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://www.owl-ontologies.com/Ontology1383393827.owl#GetCourier</process:parameterType>
+          </process:Output>
+        </profile:hasOutput>
+        <profile:hasOutput>
+          <process:Output rdf:about="http://www.example.com/process.owl#LocationOfGoods_3"/>
+        </profile:hasOutput>
+        <profile:hasInput>
+          <process:Input rdf:about="http://www.example.com/process.owl#GoodsType_1">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://www.owl-ontologies.com/Ontology1383443266.owl#GoodsType</process:parameterType>
+          </process:Input>
+        </profile:hasInput>
+        <profile:hasInput>
+          <process:Input rdf:about="http://www.example.com/process.owl#goodsID_1">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://www.owl-ontologies.com/Ontology1383393827.owl#GoodsID</process:parameterType>
+          </process:Input>
+        </profile:hasInput>
+      </profile:Profile>
+    </service:presents>
+    <service:describedBy>
+      <process:CompositeProcess rdf:about="http://www.example.com/process.owl#CompositeProcess_1"/>
+    </service:describedBy>
+    <service:supports>
+      <grounding:WsdlGrounding>
+        <grounding:hasAtomicProcessGrounding>
+          <grounding:WsdlAtomicProcessGrounding>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_11">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/orderManagement?wsdl#CampusOrder</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#CampusOrder">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.owl-ontologies.com/Ontology1383393827.owl#CampusOrder</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlOutput rdf:resource="http://www.example.com/process.owl#InputMessageMap_11"/>
+            <grounding:wsdlOperation>
+              <grounding:WsdlOperationRef>
+                <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/orderManagement?wsdl#checkOrder</grounding:operation>
+              </grounding:WsdlOperationRef>
+            </grounding:wsdlOperation>
+            <grounding:owlsProcess>
+              <process:AtomicProcess rdf:about="http://www.example.com/process.owl#checkOrder"/>
+            </grounding:owlsProcess>
+          </grounding:WsdlAtomicProcessGrounding>
+        </grounding:hasAtomicProcessGrounding>
+        <grounding:hasAtomicProcessGrounding>
+          <grounding:WsdlAtomicProcessGrounding>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_6">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/orderManagement?wsdl#goodsID</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#goodsID">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.owl-ontologies.com/Ontology1383393827.owl#GoodsID</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_7">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/orderManagement?wsdl#GoodsType</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#GoodsType">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.owl-ontologies.com/Ontology1383443266.owl#GoodsType</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_8">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/orderManagement?wsdl#GoodsWeight</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#GoodsWeight">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.owl-ontologies.com/Ontology1383443266.owl#Weight</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlOutput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_9">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/orderManagement?wsdl#GoodsName</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#GoodsName">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.owl-ontologies.com/Ontology1383443266.owl#GoodsName</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlOutput>
+            <grounding:wsdlOutput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_10">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/orderManagement?wsdl#CampuseOrder</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#CampuseOrder">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.owl-ontologies.com/Ontology1383393827.owl#CampusOrder</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlOutput>
+            <grounding:wsdlOperation>
+              <grounding:WsdlOperationRef>
+                <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/orderManagement?wsdl#addGoodsInfo</grounding:operation>
+              </grounding:WsdlOperationRef>
+            </grounding:wsdlOperation>
+            <grounding:wsdlOutput rdf:resource="http://www.example.com/process.owl#InputMessageMap_6"/>
+            <grounding:wsdlOutput rdf:resource="http://www.example.com/process.owl#InputMessageMap_8"/>
+            <grounding:wsdlOutput rdf:resource="http://www.example.com/process.owl#InputMessageMap_7"/>
+            <grounding:owlsProcess>
+              <process:AtomicProcess rdf:about="http://www.example.com/process.owl#addGoodsInfo"/>
+            </grounding:owlsProcess>
+            <grounding:wsdlInput rdf:resource="http://www.example.com/process.owl#InputMessageMap_9"/>
+            <grounding:wsdlInput rdf:resource="http://www.example.com/process.owl#InputMessageMap_10"/>
+          </grounding:WsdlAtomicProcessGrounding>
+        </grounding:hasAtomicProcessGrounding>
+        <grounding:hasAtomicProcessGrounding>
+          <grounding:WsdlAtomicProcessGrounding>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_3">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/orderManagement?wsdl#customerName</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#customerName">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.owl-ontologies.com/Ontology1383393827.owl#CustomerName</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_4">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/orderManagement?wsdl#sendAddress</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#sendAddress_1">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.owl-ontologies.com/Ontology1383393827.owl#SendAddress</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_5">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/orderManagement?wsdl#receiverAddress</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#receiverAddress">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.owl-ontologies.com/Ontology1383393827.owl#ReceiverAddress</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlOutput rdf:resource="http://www.example.com/process.owl#InputMessageMap_3"/>
+            <grounding:wsdlOutput rdf:resource="http://www.example.com/process.owl#InputMessageMap_4"/>
+            <grounding:wsdlOutput rdf:resource="http://www.example.com/process.owl#InputMessageMap_5"/>
+            <grounding:wsdlOperation>
+              <grounding:WsdlOperationRef>
+                <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/orderManagement?wsdl#generateOrder</grounding:operation>
+              </grounding:WsdlOperationRef>
+            </grounding:wsdlOperation>
+            <grounding:owlsProcess>
+              <process:AtomicProcess rdf:about="http://www.example.com/process.owl#generateOrder"/>
+            </grounding:owlsProcess>
+          </grounding:WsdlAtomicProcessGrounding>
+        </grounding:hasAtomicProcessGrounding>
+        <grounding:hasAtomicProcessGrounding>
+          <grounding:WsdlAtomicProcessGrounding>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_14">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Extension/services/extension?wsdl#org.sklse.owlseditor.xml.XInput@c069ec</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#Order_2"/>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlOutput>
+              <grounding:WsdlOutputMessageMap rdf:about="http://www.example.com/process.owl#OutputMessageMap_8">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Extension/services/extension?wsdl#org.sklse.owlseditor.xml.XOutput@6a086a</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Output rdf:about="http://www.example.com/process.owl#LocationOfGoods_2"/>
+                </grounding:owlsParameter>
+              </grounding:WsdlOutputMessageMap>
+            </grounding:wsdlOutput>
+            <grounding:wsdlOperation>
+              <grounding:WsdlOperationRef>
+                <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Extension/services/extension?wsdl#gps</grounding:operation>
+              </grounding:WsdlOperationRef>
+            </grounding:wsdlOperation>
+            <grounding:owlsProcess>
+              <process:AtomicProcess rdf:about="http://www.example.com/process.owl#gps_2"/>
+            </grounding:owlsProcess>
+          </grounding:WsdlAtomicProcessGrounding>
+        </grounding:hasAtomicProcessGrounding>
+        <grounding:hasAtomicProcessGrounding>
+          <grounding:WsdlAtomicProcessGrounding>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_1">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/CourierManagement?wsdl#sendAddress</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#sendAddress">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.owl-ontologies.com/Ontology1383393827.owl#SendAddress</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlOutput rdf:resource="http://www.example.com/process.owl#InputMessageMap_1"/>
+            <grounding:wsdlOperation>
+              <grounding:WsdlOperationRef>
+                <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/CourierManagement?wsdl#selectCurierForGetting</grounding:operation>
+              </grounding:WsdlOperationRef>
+            </grounding:wsdlOperation>
+            <grounding:owlsProcess>
+              <process:AtomicProcess rdf:about="http://www.example.com/process.owl#selectCurierForGetting"/>
+            </grounding:owlsProcess>
+          </grounding:WsdlAtomicProcessGrounding>
+        </grounding:hasAtomicProcessGrounding>
+        <service:supportedBy rdf:nodeID="A0"/>
+        <grounding:hasAtomicProcessGrounding>
+          <grounding:WsdlAtomicProcessGrounding>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_2">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/CourierManagement?wsdl#recieveAddress</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#recieveAddress">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.owl-ontologies.com/Ontology1383393827.owl#ReceiverAddress</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlOutput rdf:resource="http://www.example.com/process.owl#InputMessageMap_2"/>
+            <grounding:wsdlOperation>
+              <grounding:WsdlOperationRef>
+                <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/CourierManagement?wsdl#selectCurierForSending</grounding:operation>
+              </grounding:WsdlOperationRef>
+            </grounding:wsdlOperation>
+            <grounding:owlsProcess>
+              <process:AtomicProcess rdf:about="http://www.example.com/process.owl#selectCurierForSending"/>
+            </grounding:owlsProcess>
+          </grounding:WsdlAtomicProcessGrounding>
+        </grounding:hasAtomicProcessGrounding>
+        <grounding:hasAtomicProcessGrounding>
+          <grounding:WsdlAtomicProcessGrounding>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_13">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Extension/services/extension?wsdl#org.sklse.owlseditor.xml.XInput@4a553f</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#Order_1"/>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlOutput>
+              <grounding:WsdlOutputMessageMap rdf:about="http://www.example.com/process.owl#OutputMessageMap_7">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Extension/services/extension?wsdl#org.sklse.owlseditor.xml.XOutput@22b7f8</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Output rdf:about="http://www.example.com/process.owl#LocationOfGoods_1"/>
+                </grounding:owlsParameter>
+              </grounding:WsdlOutputMessageMap>
+            </grounding:wsdlOutput>
+            <grounding:wsdlOperation>
+              <grounding:WsdlOperationRef>
+                <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Extension/services/extension?wsdl#gps</grounding:operation>
+              </grounding:WsdlOperationRef>
+            </grounding:wsdlOperation>
+            <grounding:owlsProcess>
+              <process:AtomicProcess rdf:about="http://www.example.com/process.owl#gps_1"/>
+            </grounding:owlsProcess>
+          </grounding:WsdlAtomicProcessGrounding>
+        </grounding:hasAtomicProcessGrounding>
+        <grounding:hasAtomicProcessGrounding>
+          <grounding:WsdlAtomicProcessGrounding>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_12">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/orderManagement?wsdl#CampusOrder</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#CampusOrder_1">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.owl-ontologies.com/Ontology1383393827.owl#CampusOrder</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlOutput rdf:resource="http://www.example.com/process.owl#InputMessageMap_12"/>
+            <grounding:wsdlOperation>
+              <grounding:WsdlOperationRef>
+                <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://king-y4:8080/Campus-V1.1/services/orderManagement?wsdl#generateDeliverylist</grounding:operation>
+              </grounding:WsdlOperationRef>
+            </grounding:wsdlOperation>
+            <grounding:owlsProcess>
+              <process:AtomicProcess rdf:about="http://www.example.com/process.owl#generateDeliverylist"/>
+            </grounding:owlsProcess>
+          </grounding:WsdlAtomicProcessGrounding>
+        </grounding:hasAtomicProcessGrounding>
+      </grounding:WsdlGrounding>
+    </service:supports>
+  </service:Service>
+  <process:AtomicProcess rdf:about="http://www.example.com/process.owl#addGoodsInfo">
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#goodsID"/>
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#GoodsType"/>
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#GoodsWeight"/>
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#GoodsName"/>
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#CampuseOrder"/>
+    <process:hasOutput>
+      <process:Output rdf:about="http://www.example.com/process.owl#CampuseOrder_1">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.owl-ontologies.com/Ontology1383393827.owl#CampusOrder</process:parameterType>
+      </process:Output>
+    </process:hasOutput>
+    <j.0:hasPerform>
+      <process:Perform rdf:about="http://www.example.com/process.owl#add_goodsInfo"/>
+    </j.0:hasPerform>
+  </process:AtomicProcess>
+  <process:AtomicProcess rdf:about="http://www.example.com/process.owl#generateDeliverylist">
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#CampusOrder_1"/>
+    <process:hasOutput>
+      <process:Output rdf:about="http://www.example.com/process.owl#Deliverylist">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.owl-ontologies.com/Ontology1383393827.owl#ListForSending</process:parameterType>
+      </process:Output>
+    </process:hasOutput>
+    <j.0:hasPerform>
+      <process:Perform rdf:about="http://www.example.com/process.owl#generate_deliverylist"/>
+    </j.0:hasPerform>
+  </process:AtomicProcess>
+  <process:AtomicProcess rdf:about="http://www.example.com/process.owl#generateOrder">
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#customerName"/>
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#sendAddress_1"/>
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#receiverAddress"/>
+    <process:hasOutput>
+      <process:Output rdf:about="http://www.example.com/process.owl#campusOrder">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.owl-ontologies.com/Ontology1383393827.owl#CampusOrder</process:parameterType>
+      </process:Output>
+    </process:hasOutput>
+    <j.0:hasPerform>
+      <process:Perform rdf:about="http://www.example.com/process.owl#generate_order"/>
+    </j.0:hasPerform>
+  </process:AtomicProcess>
+  <process:AtomicProcess rdf:about="http://www.example.com/process.owl#checkOrder">
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#CampusOrder"/>
+    <process:hasOutput>
+      <process:Output rdf:about="http://www.example.com/process.owl#ReceiveTime">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.owl-ontologies.com/Ontology1383393827.owl#ReceiveTime</process:parameterType>
+      </process:Output>
+    </process:hasOutput>
+    <j.0:hasPerform>
+      <process:Perform rdf:about="http://www.example.com/process.owl#check_order"/>
+    </j.0:hasPerform>
+  </process:AtomicProcess>
+  <process:AtomicProcess rdf:about="http://www.example.com/process.owl#gps_2">
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#Order_2"/>
+    <process:hasOutput rdf:resource="http://www.example.com/process.owl#LocationOfGoods_2"/>
+    <j.0:hasPerform>
+      <process:Perform rdf:about="http://www.example.com/process.owl#GPS-Campus-V2.0_1"/>
+    </j.0:hasPerform>
+  </process:AtomicProcess>
+  <process:AtomicProcess rdf:about="http://www.example.com/process.owl#selectCurierForSending">
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#recieveAddress"/>
+    <process:hasOutput>
+      <process:Output rdf:about="http://www.example.com/process.owl#sendCourier">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.owl-ontologies.com/Ontology1383393827.owl#SendCourier</process:parameterType>
+      </process:Output>
+    </process:hasOutput>
+    <j.0:hasPerform>
+      <process:Perform rdf:about="http://www.example.com/process.owl#select_courier_send"/>
+    </j.0:hasPerform>
+  </process:AtomicProcess>
+  <process:AtomicProcess rdf:about="http://www.example.com/process.owl#selectCurierForGetting">
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#sendAddress"/>
+    <process:hasOutput>
+      <process:Output rdf:about="http://www.example.com/process.owl#GetCourier">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.owl-ontologies.com/Ontology1383393827.owl#GetCourier</process:parameterType>
+      </process:Output>
+    </process:hasOutput>
+    <j.0:hasPerform>
+      <process:Perform rdf:about="http://www.example.com/process.owl#select_courier_get"/>
+    </j.0:hasPerform>
+  </process:AtomicProcess>
+  <process:AtomicProcess rdf:about="http://www.example.com/process.owl#gps_1">
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#Order_1"/>
+    <process:hasOutput rdf:resource="http://www.example.com/process.owl#LocationOfGoods_1"/>
+    <j.0:hasPerform>
+      <process:Perform rdf:about="http://www.example.com/process.owl#Print2Dcode_campus_1"/>
+    </j.0:hasPerform>
+  </process:AtomicProcess>
+  <process:CompositeProcess rdf:about="http://www.example.com/process.owl#CompositeProcess_1">
+    <process:composedOf>
+      <process:Sequence rdf:about="http://www.example.com/process.owl#Sequence_1">
+        <process:components>
+          <process:ControlConstructList>
+            <list:first>
+              <process:Perform rdf:about="http://www.example.com/process.owl#generate_order"/>
+            </list:first>
+            <list:rest>
+              <process:ControlConstructList>
+                <list:first>
+                  <process:Perform rdf:about="http://www.example.com/process.owl#select_courier_get"/>
+                </list:first>
+                <list:rest>
+                  <process:ControlConstructList>
+                    <list:first>
+                      <process:Perform rdf:about="http://www.example.com/process.owl#add_goodsInfo"/>
+                    </list:first>
+                    <list:rest>
+                      <process:ControlConstructList>
+                        <list:first>
+                          <process:Split-Join rdf:about="http://www.example.com/process.owl#Split-Join_1">
+                            <process:components>
+                              <process:ControlConstructBag>
+                                <list:first>
+                                  <process:Sequence rdf:about="http://www.example.com/process.owl#Sequence_3">
+                                    <process:components>
+                                      <process:ControlConstructList>
+                                        <list:first>
+                                          <process:Perform rdf:about="http://www.example.com/process.owl#select_courier_send"/>
+                                        </list:first>
+                                        <list:rest>
+                                          <process:ControlConstructList>
+                                            <list:first>
+                                              <process:Perform rdf:about="http://www.example.com/process.owl#GPS-Campus-V2.0_1"/>
+                                            </list:first>
+                                            <list:rest>
+                                              <process:ControlConstructList>
+                                                <list:first>
+                                                  <process:Perform rdf:about="http://www.example.com/process.owl#Print2Dcode_campus_1"/>
+                                                </list:first>
+                                                <list:rest rdf:resource="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#nil"/>
+                                              </process:ControlConstructList>
+                                            </list:rest>
+                                          </process:ControlConstructList>
+                                        </list:rest>
+                                      </process:ControlConstructList>
+                                    </process:components>
+                                  </process:Sequence>
+                                </list:first>
+                                <list:rest>
+                                  <process:ControlConstructBag>
+                                    <list:first>
+                                      <process:Perform rdf:about="http://www.example.com/process.owl#generate_deliverylist"/>
+                                    </list:first>
+                                    <list:rest rdf:resource="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#nil"/>
+                                  </process:ControlConstructBag>
+                                </list:rest>
+                              </process:ControlConstructBag>
+                            </process:components>
+                          </process:Split-Join>
+                        </list:first>
+                        <list:rest>
+                          <process:ControlConstructList>
+                            <list:first>
+                              <process:Perform rdf:about="http://www.example.com/process.owl#check_order"/>
+                            </list:first>
+                            <list:rest rdf:resource="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#nil"/>
+                          </process:ControlConstructList>
+                        </list:rest>
+                      </process:ControlConstructList>
+                    </list:rest>
+                  </process:ControlConstructList>
+                </list:rest>
+              </process:ControlConstructList>
+            </list:rest>
+          </process:ControlConstructList>
+        </process:components>
+      </process:Sequence>
+    </process:composedOf>
+    <service:describes rdf:nodeID="A0"/>
+  </process:CompositeProcess>
+  <process:Perform rdf:about="http://www.example.com/process.owl#add_goodsInfo">
+    <process:process rdf:resource="http://www.example.com/process.owl#addGoodsInfo"/>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#goodsID"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess rdf:resource="http://www.daml.org/services/owl-s/1.1/Process.owl#TheParentPerform"/>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#goodsID_1"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#GoodsType"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess rdf:resource="http://www.daml.org/services/owl-s/1.1/Process.owl#TheParentPerform"/>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#GoodsType_1"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#GoodsWeight"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess rdf:resource="http://www.daml.org/services/owl-s/1.1/Process.owl#TheParentPerform"/>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#GoodsWeight_1"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#GoodsName"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess rdf:resource="http://www.daml.org/services/owl-s/1.1/Process.owl#TheParentPerform"/>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#GoodsName_1"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#CampuseOrder"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess>
+              <process:Perform rdf:about="http://www.example.com/process.owl#generate_order"/>
+            </process:fromProcess>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#campusOrder"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+  </process:Perform>
+  <process:Perform rdf:about="http://www.example.com/process.owl#select_courier_get">
+    <process:process rdf:resource="http://www.example.com/process.owl#selectCurierForGetting"/>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#sendAddress"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess rdf:resource="http://www.daml.org/services/owl-s/1.1/Process.owl#TheParentPerform"/>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#sendAddress_2"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+  </process:Perform>
+  <process:Perform rdf:about="http://www.example.com/process.owl#select_courier_send">
+    <process:process rdf:resource="http://www.example.com/process.owl#selectCurierForSending"/>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#recieveAddress"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess rdf:resource="http://www.daml.org/services/owl-s/1.1/Process.owl#TheParentPerform"/>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#sendAddress_2"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+  </process:Perform>
+  <process:Perform rdf:about="http://www.example.com/process.owl#generate_deliverylist">
+    <process:process rdf:resource="http://www.example.com/process.owl#generateDeliverylist"/>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#CampusOrder_1"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess>
+              <process:Perform rdf:about="http://www.example.com/process.owl#generate_order"/>
+            </process:fromProcess>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#campusOrder"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+  </process:Perform>
+  <process:Perform rdf:about="http://www.example.com/process.owl#generate_order">
+    <process:process rdf:resource="http://www.example.com/process.owl#generateOrder"/>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#customerName"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess rdf:resource="http://www.daml.org/services/owl-s/1.1/Process.owl#TheParentPerform"/>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#customerName_1"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#sendAddress_1"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess rdf:resource="http://www.daml.org/services/owl-s/1.1/Process.owl#TheParentPerform"/>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#sendAddress_2"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#receiverAddress"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess rdf:resource="http://www.daml.org/services/owl-s/1.1/Process.owl#TheParentPerform"/>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#recieveAddress_1"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+  </process:Perform>
+  <process:Perform rdf:about="http://www.example.com/process.owl#check_order">
+    <process:process rdf:resource="http://www.example.com/process.owl#checkOrder"/>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#CampusOrder"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess rdf:resource="http://www.example.com/process.owl#generate_order"/>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#campusOrder"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+  </process:Perform>
+  <process:Perform rdf:about="http://www.example.com/process.owl#Print2Dcode_campus_1">
+    <process:process rdf:resource="http://www.example.com/process.owl#gps_1"/>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#Order_1"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess rdf:resource="http://www.daml.org/services/owl-s/1.1/Process.owl#TheParentPerform"/>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#Order_2"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+  </process:Perform>
+  <process:Perform rdf:about="http://www.example.com/process.owl#GPS-Campus-V2.0_1">
+    <process:process rdf:resource="http://www.example.com/process.owl#gps_2"/>
+  </process:Perform>
+  <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1383393827.owl#SendAddress"/>
+  <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1383443266.owl#GoodsType"/>
+  <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1383393827.owl#ListForSending"/>
+  <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1383393827.owl#CampusOrder"/>
+  <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1383393827.owl#SendCourier"/>
+  <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1383443266.owl#Weight"/>
+  <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1383393827.owl#ReceiverAddress"/>
+  <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1383393827.owl#ReceiveTime"/>
+  <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1383393827.owl#GoodsID"/>
+  <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1383393827.owl#GetCourier"/>
+  <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1383393827.owl#CustomerName"/>
+  <owl:Class rdf:about="http://www.owl-ontologies.com/Ontology1383443266.owl#GoodsName"/>
+</rdf:RDF>

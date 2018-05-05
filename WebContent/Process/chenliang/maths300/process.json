@@ -1,0 +1,1 @@
+{"anyOrder":[],"choice":[],"sequence":[{"ID":"Sequence_1","components":[]}],"splitJoin":[],"perform":[],"produce":[],"atomicProcess":[],"compositeProcess":{"ID":"CompositeProcess_1","composeOf":"Sequence_1","input":[],"output":[]},"input":[],"output":[],"inputBinding":[],"outputBinding":[],"inputMessageMap":[],"outputMessageMap":[]}

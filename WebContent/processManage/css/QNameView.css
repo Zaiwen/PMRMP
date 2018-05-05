@@ -1,0 +1,17 @@
+.QNameView{
+	color:#999999;
+	margin:0px;
+	padding:0px;
+}
+
+.QNameView .LocalPart{
+	color:#990000;
+	margin:0px 2px;
+	padding:0px;
+}
+
+.QNameView .NamespaceURI{
+	color:#000099;
+	margin:0px 2px;
+	padding:0px;
+}

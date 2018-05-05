@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/NewXMLSchema"
+	xmlns:tns="http://www.example.org/NewXMLSchema" elementFormDefault="qualified">
+	<element name="compositeProcess" type="tns:RootType" />
+	<complexType name="RootType">
+		<all>
+			<element name="process" type="tns:processType" />
+			<element name="perform" type="tns:performType" />
+			<element name="produce" type="tns:produceType" />
+			<element name="sequence" type="tns:sequenceType" />
+			<element name="anyOrder" type="tns:anyOrderType" />
+			<element name="ifThenElse" type="tns:ifThenElseType" />
+		</all>
+	</complexType>
+	<complexType name="processType">
+		<all>
+			<element name="name" type="string" />
+			<element name="baseURI" type="anyURI" />
+			<element name="addr" type="string"></element>
+		</all>
+		<attribute name="id" type="nonNegativeInteger" />
+	</complexType>
+	<complexType name="performType">
+		<all>
+			<element name="name" type="string" />
+			<element name="process" type="nonNegativeInteger" />
+			<element name="inputBinding">
+				<complexType>
+					<attribute name="fromProcess" type="nonNegativeInteger" />
+					<attribute name="output" type="string" />
+				</complexType>
+			</element>
+		</all>
+		<attribute name="id" type="nonNegativeInteger" />
+	</complexType>
+	<complexType name="produceType">
+		<all>
+			<element name="name" type="string" />
+			<element name="inputBinding">
+				<complexType>
+					<attribute name="fromProcess" type="nonNegativeInteger" />
+					<attribute name="output" type="string" />
+				</complexType>
+			</element>
+		</all>
+		<attribute name="id" type="nonNegativeInteger" />
+	</complexType>
+	<complexType name="sequenceType">
+		<all>
+			<element name="construct">
+				<complexType>
+					<attribute name="ref" type="nonNegativeInteger" />
+				</complexType>
+			</element>
+		</all>
+		<attribute name="id" type="nonNegativeInteger" />
+	</complexType>
+	<complexType name="anyOrderType">
+		<all>
+			<element name="construct">
+				<complexType>
+					<attribute name="ref" type="nonNegativeInteger" />
+				</complexType>
+			</element>
+		</all>
+		<attribute name="id" type="nonNegativeInteger" />
+	</complexType>
+	<complexType name="ifThenElseType">
+		<sequence>
+			<element name="ifCondition" type="string" />
+			<element name="then">
+				<complexType>
+					<attribute name="ref" type="nonNegativeInteger" />
+				</complexType>
+			</element>
+			<element name="else">
+				<complexType>
+					<attribute name="ref" type="nonNegativeInteger" />
+				</complexType>
+			</element>
+		</sequence>
+		<attribute name="id" type="nonNegativeInteger" />
+	</complexType>
+</schema>

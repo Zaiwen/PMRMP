@@ -1,0 +1,67 @@
+#produce-dialog {
+	display: none;
+	font-size:13px;
+}
+
+#produce-dialog .name{
+	margin:8px 0px 24px 0px;
+}
+
+#produce-dialog .process{
+	margin:24px 0px 8px 0px;
+}
+
+#produce-dialog .label{
+	display:inline-block;
+	font-weight:bold;
+	line-height:28px;
+	width:48px;
+}
+
+#produce-dialog .value{
+	border:1px solid #CCCCCC;
+	border-radius:3px;
+	color:#666666;
+	display:inline-block;
+	line-height:28px;
+	margin:0px 12px 0px 6px;
+	padding:0px 8px;
+	width:240px;
+}
+
+#produce-dialog .container{
+	width:100%;
+}
+
+#produce-dialog .container table{
+	border-collapse:collapse;
+	width:100%;	
+}
+
+#produce-dialog .container tr *{
+	text-indent:8px;
+}
+
+#produce-dialog .container td{
+	border:1px solid #999999;
+	line-height:24px;
+	text-align:left;
+}
+
+#produce-dialog .container th{
+	background-color:#4455FF;
+	border:1px solid #999999;
+	color:#FFFFFF;
+	line-height:24px;
+	text-align:left;
+}
+
+#produce-dialog .container .edit ,#produce-dialog .container .reset{
+	border:none;
+	color:blue;
+	cursor:pointer;
+	font-size:12px;
+	text-decoration:underline;
+	text-align:center;
+	width:32px;
+}

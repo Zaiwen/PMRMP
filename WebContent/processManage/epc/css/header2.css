@@ -1,0 +1,523 @@
+#menubar{
+	background-color:rgb(70,73,79);
+	border-bottom:2px solid rgb(65,138,214);
+	height:26px;
+	left:0px;
+	position:absolute;
+	right:0px;
+	top:0px;
+	z-index:1;
+}
+
+#menubar>.file{
+	background-color:rgb(65,138,214);
+	cursor:default;
+	color:#fff;
+	font-size:13px;
+	font-weight:normal;
+	float:left;
+	line-height:28px;
+	padding:0px 16px;
+	position:relative;
+	z-index:2;
+}
+
+#menubar>.item{
+	color:#fff;
+	cursor:default;
+	float:left;
+	font-size:13px;
+	height:23px;
+	line-height:25px;
+	margin:0px 10px;
+	padding:0px 3px;
+	position:relative;
+	z-index:2;
+}
+
+#menubar>.item:hover{
+	border-bottom:2px solid rgb(66,127,190);
+}
+
+#menubar>.item.selected{
+	border-bottom:2px solid rgb(65,138,214);
+	height:24px;
+}
+
+#menubar>.name{
+	color:#ccc;
+	cursor:pointer;
+	font-size:13px;
+	line-height:26px;
+	padding:0px 48px;
+	position:absolute;
+	text-align:center;
+	width:100%;
+	z-index:1;
+}
+
+#menubar>.username{
+	color:#fff;
+	cursor:default;
+	float:right;
+	font-size:13px;
+	line-height:26px;
+	padding:0px 20px;
+	position:relative;
+	z-index:2;
+}
+
+#menubar>.username>span{
+	color:#ff0000;
+}
+
+#toolbar{
+	background-color:rgb(237,237,238);
+	border-bottom:1px solid rgb(188,190,195);
+	height:60px;
+	left:0px;
+	position:absolute;
+	right:0px;
+	top:28px;
+	z-index:2;
+}
+
+#toolbar>.file{
+	border-bottom:1px solid rgb(238,238,238);
+	border-right:1px solid rgb(238,238,238);
+	box-shadow:3px 3px 3px rgb(238,238,238);
+	display:none;
+	height:291px;
+	position:absolute;
+	top:-4px;
+	width:431px;
+	z-index:100;
+}
+
+#toolbar>.file>.left{
+	background-color:rgb(249,249,249);
+	position:absolute;
+	width:150px;
+}
+
+#toolbar>.file>.right{
+	background-color:#fff;
+	border-left:1px solid rgb(238,238,238);
+	height:100%;
+	left:150px;
+	position:absolute;
+	top:0px;
+	width:280px;
+}
+
+#toolbar .file .item{
+	cursor:default;
+	font-size:13px;
+	height:46px;
+	line-height:46px;
+	padding:0px 12px;
+	margin:2px;
+}
+
+#toolbar .file .item:hover{
+	background-color:rgb(227,233,254);
+}
+
+#toolbar>.section{
+	display:none;
+}
+
+#toolbar>.section.start{
+	display:block;
+	padding:4px;
+}
+#toolbar>.section.start>*{
+	float:left;
+}
+#toolbar>.section.start>.undo-redo>*{
+	background-position:3px 3px;
+	background-repeat:no-repeat;
+	cursor:default;
+	height:22px;
+	margin-left:6px;
+	width:22px;
+}
+#toolbar>.section.start>.undo-redo>*:hover{
+	background-color:rgb(209,220,234);
+}
+#toolbar>.section.start>.undo-redo>.undo{
+	background-image:url('../img/undo.png');
+	margin-bottom:4px;
+}
+#toolbar>.section.start>.undo-redo>.redo{
+	background-image:url('../img/redo.png');
+}
+#toolbar>.section.start>.paste{
+	background-image:url('../img/paste.png');
+	background-position:11px 4px;
+	background-repeat:no-repeat;
+	cursor:default;
+	float:left;
+	font-size:12px;
+	height:22px;
+	line-height:22px;
+	overflow:visible;
+	padding-top:30px;
+	text-align:center;
+	width:44px;
+}
+
+#toolbar>.section.start>.paste:hover{
+	background-color:rgb(209,220,234);
+	background-image:url('../img/paste-hover.png');
+}
+#toolbar>.section.start>.cut-copy{
+	float:left;
+}
+#toolbar>.section.start>.cut-copy *{
+	background-position:3px 3px;
+	background-repeat:no-repeat;
+	cursor:default;
+	font-size:12px;
+	line-height:22px;
+	padding:0px 8px 0px 24px;
+}
+#toolbar>.section.start>.cut-copy>.cut{
+	background-image:url('../img/cut.gif');
+	margin-bottom:8px;
+}
+#toolbar>.section.start>.cut-copy>.copy{
+	background-image:url('../img/copy.gif');
+}
+#toolbar>.section.start>.cut-copy>*:hover{
+	background-color:rgb(209,220,234);
+}
+#toolbar>.section.start>.split{
+	border-left:1px solid rgb(204,203,205);
+	float:left;
+	height:52px;
+	margin:0px 10px;
+}
+#toolbar>.section.start>.font{
+	float:left;
+}
+#toolbar>.section.start>.font>.top>.family{
+	border:1px solid rgb(187,190,196);
+	float:left;
+	height:22px;
+	width:114px
+}
+#toolbar>.section.start>.font>.top>.family>.text{
+	background-color:#fff;
+	font-size:12px;
+	float:left;
+	height:22px;
+	line-height:22px;
+	text-indent:5px;
+	text-overflow:ellipsis;
+	width:100px;
+}
+#toolbar>.section.start>.font>.top>*>.dropdown{
+	background-image:url('../img/dropdown.png');
+	background-repeat:no-repeat;
+	background-position:4px 10px;
+	background-color:#fff;
+	float:left;
+	height:22px;
+	width:13px;
+}
+#toolbar>.section.start>.font>.top>*>.dropdown:hover{
+	background-color:rgb(227,238,252);
+}
+#toolbar>.section.start>.font>.top>.size{
+	border:1px solid rgb(187,190,196);
+	border-left:0px;
+	float:left;
+	height:22px;
+	width:54px
+}
+#toolbar>.section.start>.font>.top>.size>.text{
+	background-color:#fff;
+	font-size:12px;
+	float:left;
+	height:22px;
+	line-height:22px;
+	text-indent:5px;
+	text-overflow:ellipsis;
+	width:40px;
+}
+#toolbar>.section.start>.font>.bottom>*{
+	float:left;
+	margin-top:6px;
+}
+#toolbar>.section.start>.font>.bottom>.bold{
+	background-image:url('../img/bold.gif');
+	background-repeat:no-repeat;
+	background-position:3px 3px;
+	height:22px;
+	width:22px;
+}
+#toolbar>.section.start>.font>.bottom>.bold:hover{
+	background-color:rgb(209,220,234);
+}
+#toolbar>.section.start>.font>.bottom>.italic{
+	background-image:url('../img/italic.gif');
+	background-repeat:no-repeat;
+	background-position:3px 3px;
+	height:22px;
+	width:22px;
+}
+#toolbar>.section.start>.font>.bottom>.italic:hover{
+	background-color:rgb(209,220,234);
+}
+#toolbar>.section.start>.font>.bottom>.underline{
+	background-image:url('../img/underline.gif');
+	background-repeat:no-repeat;
+	background-position:3px 3px;
+	height:22px;
+	width:22px;
+}
+#toolbar>.section.start>.font>.bottom>.underline:hover{
+	background-color:rgb(209,220,234);
+}
+#toolbar>.section.start>.font>.bottom>.split{
+	border-left:1px solid rgb(204,203,205);
+	height:22px;
+	margin:6px 6px 0px 6px;
+}
+#toolbar>.section.start>.font>.bottom>.size-up{
+	cursor:default;
+	font-family:"Microsoft YaHei UI";
+	font-size:14px;
+	height:24px;
+	line-height:22px;
+	position:relative;
+	text-align:center;
+	width:22px;
+}
+#toolbar>.section.start>.font>.bottom>*>.sup{
+	font-size:12px;
+	line-height:12px;
+	position:absolute;
+	right:0px;
+	text-align:center;
+	top:0px;
+	width:9px;
+}
+#toolbar>.section.start>.font>.bottom>.size-up:hover{
+	background-color:rgb(209,220,234);
+}
+#toolbar>.section.start>.font>.bottom>.size-down{
+	cursor:default;
+	font-family:"Microsoft YaHei UI";
+	font-size:12px;
+	height:22px;
+	line-height:24px;
+	position:relative;
+	text-align:center;
+	width:22px;
+}
+#toolbar>.section.start>.font>.bottom>.size-down:hover{
+	background-color:rgb(209,220,234);
+}
+#toolbar>.section.start>.font>.bottom>.color{
+	cursor:default;
+	height:22px;
+	margin-left:10px;
+	position:relative;
+	width:33px;
+}
+#toolbar>.section.start>.font>.bottom>.color>.icon{
+	background-image:url('../img/fontcolor.gif');
+	background-position:3px 3px;
+	background-repeat:no-repeat;
+	height:22px;
+	position:absolute;
+	width:22px;
+}
+#toolbar>.section.start>.font>.bottom>.color>.bottom{
+	background-color:#f00;
+	bottom:3px;
+	height:4px;
+	left:3px;
+	position:absolute;
+	width:16px;
+}
+#toolbar>.section.start>.font>.bottom>.color>.dropdown{
+	background-image:url('../img/dropdown.png');
+	background-repeat:no-repeat;
+	background-position:3px 10px;
+	height:22px;
+	position:absolute;
+	right:0px;
+	top:0px;
+	width:11px;
+}
+#toolbar>.section.start>.font>.bottom>.color:hover>.icon{
+	background-color:rgb(209,220,234);
+}
+#toolbar>.section.start>.font>.bottom>.color:hover>.dropdown{
+	background-color:rgb(180,204,230);
+}
+#toolbar>.section.start>.font>.bottom>.color>.dropdown:hover{
+	background-color:rgb(209,220,234);
+}
+#toolbar>.section.start>.font>.bottom>.color>.dropdown:hover+.icon{
+	background-color:rgb(180,204,230);
+}
+#toolbar>.section.start>.cell>.top>*:not(.split){
+	background-repeat:no-repeat;
+	background-position:3px 3px;
+	float:left;
+	height:22px;
+	margin:1px;
+	width:22px;
+}
+#toolbar>.section.start>.cell>.top>*:hover{
+	background-color:rgb(209,220,234);
+}
+#toolbar>.section.start>.cell>.top>.selected{
+	background-color:rgb(180,204,230);
+}
+#toolbar>.section.start>.cell>.top>.split{
+	border-left:1px solid rgb(204,203,205);
+	float:left;
+	height:22px;
+	margin:0px 6px;
+	
+}
+#toolbar>.section.start>.cell>.top>.left{
+	background-image:url('../img/left.gif');
+}
+#toolbar>.section.start>.cell>.top>.center{
+	background-image:url('../img/center.gif');
+}
+#toolbar>.section.start>.cell>.top>.right{
+	background-image:url('../img/right.gif');
+}
+#toolbar>.section.start>.cell>.top>.top{
+	background-image:url('../img/top.gif');
+}
+
+#toolbar>.section.start>.cell>.top>.middle{
+	background-image:url('../img/middle.gif');
+}
+#toolbar>.section.start>.cell>.top>.bottom{
+	background-image:url('../img/bottom.gif');
+}
+#toolbar>.section.start>.cell>.top>.select{
+	background-image:url('../img/select.gif');
+}
+#toolbar>.section.start>.cell>.top>.pan{
+	background-image:url('../img/pan.gif');
+}
+#toolbar>.section.start>.cell>.bottom>*{
+	float:left;
+	margin-top:6px;
+}
+#toolbar>.section.start>.cell>.bottom>.line-color,
+#toolbar>.section.start>.cell>.bottom>.line-width,
+#toolbar>.section.start>.cell>.bottom>.line-shape,
+#toolbar>.section.start>.cell>.bottom>.line-style,
+#toolbar>.section.start>.cell>.bottom>.fill-color{
+	cursor:default;
+	height:22px;
+	margin-right:10px;
+	position:relative;
+	width:33px;
+}
+#toolbar>.section.start>.cell>.bottom>.line-color>.icon,
+#toolbar>.section.start>.cell>.bottom>.line-width>.icon,
+#toolbar>.section.start>.cell>.bottom>.line-shape>.icon,
+#toolbar>.section.start>.cell>.bottom>.line-style>.icon,
+#toolbar>.section.start>.cell>.bottom>.fill-color>.icon{
+	background-position:3px 3px;
+	background-repeat:no-repeat;
+	height:22px;
+	position:absolute;
+	width:22px;
+}
+#toolbar>.section.start>.cell>.bottom>.line-color>.icon{
+	background-image:url('../img/linecolor.gif');
+}
+#toolbar>.section.start>.cell>.bottom>.line-width>.icon{
+	background-image:url('../img/connect.gif');
+}
+#toolbar>.section.start>.cell>.bottom>.line-shape>.icon{
+	background-image:url('../img/connect.gif');
+}
+#toolbar>.section.start>.cell>.bottom>.line-style>.icon{
+	background-image:url('../img/connect.gif');
+}
+#toolbar>.section.start>.cell>.bottom>.fill-color>.icon{
+	background-image:url('../img/fillcolor.gif');
+}
+#toolbar>.section.start>.cell>.bottom>.line-color>.bottom,
+#toolbar>.section.start>.cell>.bottom>.fill-color>.bottom{
+	background-color:#f00;
+	bottom:3px;
+	height:4px;
+	left:3px;
+	position:absolute;
+	width:16px;
+}
+#toolbar>.section.start>.cell>.bottom>.line-color>.dropdown,
+#toolbar>.section.start>.cell>.bottom>.line-width>.dropdown,
+#toolbar>.section.start>.cell>.bottom>.line-shape>.dropdown,
+#toolbar>.section.start>.cell>.bottom>.line-style>.dropdown,
+#toolbar>.section.start>.cell>.bottom>.fill-color>.dropdown{
+	background-image:url('../img/dropdown.png');
+	background-repeat:no-repeat;
+	background-position:3px 10px;
+	height:22px;
+	position:absolute;
+	right:0px;
+	top:0px;
+	width:11px;
+}
+#toolbar>.section.start>.cell>.bottom>.line-color:hover>.icon,
+#toolbar>.section.start>.cell>.bottom>.line-width:hover>.icon,
+#toolbar>.section.start>.cell>.bottom>.line-shape:hover>.icon,
+#toolbar>.section.start>.cell>.bottom>.line-style:hover>.icon,
+#toolbar>.section.start>.cell>.bottom>.fill-color:hover>.icon{
+	background-color:rgb(209,220,234);
+}
+#toolbar>.section.start>.cell>.bottom>.line-color:hover>.dropdown,
+#toolbar>.section.start>.cell>.bottom>.line-width:hover>.dropdown,
+#toolbar>.section.start>.cell>.bottom>.line-shape:hover>.dropdown,
+#toolbar>.section.start>.cell>.bottom>.line-style:hover>.dropdown,
+#toolbar>.section.start>.cell>.bottom>.fill-color:hover>.dropdown{
+	background-color:rgb(180,204,230);
+}
+#toolbar>.section.start>.cell>.bottom>.line-color>.dropdown:hover,
+#toolbar>.section.start>.cell>.bottom>.line-width>.dropdown:hover,
+#toolbar>.section.start>.cell>.bottom>.line-shape>.dropdown:hover,
+#toolbar>.section.start>.cell>.bottom>.line-style>.dropdown:hover,
+#toolbar>.section.start>.cell>.bottom>.fill-color>.dropdown:hover{
+	background-color:rgb(209,220,234);
+}
+#toolbar>.section.start>.cell>.bottom>.line-color>.dropdown:hover+.icon,
+#toolbar>.section.start>.cell>.bottom>.line-width>.dropdown:hover+.icon,
+#toolbar>.section.start>.cell>.bottom>.line-shape>.dropdown:hover+.icon,
+#toolbar>.section.start>.cell>.bottom>.line-style>.dropdown:hover+.icon,
+#toolbar>.section.start>.cell>.bottom>.fill-color>.dropdown:hover+.icon{
+	background-color:rgb(180,204,230);
+}
+#toolbar>.section.start>.find>*{
+	background-position:3px 3px;
+	background-repeat:no-repeat;
+	cursor:default;
+	font-size:12px;
+	line-height:22px;
+	padding:0px 8px 0px 24px;
+}
+#toolbar>.section.start>.find>*:hover{
+	background-color:rgb(209,220,234);
+}
+#toolbar>.section.start>.find>.find{
+	background-image:url('../img/find.png');
+	margin-bottom:8px;
+}
+#toolbar>.section.start>.find>.replace{
+	background-image:url('../img/replace.png');
+}

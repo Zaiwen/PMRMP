@@ -1,0 +1,32 @@
+.theme-blue .button{
+	background-color:RGB(255,255,255);
+	border:1px solid RGB(171,171,171);
+	cursor:default;
+	display:inline-block;
+	font-size:12px;
+	height:23px;
+	line-height:23px;
+	text-align:center;
+	width:70px;
+}
+
+.theme-blue .button:hover{
+	background-color:RGB(213,225,242);
+	border:1px solid RGB(163,189,227);
+}
+
+.theme-blue .button:active{
+	background-color:RGB(163,189,227);
+	border:1px solid RGB(62,109,181);
+}
+
+.theme-blue .button.default{
+	background-color:RGB(227,236,250);
+	border:1px solid RGB(163,189,227);
+	
+}
+
+.theme-blue .dialog{
+	border:1px solid RGB(43,87,154);
+	outline:1px solid RGB(191,205,226);
+}

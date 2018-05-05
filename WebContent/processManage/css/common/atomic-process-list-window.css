@@ -1,0 +1,68 @@
+#atomic-process-list-window {
+	left:80%;
+	width:20%;
+}
+
+
+#atomic-process-list-window>.head>.add {
+	background-image: url('../../img/add.png');
+	cursor: pointer;
+	float: right;
+	height: 20px;
+	margin: 6px 2px;
+	position: relative;
+	width: 20px;
+}
+
+#atomic-process-list-window>.head>.add:hover {
+	background-image: url('../../img/add-hover.png');
+}
+
+#atomic-process-list-window>.head>.add:active {
+	background-image: url('../../img/add-active.png');
+}
+
+#atomic-process-list-window>.head>.remove {
+	background-image: url('../../img/remove.png');
+	cursor: pointer;
+	float: right;
+	height: 20px;
+	margin: 6px 2px;
+	position: relative;
+	width: 20px;
+}
+
+#atomic-process-list-window>.head>.remove:hover {
+	background-image: url('../../img/remove-hover.png');
+}
+
+#atomic-process-list-window>.head>.remove:active {
+	background-image: url('../../img/remove-active.png');
+}
+
+#atomic-process-list-window>.body {
+	padding: 8px 2px;
+}
+
+#atomic-process-list-window>.body>.unselected {
+	color: #000000;
+	cursor: default;
+	font-size: 14px;
+	line-height: 24px;
+	margin: 4px 2px;
+	padding: 0px 18px;
+}
+
+#atomic-process-list-window>.body>.unselected:hover {
+	background-color: RGB(183, 231, 251);
+}
+
+#atomic-process-list-window>.body>.selected {
+	background-color: RGB(123, 221, 241);
+	color: #FFFFF;
+	cursor: default;
+	font-size: 14px;
+	line-height: 24px;
+	margin: 4px 2px;
+	padding: 0px 18px;
+}

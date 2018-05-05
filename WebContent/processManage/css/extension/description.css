@@ -1,0 +1,35 @@
+#extension-description-dialog {
+	display:none;
+	padding: 20px;
+}
+
+#extension-description-dialog .label {
+	display: inline;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+#extension-description-dialog  .value {
+	font-size: 13px;
+	padding: 2px 8px;
+	width: 320px;
+}
+
+#extension-description-dialog .domain {
+	margin: 16px 0px;
+}
+
+#extension-description-dialog .introduction {
+	display: inline;
+}
+
+#extension-description-dialog .introduction .label {
+	vertical-align: top;
+}
+
+#extension-description-dialog textarea {
+	height:120px;
+	margin: 4px 10px;
+	resize: none;
+	width: 420px;
+}

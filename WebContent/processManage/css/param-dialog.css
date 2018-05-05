@@ -1,0 +1,30 @@
+#param-dialog{
+	display:none;
+	font-size:13px;
+}
+
+#param-dialog .name{
+	margin:8px 0px 24px 0px;
+}
+
+#param-dialog .type{
+	margin:24px 0px 8px 0px;
+}
+
+#param-dialog .label{
+	display:inline-block;
+	font-weight:bold;
+	line-height:28px;
+	width:48px;
+}
+
+#param-dialog .value{
+	border:1px solid #CCCCCC;
+	border-radius:3px;
+	color:#666666;
+	display:inline-block;
+	line-height:28px;
+	margin:0px 12px 0px 6px;
+	padding:0px 8px;
+	width:520px;
+}

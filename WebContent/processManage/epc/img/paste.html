@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html>
+	<body>
+		<canvas id='paste' width=20 height=20></canvas>
+		<canvas id='paste-hover' width=20 height=20></canvas>
+		<canvas id='paste-active' width=20 height=20></canvas>
+		<script>
+			// paste	
+			c=document.getElementById('paste');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,8,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(137,190,229)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(5,10);
+			c.lineTo(15,10);
+			c.moveTo(10,5);
+			c.lineTo(10,15);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+			// paste-Hover
+			c=document.getElementById('paste-hover');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,8,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(161,204,235)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(5,10);
+			c.lineTo(15,10);
+			c.moveTo(10,5);
+			c.lineTo(10,15);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+			// paste-Active
+			c=document.getElementById('paste-active');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,8,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(184,216,240)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(5,10);
+			c.lineTo(15,10);
+			c.moveTo(10,5);
+			c.lineTo(10,15);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+		</script>
+	</body>
+</html>

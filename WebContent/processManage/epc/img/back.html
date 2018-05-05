@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html>
+	<body style="background:rgb(33,115,70)">
+		<canvas id='back' width=24 height=24></canvas>
+		<script>
+			// back	
+			c=document.getElementById('back');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(12,12,11,0,Math.PI*2,true);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle="rgba(255,255,255,1)";
+			c.stroke();
+			c.beginPath();
+			c.moveTo(18,12);
+			c.lineTo(6,12);
+			c.moveTo(11,7);
+			c.lineTo(6,12);
+			c.lineTo(11,17);
+			c.moveTo(18,12);
+			c.closePath();
+			c.stroke();
+		</script>
+	</body>
+</html>

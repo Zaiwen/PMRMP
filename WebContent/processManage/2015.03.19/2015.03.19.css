@@ -1,0 +1,266 @@
+
+@-webkit-keyframes "readonly"{
+	0%{
+		bottom: 24px;
+		left: 286px;
+		right: 286px;
+		position: absolute;
+		top: 32px;
+	}
+	100%{
+		
+		bottom:0px;
+		left:0px;
+		top:0px;
+		right:50%;
+		z-index:1000;
+	}
+}
+
+#editor.readonly>.center{
+	-webkit-animation-name:'readonly';
+	-webkit-animation-duration:0.3s;
+	-webkit-animation-timing-function:ease-out;
+	-webkit-animation-iteration-count:1;
+	-webkit-animation-fill-mode:forwards;
+	border-right:6px solid transparent;
+	border-bottom:24px solid rgb(21,127,204);
+}
+
+#editor.readonly>.center>.head{
+	height:48px;
+}
+
+#editor.readonly>.center>.head>.title{
+	display:block;
+	font-family:"Microsoft YaHei";
+	font-size:18px;
+	line-height:48px;
+	text-indent:24px;
+}
+
+#editor.readonly>.center>.head *{
+	display:none;
+}
+
+#editor.readonly>.center>.body{
+	top:48px;
+}
+
+@-webkit-keyframes 'window-right'{
+	0%{
+		opacity:0;
+	}
+	100%{
+		opacity:1;
+	}
+}
+
+#editor.readonly>#window-right{
+	-webkit-animation-name:'window-right';
+	-webkit-animation-duration:0.3s;
+	-webkit-animation-timing-function:ease-out;
+	-webkit-animation-iteration-count:1;
+	-webkit-animation-fill-mode:forwards;
+	display:block;
+}
+
+#window-right{
+	bottom:0px;
+	border-bottom:24px solid rgb(21,127,20);
+	border-left:6px solid transparent;
+	display:none;
+	left:50%;
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:1000;
+}
+
+#window-right>.head{
+	background-color:RGB(21, 127,20);
+	height:64px;
+	left:0px;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+
+#window-right>.head>.title{
+	color: #FFFFFF;
+	font-weight: bold;
+	float: left;
+	font-family:"Microsoft YaHei";
+	font-size:18px;
+	line-height:48px;
+	text-indent:24px;
+}
+
+#window-right>.body{
+	background-color:#fff;
+	bottom:0px;
+	font-family:"Microsoft YaHei UI","Microsoft YaHei";
+	left:0px;
+	overflow:auto;
+	padding:24px;
+	position:absolute;
+	top:48px;
+	right:0px;
+}
+
+#window-right .button{
+	background-color:rgb(204,204,204);
+	color:#000;
+	cursor:default;
+	float:left;
+	font-size:15px;
+	font-weight:bold;
+	height:31px;
+	line-height:31px;
+	margin:10px 20px 10px 0px;
+	min-width:62px;
+	padding:0px 14px;
+	text-align:center;
+}
+
+#window-right .button:hover{
+	background-color:rgb(216,216,216);
+}
+
+#window-right .button:disable{
+	background-color:rgb(234,234,234);
+	color:rgb(140,140,140);
+}
+
+#window-right .button:active{
+	background-color:#000;
+	color:#fff;
+}
+
+#window-right .radio{
+	background-image:url('../img/radio-button.png');
+	background-position:4px 4px;
+	background-repeat:no-repeat;
+	cursor:default;
+	font-size:16px;
+	line-height:32px;
+	text-indent:32px;
+}
+
+#window-right .label{
+	font-size:15px;
+	line-height:25px;
+}
+
+#window-right .select{
+	border:2px solid rgb(186,186,186);
+	cursor:default;
+	height:28px;
+	position:relative;
+}
+
+#window-right .select .down{
+	background-image:url('../img/list-down.png');
+	height:9px;
+	position:absolute;
+	right:9px;
+	top:11px;
+	width:12px;
+}
+
+#window-right .select ul{
+	display:none;
+}
+
+#window-right .select:hover{
+	border-color:rgb(143,143,143);
+}
+
+#window-right .title{
+	color:rgb(0,172,255);
+	font-size:28px;
+	line-height:64px;
+}
+
+#center-split{
+	outline:6px solid #ccc;
+	display:none;
+	bottom:0px;
+	left:50%;
+	position:absolute;
+	top:0px;
+	z-index:1001;
+}
+
+#editor.readonly>#center-split{
+	display:block;
+}
+
+body #editor{
+	left:0px;
+	overflow:visible;
+	right:auto;
+	width:100%;
+}
+
+body #editor #composite-process-tree-window{
+	left:0;
+	right:auto;
+	width:20%;
+}
+
+body #editor #composite-process-graph-window{
+	left:20%;
+	right:auto;
+	width:60%;
+}
+
+body #editor #atomic-process-list-window{
+	left:80%;
+	right:auto;
+	width:20%;
+}
+
+#editor #atomic-process-list-window .head{
+
+}
+
+#editor .split{
+	bottom:26px;
+	outline:2px solid RGB(56, 146, 211);
+	position:absolute;
+	top:34px;
+}
+
+#editor #split-20{
+	left:20%;
+}
+
+#editor #split-80{
+	left:80%;
+}
+
+#editor #split-100{
+	left:100%;
+}
+
+#editor #split-160{
+	left:160%;
+}
+
+@-webkit-keyframes "atomic-process-mode-in"{
+	0%{
+		left:0;
+	}
+	100%{
+		left:-80%;
+	}
+}
+
+#editor.atomic-process-mode {
+	-webkit-animation-name:'atomic-process-mode-in';
+	-webkit-animation-duration:0.2s;
+	-webkit-animation-timing-function:ease-out;
+	-webkit-animation-iteration-count:1;
+	-webkit-animation-fill-mode:forwards;
+}

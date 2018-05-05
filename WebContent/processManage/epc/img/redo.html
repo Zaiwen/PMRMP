@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html>
+	<body>
+		<canvas id='redo' width=20 height=20></canvas>
+		<canvas id='redo-hover' width=20 height=20></canvas>
+		<canvas id='redo-active' width=20 height=20></canvas>
+		<script>
+			// redo	
+			c=document.getElementById('redo');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,8,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(137,190,229)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(11,6);
+			c.lineTo(15.5,10);
+			c.lineTo(11,14);
+			c.lineTo(11,11);
+			c.lineTo(5,11);
+			c.lineTo(5,9);
+			c.lineTo(11,9);
+			c.closePath();
+			c.fillStyle='RGB(21,127,204)';
+			c.fill();
+			// redo-Hover
+			c=document.getElementById('redo-hover');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,8,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(161,204,235)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(11,6);
+			c.lineTo(15.5,10);
+			c.lineTo(11,14);
+			c.lineTo(11,11);
+			c.lineTo(5,11);
+			c.lineTo(5,9);
+			c.lineTo(11,9);
+			c.closePath();
+			c.fillStyle='RGB(21,127,204)';
+			c.fill();
+			// redo-Active
+			c=document.getElementById('redo-active');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,8,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(184,216,240)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(11,6);
+			c.lineTo(15.5,10);
+			c.lineTo(11,14);
+			c.lineTo(11,11);
+			c.lineTo(5,11);
+			c.lineTo(5,9);
+			c.lineTo(11,9);
+			c.closePath();
+			c.fillStyle='RGB(21,127,204)';
+			c.fill();
+		</script>
+	</body>
+</html>

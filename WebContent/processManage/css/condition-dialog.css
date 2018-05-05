@@ -1,0 +1,50 @@
+#condition-dialog {
+	display: none;
+	font-family:Consolas;
+	font-size: 13px;
+}
+
+#condition-dialog *{
+	margin:0px;
+	padding:0px;
+}
+
+#condition-dialog .name{
+	margin:16px 0px 28px 0px;
+}
+
+#condition-dialog .label {
+	display: inline-block;
+	font-weight: bold;
+	line-height: 28px;
+}
+
+#condition-dialog .value {
+	border: 1px solid #CCCCCC;
+	color: #666666;
+	display: inline-block;
+	line-height: 28px;
+	margin: 0px 12px 0px 0px;
+	padding: 0px 8px;
+	width: 380px;
+}
+
+#condition-dialog .operation{
+	color:#0000FF;
+	cursor:pointer;
+	display:inline-block;
+	text-decoration:underline;
+}
+
+#condition-dialog .language{
+	display:inline-block;
+	margin-right:9px;
+}
+
+#condition-dialog textarea{
+	border: 1px solid #CCCCCC;
+	height:220px;
+	padding:8px;
+	resize:none;
+	width:380px;
+}

@@ -1,0 +1,16 @@
+#select-wsdl-dialog {
+	display: none;
+	font-size: 14px;
+	padding: 12px 24px;
+}
+
+#select-wsdl-dialog .item {
+	color: #4455FF;
+	cursor: pointer;
+	line-height: 240%;
+	text-decoration: underline;
+}
+
+#select-wsdl-dialog .item:hover {
+	color: #0000FF;
+}

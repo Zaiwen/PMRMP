@@ -1,0 +1,104 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<canvas id='refresh' width=20 height=20></canvas>
+		<canvas id='refresh-hover' width=20 height=20></canvas>
+		<canvas id='refresh-active' width=20 height=20></canvas>
+		<script>
+			// refresh
+			c=document.getElementById('refresh');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(137,190,220)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(3,6);
+			c.lineTo(13,6);
+			c.lineTo(13,4);
+			c.lineTo(17,7);
+			c.lineTo(13,10);
+			c.lineTo(13,8);
+			c.lineTo(3,8);
+			c.closePath();
+			c.fillStyle='RGB(21,127,204)';
+			c.fill();
+			c.beginPath();
+			c.moveTo(17,14);
+			c.lineTo(7,14);
+			c.lineTo(7,16);
+			c.lineTo(3,13);
+			c.lineTo(7,10);
+			c.lineTo(7,12);
+			c.lineTo(17,12);
+			c.closePath();
+			c.fillStyle='RGB(21,127,204)';
+			c.fill();
+
+			// refresh-hover
+			c=document.getElementById('refresh-hover');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(161,204,230)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(3,6);
+			c.lineTo(13,6);
+			c.lineTo(13,4);
+			c.lineTo(17,7);
+			c.lineTo(13,10);
+			c.lineTo(13,8);
+			c.lineTo(3,8);
+			c.closePath();
+			c.fillStyle='RGB(21,127,204)';
+			c.fill();
+			c.beginPath();
+			c.moveTo(17,14);
+			c.lineTo(7,14);
+			c.lineTo(7,16);
+			c.lineTo(3,13);
+			c.lineTo(7,10);
+			c.lineTo(7,12);
+			c.lineTo(17,12);
+			c.closePath();
+			c.fillStyle='RGB(21,127,204)';
+			c.fill();
+			// refresh-active
+			c=document.getElementById('refresh-active');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(184,216,240)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(3,6);
+			c.lineTo(13,6);
+			c.lineTo(13,4);
+			c.lineTo(17,7);
+			c.lineTo(13,10);
+			c.lineTo(13,8);
+			c.lineTo(3,8);
+			c.closePath();
+			c.fillStyle='RGB(21,127,204)';
+			c.fill();
+			c.beginPath();
+			c.moveTo(17,14);
+			c.lineTo(7,14);
+			c.lineTo(7,16);
+			c.lineTo(3,13);
+			c.lineTo(7,10);
+			c.lineTo(7,12);
+			c.lineTo(17,12);
+			c.closePath();
+			c.fillStyle='RGB(21,127,204)';
+			c.fill();
+		</script>
+	</body>
+</html>

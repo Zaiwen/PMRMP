@@ -1,0 +1,234 @@
+.dialog{
+	border-radius:3px;
+	box-shadow:0px 0px 6px rgb(21,127,204);
+	display: none;
+	padding:20px;
+	position:absolute;
+	z-index:101;
+}
+
+.dialog .head{
+	background-color:rgb(21,127,204);
+	height:32px;
+	left:0px;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+
+
+.dialog .head .title{
+	color:#fff;
+	cursor:default;
+	font-size:14px;
+	line-height:32px;
+	position:absolute;
+	text-align:center;
+	width:100%;
+}
+
+.dialog .head .close{
+	background-image:url("../img/close.png");
+	cursor:default;
+	display:none;
+	height:20px;
+	position:absolute;
+	right:6px;
+	top:6px;
+	width:20px;
+}
+
+.dialog .head .close:hover{
+	background-image:url("../img/close-hover.png");
+}
+
+.dialog .head .close:active{
+	background-image:url("../img/close-active.png");
+}
+
+.dialog .body{
+	background-color:#FFFFFF;
+	bottom:35px;
+	left:0px;
+	overflow:auto;
+	padding:20px;
+	position:absolute;
+	right:0px;
+	top:32px;
+}
+
+
+.dialog .foot{
+	background-color:#fff;
+	border-top:1px solid RGB(160,160,160);
+	bottom:0px;
+	height:34px;
+	left:0px;
+	position:absolute;
+	right:0px;	
+}
+
+.dialog .button{
+	background-color:RGB(236,236,236);
+	border:1px solid RGB(172,172,172);
+	cursor:default;
+	float:right;
+	font-size:13px;
+	line-height:19px;
+	margin:7px 24px 6px 8px;
+	padding:0px 18px;
+}
+
+.dialog .button:hover{
+	background-color:RGB(229,241,252);
+	border:1px solid RGB(126,180,234);
+}
+
+.dialog .button:active{
+	background-color:RGB(213,233,252);
+	border:1px solid RGB(86,157,229);
+}
+
+#dialog-cover{
+	background-color:#000000;
+	bottom:0px;
+	display:none;
+	left:0px;
+	opacity:0.5;
+	position:absolute;
+	right:0px;
+	top:0px;
+	z-index:100;
+}
+
+#open-dialog{
+	height:320px;
+	width:480px;
+}
+
+#open-dialog .body{
+	bottom:35px;
+	overflow:auto;
+}
+
+#open-dialog .top{
+	height:40px;
+	left:0;
+	position:absolute;
+	right:0;
+	top:0px;
+}
+
+#open-dialog .top .radio{
+	cursor:default;
+	float:left;
+	font-size:14px;
+	line-height:28px;
+	margin:6px;
+	padding:0px 12px;
+}
+
+#open-dialog .top .radio:hover{
+	background-color:#ccc;
+	color:#fff;
+}
+
+#open-dialog .top .radio.selected{
+	background-color:#666;
+	color:#fff;
+}
+
+
+
+#open-dialog .top .search{
+	border:1px solid #999;
+	height:24px;
+	margin:6px 22px;
+	position:absolute;
+	right:0;
+	top:0;
+	width:160px;
+}
+	
+#open-dialog .top .search input{
+	background-color:transparent;
+	border:none;
+	font-size:14px;
+	height:100%;
+	line-height:24px;
+	padding:0;
+	position:absolute;
+	text-indent:8px;
+	width:100%;
+}
+	
+#open-dialog .top .search input:focus{
+	outline:none;
+}
+	
+#open-dialog .top .search .text{
+	color:#ccc;
+	font-size:14px;
+	line-height:24px;
+	padding:0px 8px;
+	position:absolute;
+}
+
+#open-dialog .content{
+	border-top:1px solid #999;
+	bottom:0px;
+	left:0;
+	overflow:auto;
+	position:absolute;
+	right:0;
+	top:40px;	
+}
+
+#open-dialog table{
+	border-collapse:collapse;
+	width:100%;
+}
+
+#open-dialog table th{
+	font-weight:normal;
+	font-size:13px;
+	line-height:28px;
+	text-align:left;
+	text-indent:20px;
+}
+
+#open-dialog table tr.item{
+	cursor:default;
+	font-size:13px;
+	line-height:21px;
+	text-indent:20px;
+}
+
+#open-dialog table tr.item.selected{
+	background:rgb(21,127,204);
+	color:#fff;
+}
+
+#open-dialog table tr.item.selected .name{
+	color:#fff;
+}
+
+#open-dialog tr.item:hover{
+	background:#99CCFF;
+}
+
+#open-dialog tr.item:hover td{
+	color:#fff;
+}
+
+#open-dialog table tr td{
+	font-family:Consolas;
+}
+
+#open-dialog table .id{
+	display:none;
+}
+
+#open-dialog table tr td.name{
+	color:#00f;
+}

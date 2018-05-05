@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<canvas id='list' width=20 height=20></canvas>
+		<canvas id='list-hover' width=20 height=20></canvas>
+		<canvas id='list-active' width=20 height=20></canvas>
+		<script>
+			// list
+			c=document.getElementById('list');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(137,190,220)'
+			c.fill();
+			c.fillStyle='RGB(21,127,204)';
+			c.fillRect(4,6,12,1);
+			c.fillRect(4,8,12,1);
+			c.fillRect(4,10,12,1);
+			c.fillRect(4,12,12,1);
+			c.fillRect(4,14,12,1);
+			// list-hover
+			c=document.getElementById('list-hover');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(161,204,230)'
+			c.fill();
+			c.fillStyle='RGB(21,127,204)';
+			c.fillRect(4,6,12,1);
+			c.fillRect(4,8,12,1);
+			c.fillRect(4,10,12,1);
+			c.fillRect(4,12,12,1);
+			c.fillRect(4,14,12,1);
+			// list-active
+			c=document.getElementById('list-active');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(184,216,240)'
+			c.fill();
+			c.fillStyle='RGB(21,127,204)';
+			c.fillRect(4,6,12,1);
+			c.fillRect(4,8,12,1);
+			c.fillRect(4,10,12,1);
+			c.fillRect(4,12,12,1);
+			c.fillRect(4,14,12,1);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+#select-binding-dialog{
+	display:none;
+	font-size:13px;
+}
+
+#select-binding-dialog .item {
+	border: 1px solid transparent;
+	border-radius: 3px;
+	color: #000000;
+	cursor: default;
+	font-size: 14px;
+	line-height: 24px;
+	margin: 4px 2px;
+	padding: 0px 18px;
+}
+
+#select-binding-dialog .item:hover {
+	background-color: #DDEEFF;
+	border: 1px solid #BBDDFF;
+}

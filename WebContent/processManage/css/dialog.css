@@ -1,0 +1,126 @@
+#dialog-cover{
+	background-color:#000000;
+	bottom:0px;
+	display:none;
+	left:0px;
+	opacity:0.5;
+	position:absolute;
+	right:0px;
+	top:0px;
+	z-index:100;
+}
+
+.dialog{
+	border:5px solid RGB(21, 127, 204);
+	border-radius:5px;
+	box-shadow:0px 0px 50px #000000;
+	height:420px;
+	position:absolute;
+	width:640px;
+	z-index:101;
+}
+
+.dialog>.head{
+	background-color:RGB(21, 127, 204);
+	height:28px;
+	left:0px;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+
+.dialog>.head>.title{
+	color:#FFFFFF;
+	cursor:default;
+	font-size:14px;
+	font-weight:bold;
+	line-height:24px;
+	position:absolute;
+	text-indent:12px;
+	width:200px;
+}
+
+.dialog>.head>.icon{
+	cursor:default;
+	float:right;
+	height:20px;
+	margin:2px 6px 0px 0px;
+	width:20px;
+}
+
+.dialog>.head>.minimize{
+	background-image:url("../img/minimize.png");
+}
+
+.dialog>.head>.minimize:hover{
+	background-image:url("../img/minimize-hover.png");
+}
+
+.dialog>.head>.minimize:active{
+	background-image:url("../img/minimize-active.png");
+}
+
+.dialog>.head>.help{
+	background-image:url("../img/help.png");
+}
+
+.dialog>.head>.help:hover{
+	background-image:url("../img/help-hover.png");
+}
+
+.dialog>.head>.help:active{
+	background-image:url("../img/help-active.png");
+}
+
+.dialog>.head>.close{
+	background-image:url("../img/close.png");
+}
+
+.dialog>.head>.close:hover{
+	background-image:url("../img/close-hover.png");
+}
+
+.dialog>.head>.close:active{
+	background-image:url("../img/close-active.png");
+}
+
+.dialog>.body{
+	background-color:#FFFFFF;
+	bottom:35px;
+	left:0px;
+	overflow:auto;
+	position:absolute;
+	right:0px;
+	top:28px;
+}
+
+.dialog>.foot{
+	background-color:RGB(240,240,240);
+	border-top:1px solid RGB(160,160,160);
+	bottom:0px;
+	height:34px;
+	left:0px;
+	position:absolute;
+	right:0px;	
+}
+
+.dialog>.foot>.button{
+	background-color:RGB(236,236,236);
+	border:1px solid RGB(172,172,172);
+	cursor:default;
+	float:right;
+	font-size:13px;
+	line-height:19px;
+	margin:7px 24px 6px 8px;
+	padding:0px 18px;
+}
+
+.dialog>.foot>.button:hover{
+	background-color:RGB(229,241,252);
+	border:1px solid RGB(126,180,234);
+}
+
+.dialog>.foot>.button:active{
+	background-color:RGB(213,233,252);
+	border:1px solid RGB(86,157,229);
+}

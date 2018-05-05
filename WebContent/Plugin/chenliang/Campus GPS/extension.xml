@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Pluggable_Extension>
+<name>Campus GPS</name>
+<Extensional_Point>
+<Variable_Query>
+<Output_0>http://www.owl-ontologies.com/Ontology1383393827.owl#SendCourier</Output_0>
+</Variable_Query>
+<SPARQL_DL>
+<spardl0>PREFIX process: &lt;http://www.daml.org/services/owl-s/1.1/Process.owl#&gt;
+SELECT ?x WHERE {
+PropertyValue(?x , process:process, ?y),
+PropertyValue(?y , process:hasOutput, ?z0),
+PropertyValue(?z0, process:parameterType, "http://www.owl-ontologies.com/Ontology1383393827.owl#SendCourier")}
+ OR WHERE {
+PropertyValue(?x , process:process, ?y),
+PropertyValue(?y , process:hasOutput, ?z0),
+PropertyValue(?z0, process:parameterType, "http://www.owl-ontologies.com/Ontology1383393827.owl#Driver")}
+ </spardl0>
+</SPARQL_DL>
+</Extensional_Point>
+<Extensional_Fragment>
+<Extension_pattern>postfix</Extension_pattern>
+<Input>
+<Name>Order</Name>
+<Binding>http://www.owl-ontologies.com/Ontology1383393827.owl#SendCourier</Binding>
+</Input>
+<Output>
+<Name>LocationOfGoods</Name>
+<Binding>http://www.owl-ontologies.com/Ontology1383393827.owl#SendCourier</Binding>
+</Output>
+</Extensional_Fragment>
+</Pluggable_Extension>

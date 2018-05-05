@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Pluggable_Extension>
+<name>pppp-</name>
+<Extensional_Point>
+<Variable_Query>
+<Input_0>http://www.owl-ontologies.com/Ontology1383393827.owl#JDOrder</Input_0>
+</Variable_Query>
+<SPARQL_DL>
+<spardl0>PREFIX process: &lt;http://www.daml.org/services/owl-s/1.1/Process.owl#&gt;
+SELECT ?x WHERE {
+PropertyValue(?x , process:process, ?y),
+PropertyValue(?y , process:hasInput, ?z0),
+PropertyValue(?z0, process:parameterType,"http://www.owl-ontologies.com/Ontology1383393827.owl#JDOrder")}
+</spardl0>
+</SPARQL_DL>
+</Extensional_Point>
+<Extensional_Fragment>
+<Extension_pattern>postfix</Extension_pattern>
+<Input>
+<Name>JDOrder</Name>
+</Input>
+<Input>
+<Name>packmanID</Name>
+</Input>
+<Output>
+<Name>PackTime</Name>
+</Output>
+</Extensional_Fragment>
+</Pluggable_Extension>

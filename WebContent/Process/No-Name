@@ -1,0 +1,31 @@
+<epml>
+  <epc epcId="0">
+    <function id="0">
+      <name>
+B      </name>
+      <graphics>
+        <position x="180" y="110" width="80" height="40"/>
+      </graphics>
+    </function>
+    <event id="1">
+      <name>
+A      </name>
+      <graphics>
+        <position x="170" y="20" width="80" height="40"/>
+      </graphics>
+    </event>
+    <event id="2">
+      <name>
+C      </name>
+      <graphics>
+        <position x="180" y="220" width="80" height="40"/>
+      </graphics>
+    </event>
+    <arc id="6">
+      <flow source="1" target="0"/>
+    </arc>
+    <arc id="7">
+      <flow source="0" target="2"/>
+    </arc>
+  </epc>
+</epml>

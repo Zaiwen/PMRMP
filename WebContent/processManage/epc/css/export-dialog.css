@@ -1,0 +1,22 @@
+#export-dialog{
+	height: 480px;
+	width: 640px;
+}
+
+#export-dialog .body{
+	bottom: 0px;
+	overflow: hidden;
+	padding: 0px;
+}
+
+#export-dialog .body textarea{
+	border: 0px;
+	bottom: 0px;
+	display: block;
+	overflow: auto;
+	padding:0px;
+	position: absolute;
+	resize: none;
+	top: 0px;
+	width: 100%;
+}

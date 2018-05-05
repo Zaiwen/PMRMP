@@ -1,0 +1,683 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.owl-ontologies.com/Ontology1383393827.owl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.owl-ontologies.com/Ontology1383393827.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="ElectronicDocument"/>
+  <owl:Class rdf:ID="GetCourierID"/>
+  <owl:Class rdf:ID="Customer">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasCustomerAddress"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasCustomerID"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasName"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasPhoneNum"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasMadeOrderID"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class rdf:ID="User"/>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="GetCourier">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Worker"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="DeliveryForm">
+    <owl:equivalentClass>
+      <owl:Class rdf:ID="List"/>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ElectronicForms"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="E-signature">
+    <rdfs:subClassOf rdf:resource="#ElectronicDocument"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SendCourier">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Worker"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#List">
+    <owl:equivalentClass rdf:resource="#DeliveryForm"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CooperateTime"/>
+  <owl:Class rdf:ID="Company">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="hasCoorperateTime"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Customer"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Individuals">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="hasRequsetNumber"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Customer"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DistributeTime"/>
+  <owl:Class rdf:about="#ElectronicForms">
+    <rdfs:subClassOf rdf:resource="#ElectronicDocument"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PeopleInDelivery"/>
+  <owl:Class rdf:ID="SendAddress"/>
+  <owl:Class rdf:ID="Deliverylist">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasDealOrderID"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#List"/>
+    <owl:equivalentClass>
+      <owl:Class rdf:ID="ListForSending"/>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="#Worker">
+    <rdfs:subClassOf rdf:resource="#PeopleInDelivery"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasDealOrderID"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasWorkID"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasPhoneNum"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasName"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasDepartment"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#User">
+    <rdfs:subClassOf rdf:resource="#PeopleInDelivery"/>
+    <owl:equivalentClass rdf:resource="#Customer"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ScannerOffTime"/>
+  <owl:Class rdf:ID="Pickinglist">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:InverseFunctionalProperty rdf:ID="hasPickinglistID"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <rdf:Property rdf:about="http://www.owl-ontologies.com/Ontology1383443266.owl#hasGoodsItem"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#List"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DealOrderID"/>
+  <owl:Class rdf:ID="DistributIngMan">
+    <owl:equivalentClass>
+      <owl:Class rdf:ID="PackMan"/>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#Worker"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PackManID"/>
+  <owl:Class rdf:ID="SocialCustomer">
+    <rdfs:subClassOf rdf:resource="#Individuals"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CustomerName"/>
+  <owl:Class rdf:ID="ReceiverPhone"/>
+  <owl:Class rdf:ID="PickingMan">
+    <rdfs:subClassOf rdf:resource="#Worker"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodsID"/>
+  <owl:Class rdf:ID="CustomerAddress"/>
+  <owl:Class rdf:ID="RFID">
+    <rdfs:subClassOf rdf:resource="#ElectronicDocument"/>
+  </owl:Class>
+  <owl:Class rdf:ID="RequestNumber"/>
+  <owl:Class rdf:ID="Department"/>
+  <owl:Class rdf:ID="ReceiveTime"/>
+  <owl:Class rdf:ID="ScannerOnTime"/>
+  <owl:Class rdf:ID="ReceiverAddress"/>
+  <owl:Class rdf:ID="LoadForm">
+    <rdfs:subClassOf rdf:resource="#ElectronicForms"/>
+  </owl:Class>
+  <owl:Class rdf:about="#ListForSending">
+    <owl:equivalentClass rdf:resource="#Deliverylist"/>
+  </owl:Class>
+  <owl:Class rdf:ID="StudentCustomer">
+    <rdfs:subClassOf rdf:resource="#Individuals"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PickinglistID"/>
+  <owl:Class rdf:ID="Demandlist">
+    <owl:equivalentClass>
+      <owl:Class rdf:ID="Order"/>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="#List"/>
+  </owl:Class>
+  <owl:Class rdf:ID="GoodsPlace"/>
+  <owl:Class rdf:ID="CampusOrder">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Order"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasSendAddress"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasGetCourierID"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasTokenTime"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="TokenTime"/>
+  <owl:Class rdf:ID="Driver">
+    <rdfs:subClassOf rdf:resource="#Worker"/>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#GetCourier"/>
+          <owl:Class rdf:about="#SendCourier"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="OutboundlistID"/>
+  <owl:Class rdf:ID="Two-DimensionCode">
+    <rdfs:subClassOf rdf:resource="#ElectronicDocument"/>
+  </owl:Class>
+  <owl:Class rdf:ID="FeedBack"/>
+  <owl:Class rdf:ID="SortForm">
+    <rdfs:subClassOf rdf:resource="#ElectronicForms"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CustomerID"/>
+  <owl:Class rdf:ID="OrderID"/>
+  <owl:Class rdf:about="#Order">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="CreatedByCustomerID"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasReceiveAddress"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasOrderID"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="#Demandlist"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasReceiverPhone"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasGoodsID"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasSendTime"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:ID="hasFeedBack"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasReceiveTime"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="JDOrder">
+    <rdfs:subClassOf rdf:resource="#Order"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasPackManID"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasScannerOffTime"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasScannerOnTime"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasPackTime"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasdistributeTime"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="SendTime"/>
+  <owl:Class rdf:about="#PackMan">
+    <owl:equivalentClass rdf:resource="#DistributIngMan"/>
+    <rdfs:subClassOf rdf:resource="#Worker"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SendCourierID"/>
+  <owl:Class rdf:ID="PhoneNum"/>
+  <owl:Class rdf:ID="WorkID"/>
+  <owl:Class rdf:ID="Outboundlist">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+        <owl:onProperty>
+          <rdf:Property rdf:about="http://www.owl-ontologies.com/Ontology1383443266.owl#hasGoodsNum"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <rdf:Property rdf:about="http://www.owl-ontologies.com/Ontology1383443266.owl#hasGoodsInfo"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:InverseFunctionalProperty rdf:ID="hasOutboundlistID"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#List"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="#hasCustomerAddress">
+    <rdfs:range rdf:resource="#CustomerAddress"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Customer"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasManyOrderID">
+    <rdfs:domain rdf:resource="#ListForSending"/>
+    <rdfs:range rdf:resource="#OrderID"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasSendTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#SendTime"/>
+    <rdfs:domain rdf:resource="#Order"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasDepartment">
+    <rdfs:range rdf:resource="#Department"/>
+    <rdfs:domain rdf:resource="#Worker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasTokenTime">
+    <rdfs:domain rdf:resource="#CampusOrder"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#TokenTime"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasReceiveAddress">
+    <rdfs:domain rdf:resource="#Order"/>
+    <rdfs:range rdf:resource="#ReceiverAddress"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasReceiverPhone">
+    <rdfs:domain rdf:resource="#Order"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#ReceiverPhone"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasGetCourierID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#GetCourierID"/>
+    <rdfs:domain rdf:resource="#CampusOrder"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasGoodsPlace">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#GoodsPlace"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasCustomerName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#CustomerName"/>
+    <rdfs:domain rdf:resource="#Customer"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasSendCourierID">
+    <rdfs:domain rdf:resource="#Order"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#SendCourierID"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#CreatedByCustomerID">
+    <rdfs:domain rdf:resource="#Order"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#CustomerID"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasScannerOffTime">
+    <rdfs:range rdf:resource="#ScannerOffTime"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#JDOrder"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasName">
+    <rdfs:domain rdf:resource="#Customer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasGoodsID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:range rdf:resource="#GoodsID"/>
+    <rdfs:domain rdf:resource="#Order"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasdistributeTime">
+    <rdfs:domain rdf:resource="#JDOrder"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#DistributeTime"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasPackManID">
+    <rdfs:range rdf:resource="#PackManID"/>
+    <rdfs:domain rdf:resource="#JDOrder"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasPackTime">
+    <rdfs:domain rdf:resource="#JDOrder"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasCustomerID">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:range rdf:resource="#CustomerID"/>
+    <rdfs:domain rdf:resource="#Customer"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasOrderID">
+    <rdfs:range rdf:resource="#OrderID"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Order"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasPhoneNum">
+    <rdfs:domain rdf:resource="#Customer"/>
+    <rdfs:range rdf:resource="#PhoneNum"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasWorkID">
+    <rdfs:range rdf:resource="#WorkID"/>
+    <rdfs:domain rdf:resource="#Worker"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasScannerOnTime">
+    <rdfs:range rdf:resource="#ScannerOnTime"/>
+    <rdfs:domain rdf:resource="#JDOrder"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasSendAddress">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#SendAddress"/>
+    <rdfs:domain rdf:resource="#CampusOrder"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasReceiveTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Order"/>
+    <rdfs:range rdf:resource="#ReceiveTime"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasDealOrderID">
+    <rdfs:range rdf:resource="#OrderID"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="#Worker"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="PhoneValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#ReceiverPhone"/>
+          <owl:Class rdf:about="#PhoneNum"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="IDValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="TimeValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#SendTime"/>
+          <owl:Class rdf:about="#ReceiveTime"/>
+          <owl:Class rdf:about="#TokenTime"/>
+          <owl:Class rdf:about="#ScannerOnTime"/>
+          <owl:Class rdf:about="#ScannerOffTime"/>
+          <owl:Class rdf:about="#DistributeTime"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="NameValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="AddressValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#SendAddress"/>
+          <owl:Class rdf:about="#ReceiverAddress"/>
+          <owl:Class rdf:about="#CustomerAddress"/>
+          <owl:Class rdf:about="#GoodsPlace"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:about="#hasCoorperateTime">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Company"/>
+    <rdfs:range rdf:resource="#CooperateTime"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasFeedBack">
+    <rdfs:domain rdf:resource="#Order"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#FeedBack"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="NumberValue">
+    <rdfs:domain rdf:resource="#RequestNumber"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="#hasRequsetNumber">
+    <rdfs:range rdf:resource="#RequestNumber"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Individuals"/>
+  </owl:FunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="#hasPickinglistID">
+    <rdfs:domain rdf:resource="#Pickinglist"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#PickinglistID"/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="#hasOutboundlistID">
+    <rdfs:domain rdf:resource="#Outboundlist"/>
+    <rdfs:range rdf:resource="#OutboundlistID"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:InverseFunctionalProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->

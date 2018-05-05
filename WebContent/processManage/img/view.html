@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<style type='text/css'>
+			body{
+				background-color:#999;
+			}
+			canvas{
+				border:1px dotted #f00;
+				margin:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id='view-3' width=12 height=12></canvas>
+		<canvas id='view-2' width=12 height=12></canvas>
+		<canvas id='view-1' width=12 height=12></canvas>
+		<script>
+			// view-3
+			c=document.getElementById('view-3');
+			c=c.getContext('2d');
+			c.fillStyle = "#fff";
+			c.rect(0,0,2,12);
+			c.rect(3,0,6,12);
+			c.rect(10,0,2,12);
+			c.fill();
+			// view-2
+			c=document.getElementById('view-2');
+			c=c.getContext('2d');
+			c.fillStyle = "#fff";
+			c.rect(0,0,2,12);
+			c.rect(3,0,9,12);
+			c.fill();
+			// view-1
+			c=document.getElementById('view-1');
+			c=c.getContext('2d');
+			c.fillStyle = "#fff";
+			c.rect(0,0,12,12);
+			c.fill();
+		
+			
+			
+		</script>
+	</body>
+</html>

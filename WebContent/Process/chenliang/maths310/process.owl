@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:process="http://www.daml.org/services/owl-s/1.1/Process.owl#"
+    xmlns:service="http://www.daml.org/services/owl-s/1.1/Service.owl#"
+    xmlns:list="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:profile="http://www.daml.org/services/owl-s/1.1/Profile.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:grounding="http://www.daml.org/services/owl-s/1.1/Grounding.owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:expression="http://www.daml.org/services/owl-s/1.1/generic/Expression.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <service:Service rdf:nodeID="A0">
+    <service:presents>
+      <profile:Profile>
+        <service:presentedBy rdf:nodeID="A0"/>
+      </profile:Profile>
+    </service:presents>
+    <service:describedBy>
+      <process:CompositeProcess rdf:about="http://www.example.com/process.owl#CompositeProcess_1"/>
+    </service:describedBy>
+    <service:supports>
+      <grounding:WsdlGrounding>
+        <service:supportedBy rdf:nodeID="A0"/>
+      </grounding:WsdlGrounding>
+    </service:supports>
+  </service:Service>
+  <process:CompositeProcess rdf:about="http://www.example.com/process.owl#CompositeProcess_1">
+    <process:composedOf>
+      <process:Sequence rdf:about="http://www.example.com/process.owl#Sequence_1">
+        <process:components>
+          <process:ControlConstructList>
+            <list:first>
+              <process:Perform rdf:about="http://www.example.com/process.owl#Perform-1"/>
+            </list:first>
+            <list:rest>
+              <process:ControlConstructList>
+                <list:first>
+                  <process:Perform rdf:about="http://www.example.com/process.owl#Perform-2"/>
+                </list:first>
+                <list:rest>
+                  <process:ControlConstructList>
+                    <list:first>
+                      <process:Perform rdf:about="http://www.example.com/process.owl#Perform-3"/>
+                    </list:first>
+                    <list:rest>
+                      <process:ControlConstructList>
+                        <list:first>
+                          <process:Perform rdf:about="http://www.example.com/process.owl#Perform-4"/>
+                        </list:first>
+                        <list:rest>
+                          <process:ControlConstructList>
+                            <list:first>
+                              <process:Perform rdf:about="http://www.example.com/process.owl#Perform-5"/>
+                            </list:first>
+                            <list:rest rdf:resource="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#nil"/>
+                          </process:ControlConstructList>
+                        </list:rest>
+                      </process:ControlConstructList>
+                    </list:rest>
+                  </process:ControlConstructList>
+                </list:rest>
+              </process:ControlConstructList>
+            </list:rest>
+          </process:ControlConstructList>
+        </process:components>
+      </process:Sequence>
+    </process:composedOf>
+    <service:describes rdf:nodeID="A0"/>
+  </process:CompositeProcess>
+</rdf:RDF>

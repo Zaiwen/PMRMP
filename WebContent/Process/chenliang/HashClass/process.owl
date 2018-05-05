@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:process="http://www.daml.org/services/owl-s/1.1/Process.owl#"
+    xmlns:service="http://www.daml.org/services/owl-s/1.1/Service.owl#"
+    xmlns:list="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#"
+    xmlns:j.0="http://www.ifi.unizh.ch/ddis/ont/owl-s/OWLSExtensions.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:profile="http://www.daml.org/services/owl-s/1.1/Profile.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:grounding="http://www.daml.org/services/owl-s/1.1/Grounding.owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:expression="http://www.daml.org/services/owl-s/1.1/generic/Expression.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <service:Service rdf:nodeID="A0">
+    <service:presents>
+      <profile:Profile>
+        <profile:hasInput>
+          <process:Input rdf:about="http://www.example.com/process.owl#str_1">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://www.w3.org/2000/01/rdf-schema#Resource</process:parameterType>
+          </process:Input>
+        </profile:hasInput>
+        <profile:hasInput>
+          <process:Input rdf:about="http://www.example.com/process.owl#hashType_2">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://127.0.0.1/ontology/Medical.owl#Number</process:parameterType>
+          </process:Input>
+        </profile:hasInput>
+        <profile:hasOutput>
+          <process:Output rdf:about="http://www.example.com/process.owl#checkHashReturn_1">
+            <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://127.0.0.1/ontology/travel.owl#FamilyDestination</process:parameterType>
+          </process:Output>
+        </profile:hasOutput>
+        <service:presentedBy rdf:nodeID="A0"/>
+      </profile:Profile>
+    </service:presents>
+    <service:describedBy>
+      <process:CompositeProcess rdf:about="http://www.example.com/process.owl#CompositeProcess_1"/>
+    </service:describedBy>
+    <service:supports>
+      <grounding:WsdlGrounding>
+        <grounding:hasAtomicProcessGrounding>
+          <grounding:WsdlAtomicProcessGrounding>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_1">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/WebServiceProject/wsdl/HashClass.wsdl#str</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#str">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.w3.org/2000/01/rdf-schema#Resource</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_2">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/WebServiceProject/wsdl/HashClass.wsdl#hashType</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#hashType">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://127.0.0.1/ontology/Medical.owl#Number</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlOutput>
+              <grounding:WsdlOutputMessageMap rdf:about="http://www.example.com/process.owl#OutputMessageMap_1">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/WebServiceProject/wsdl/HashClass.wsdl#hashStringReturn</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Output rdf:about="http://www.example.com/process.owl#hashStringReturn">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://127.0.0.1/ontology/Medical.owl#Country</process:parameterType>
+                  </process:Output>
+                </grounding:owlsParameter>
+              </grounding:WsdlOutputMessageMap>
+            </grounding:wsdlOutput>
+            <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://ws.apd.whu.cn#hashStringRequest</grounding:wsdlInputMessage>
+            <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://ws.apd.whu.cn#hashStringResponse</grounding:wsdlOutputMessage>
+            <grounding:wsdlOperation>
+              <grounding:WsdlOperationRef>
+                <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/WebServiceProject/wsdl/HashClass.wsdl#hashString</grounding:operation>
+                <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/WebServiceProject/wsdl/HashClass.wsdl#HashClass</grounding:portType>
+              </grounding:WsdlOperationRef>
+            </grounding:wsdlOperation>
+            <grounding:owlsProcess>
+              <process:AtomicProcess rdf:about="http://www.example.com/process.owl#hashString"/>
+            </grounding:owlsProcess>
+          </grounding:WsdlAtomicProcessGrounding>
+        </grounding:hasAtomicProcessGrounding>
+        <grounding:hasAtomicProcessGrounding>
+          <grounding:WsdlAtomicProcessGrounding>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_3">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/WebServiceProject/wsdl/HashClass.wsdl#originalString</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#originalString">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://127.0.0.1/ontology/Medical.owl#CommercialOrganisation</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_4">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/WebServiceProject/wsdl/HashClass.wsdl#hashType</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#hashType_1">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://127.0.0.1/ontology/travel.owl#Campground</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap_5">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/WebServiceProject/wsdl/HashClass.wsdl#hashString</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#hashString_1">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://127.0.0.1/ontology/Medical.owl#Organisation</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlOutput>
+              <grounding:WsdlOutputMessageMap rdf:about="http://www.example.com/process.owl#OutputMessageMap_2">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/WebServiceProject/wsdl/HashClass.wsdl#checkHashReturn</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Output rdf:about="http://www.example.com/process.owl#checkHashReturn">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://127.0.0.1/ontology/travel.owl#FamilyDestination</process:parameterType>
+                  </process:Output>
+                </grounding:owlsParameter>
+              </grounding:WsdlOutputMessageMap>
+            </grounding:wsdlOutput>
+            <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://ws.apd.whu.cn#checkHashRequest</grounding:wsdlInputMessage>
+            <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+            >http://ws.apd.whu.cn#checkHashResponse</grounding:wsdlOutputMessage>
+            <grounding:wsdlOperation>
+              <grounding:WsdlOperationRef>
+                <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/WebServiceProject/wsdl/HashClass.wsdl#checkHash</grounding:operation>
+                <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://localhost:8080/WebServiceProject/wsdl/HashClass.wsdl#HashClass</grounding:portType>
+              </grounding:WsdlOperationRef>
+            </grounding:wsdlOperation>
+            <grounding:owlsProcess>
+              <process:AtomicProcess rdf:about="http://www.example.com/process.owl#checkHash"/>
+            </grounding:owlsProcess>
+          </grounding:WsdlAtomicProcessGrounding>
+        </grounding:hasAtomicProcessGrounding>
+        <service:supportedBy rdf:nodeID="A0"/>
+      </grounding:WsdlGrounding>
+    </service:supports>
+  </service:Service>
+  <process:AtomicProcess rdf:about="http://www.example.com/process.owl#checkHash">
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#originalString"/>
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#hashType_1"/>
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#hashString_1"/>
+    <process:hasOutput rdf:resource="http://www.example.com/process.owl#checkHashReturn"/>
+    <j.0:hasPerform>
+      <process:Perform rdf:about="http://www.example.com/process.owl#Perform_2"/>
+    </j.0:hasPerform>
+  </process:AtomicProcess>
+  <process:AtomicProcess rdf:about="http://www.example.com/process.owl#hashString">
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#str"/>
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#hashType"/>
+    <process:hasOutput rdf:resource="http://www.example.com/process.owl#hashStringReturn"/>
+    <j.0:hasPerform>
+      <process:Perform rdf:about="http://www.example.com/process.owl#Perform_1"/>
+    </j.0:hasPerform>
+  </process:AtomicProcess>
+  <process:CompositeProcess rdf:about="http://www.example.com/process.owl#CompositeProcess_1">
+    <process:composedOf>
+      <process:Sequence rdf:about="http://www.example.com/process.owl#Sequence_1">
+        <process:components>
+          <process:ControlConstructList>
+            <list:first>
+              <process:Perform rdf:about="http://www.example.com/process.owl#Perform_1"/>
+            </list:first>
+            <list:rest>
+              <process:ControlConstructList>
+                <list:first>
+                  <process:Perform rdf:about="http://www.example.com/process.owl#Perform_2"/>
+                </list:first>
+                <list:rest>
+                  <process:ControlConstructList>
+                    <list:first>
+                      <process:Produce rdf:about="http://www.example.com/process.owl#Produce_1">
+                        <process:producedBinding>
+                          <process:OutputBinding>
+                            <process:toParam rdf:resource="http://www.example.com/process.owl#checkHashReturn_1"/>
+                            <process:valueSource>
+                              <process:ValueOf>
+                                <process:fromProcess>
+                                  <process:Perform rdf:about="http://www.example.com/process.owl#Perform_2"/>
+                                </process:fromProcess>
+                                <process:theVar rdf:resource="http://www.example.com/process.owl#checkHashReturn"/>
+                              </process:ValueOf>
+                            </process:valueSource>
+                          </process:OutputBinding>
+                        </process:producedBinding>
+                      </process:Produce>
+                    </list:first>
+                    <list:rest rdf:resource="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#nil"/>
+                  </process:ControlConstructList>
+                </list:rest>
+              </process:ControlConstructList>
+            </list:rest>
+          </process:ControlConstructList>
+        </process:components>
+      </process:Sequence>
+    </process:composedOf>
+    <service:describes rdf:nodeID="A0"/>
+  </process:CompositeProcess>
+  <process:Perform rdf:about="http://www.example.com/process.owl#Perform_2">
+    <process:process rdf:resource="http://www.example.com/process.owl#checkHash"/>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#originalString"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess rdf:resource="http://www.daml.org/services/owl-s/1.1/Process.owl#TheParentPerform"/>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#str_1"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#hashType_1"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess rdf:resource="http://www.daml.org/services/owl-s/1.1/Process.owl#TheParentPerform"/>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#hashType_2"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#hashString_1"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess>
+              <process:Perform rdf:about="http://www.example.com/process.owl#Perform_1"/>
+            </process:fromProcess>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#hashStringReturn"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+  </process:Perform>
+  <process:Perform rdf:about="http://www.example.com/process.owl#Perform_1">
+    <process:process rdf:resource="http://www.example.com/process.owl#hashString"/>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#str"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess rdf:resource="http://www.daml.org/services/owl-s/1.1/Process.owl#TheParentPerform"/>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#str_1"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+    <process:hasDataFrom>
+      <process:InputBinding>
+        <process:toParam rdf:resource="http://www.example.com/process.owl#hashType"/>
+        <process:valueSource>
+          <process:ValueOf>
+            <process:fromProcess rdf:resource="http://www.daml.org/services/owl-s/1.1/Process.owl#TheParentPerform"/>
+            <process:theVar rdf:resource="http://www.example.com/process.owl#hashType_2"/>
+          </process:ValueOf>
+        </process:valueSource>
+      </process:InputBinding>
+    </process:hasDataFrom>
+  </process:Perform>
+  <owl:Class rdf:about="http://127.0.0.1/ontology/travel.owl#FamilyDestination"/>
+  <owl:Class rdf:about="http://127.0.0.1/ontology/Medical.owl#Organisation"/>
+  <owl:Class rdf:about="http://127.0.0.1/ontology/Medical.owl#Country"/>
+  <owl:Class rdf:about="http://127.0.0.1/ontology/travel.owl#Campground"/>
+  <owl:Class rdf:about="http://127.0.0.1/ontology/Medical.owl#CommercialOrganisation"/>
+  <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  <owl:Class rdf:about="http://127.0.0.1/ontology/Medical.owl#Number"/>
+</rdf:RDF>

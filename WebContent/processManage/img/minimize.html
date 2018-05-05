@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html>
+	<body>
+		<canvas id='minimize' width=20 height=20></canvas>
+		<canvas id='minimize-hover' width=20 height=20></canvas>
+		<canvas id='minimize-active' width=20 height=20></canvas>
+		<script>
+			// minimize	
+			c=document.getElementById('minimize');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(137,190,229)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(5,10);
+			c.lineTo(15,10);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+			// minimize-Hover
+			c=document.getElementById('minimize-hover');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(161,204,235)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(5,10);
+			c.lineTo(15,10);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+			// minimize-Active
+			c=document.getElementById('minimize-active');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(184,216,240)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(5,10);
+			c.lineTo(15,10);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+		</script>
+	</body>
+</html>

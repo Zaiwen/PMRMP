@@ -1,0 +1,81 @@
+#edit-window>.head{
+	position:relative;
+	z-index:1;
+}
+
+#edit-window>.head>.undo,#edit-window>.head>.redo{
+	background-position:3px 3px;
+	background-repeat:no-repeat;
+	float:left;
+	height:21px;
+	margin:1px;
+	width:21px;
+}
+
+#edit-window>.head>.undo:hover,#edit-window>.head>.redo:hover{
+	background-color:rgb(178,199,237);
+}
+
+#edit-window>.head>.undo{
+	background-image:url('../img/undo.png')
+}
+
+#edit-window>.head>.redo{
+	background-image:url('../img/redo.png')
+}
+
+#edit-window>.head>.title{
+	background-color:rgb(207,209,216);
+	border-left:1px solid rgb(182,185,193);
+	cursor:default;
+	float:left;
+	position:relative;
+	width:150px;
+}
+
+#edit-window>.head>.title.selected{
+	background-color:rgb(236,237,239);
+	border-bottom:1px solid rgb(236,237,239);
+	z-index:2;
+}
+
+#edit-window>.head>.title>.text{
+	float:left;
+	line-height:23px;
+}
+
+#edit-window>.head>.title>.close{
+	font-size:16px;
+	float:right;
+	line-height:23px;
+}
+
+#edit-window>.head>.title>.close:hover{
+	color:rgb(80,136,239);
+}
+
+#edit-window>.head>.split{
+	border-right:1px solid rgb(182,185,193);
+	float:left;
+	height:23px;
+}
+
+
+#edit-window>.head>.add,#edit-window>.head>.slide-left,#edit-window>.head>.slide-right{
+	cursor:default;
+	float:left;
+	font-size:15px;
+	line-height:23px;
+	text-align:center;
+	width:23px;
+}
+
+#edit-window>.head>.add:hover{
+	background-color0:rgb(178,199,237);
+	color:rgb(76,133,237);
+}
+
+#edit-window>.body{
+	background-color:#fff;
+	padding:20px;
+}

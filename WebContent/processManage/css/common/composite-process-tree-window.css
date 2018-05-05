@@ -1,0 +1,76 @@
+#composite-process-tree-window {
+	left: 0px;
+	width: 280px;
+}
+
+
+#composite-process-tree-window>.head>.title {
+	display:none;
+}
+
+#composite-process-tree-window>.head>.item {
+	background-repeat: no-repeat;
+	background-position: center center;
+	border: 1px solid transparent;
+	cursor: pointer;
+	display:none;
+	float: left;
+	height: 20px;
+	margin: 5px 3px;
+	padding: 0px;
+	position: relative;
+	width: 20px;
+}
+
+#composite-process-tree-window>.head>.item:hover {
+	border1: 1px solid #000000;
+}
+
+#composite-process-tree-window>.head>.item:active {
+	left: 1px;
+	top: 1px;
+}
+
+#composite-process-tree-window>.head>.perform {
+	background-image: url("../../img/perform.png");
+}
+
+#composite-process-tree-window>.head>.sequence {
+	background-image: url("../../img/sequence.png");
+}
+
+#composite-process-tree-window>.head>.split-join {
+	background-image: url("../../img/split-join.png");
+}
+
+#composite-process-tree-window>.head>.any-order {
+	background-image: url("../../img/any-order.png");
+}
+
+#composite-process-tree-window>.head>.choice {
+	background-image: url("../../img/choice.png");
+}
+
+#composite-process-tree-window>.head>.if-then-else {
+	background-image: url("../../img/if-then-else.png");
+}
+
+#composite-process-tree-window>.head>.produce {
+	background-image: url("../../img/produce.png");
+}
+
+#composite-process-tree-window>.head>.repeat-while {
+	background-image: url("../../img/repeat-while.png");
+}
+
+#composite-process-tree-window>.head>.repeat-until {
+	background-image: url("../../img/repeat-until.png");
+}
+
+#composite-process-tree-window>.head>.delete {
+	background-image: url("../../img/delete.png");
+}
+
+#composite-process-tree-window>.body {
+	padding: 8px 2px;
+}

@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html>
+	<body style="background:rgb(33,115,70)">
+		<canvas id='language' width=24 height=24></canvas>
+		<script>
+			// view1
+			c=document.getElementById('language');
+			c=c.getContext('2d');
+			
+			c.strokeStyle="#fff";
+			c.beginPath();
+			c.arc(12,12,10,0,Math.PI*2,true);
+			c.closePath();
+			c.lineWidth=2;
+			c.stroke();
+			c.beginPath();
+			c.moveTo(3,9)
+			c.lineTo(21,9);
+			c.moveTo(3,15);
+			c.lineTo(21,15);
+			c.closePath();
+			c.stroke();
+			c.beginPath();
+			c.moveTo(11,3);
+			c.arcTo(0,12,11,21,13);
+			c.moveTo(11,3);
+			c.closePath();
+			c.stroke();
+			c.beginPath();
+			c.moveTo(13,3);
+			c.arcTo(24,12,13,21,13);
+			c.moveTo(13,3);
+			c.closePath();
+			c.stroke();
+			
+		</script>
+	</body>
+</html>

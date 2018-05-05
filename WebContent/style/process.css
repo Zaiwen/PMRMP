@@ -1,0 +1,213 @@
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	width:900px;
+	margin:0 auto;
+	font-size:12px;
+	background:white;
+	position:relative;
+}
+ul {
+	list-style-type:none;
+}
+#header {
+	width:900px;
+	height:79px;
+	background:url(../images/logo.gif) no-repeat;
+	display:block;
+}
+#top{
+	width:898px;
+	height:51px;
+	background:#CAFF70;
+	border:1px solid #BF3EFF;
+	border-radius:5px;
+}
+#top ul {
+	height:51px;
+	line-height:51px;
+	margin-left:auto;
+	position:relative;
+	z-index:100;
+}
+#top ul li.noneline{
+	font-size:16px;
+	text-align:center;
+	height:51px;
+	width:125px;
+	background:url(../images/linkr.gif) no-repeat right center;
+	float:left;
+	text-decoration:none;
+}
+#top ul li.noneline:hover{
+	font-size:18px;
+	text-decoration:none;
+}
+#top ul li.end {
+	width:125px;
+	background:none;
+	text-align:center;
+	height:51px;
+	float:left;
+}
+#top ul li a {
+	font-size:16px;
+	display:block;
+	width:125px;
+	height:51px;
+	text-decoration:none;
+}
+#top ul li a:hover {
+	font-size:18px;
+	text-decoration:none;
+}
+#top ul li.end a {
+	width:125px;
+}
+#top ul li ul.login{
+	display:none;
+	margin:0;
+	padding:0;
+	background-color:#CAFF70;
+	width:125px;
+	border-top:1px solid #FC0;
+	border-bottom:1px solid #FC0;
+}
+#top ul li ul.user{
+	display:none;
+	margin:0;
+	padding:0;
+	background-color:#CAFF70;
+	width:125px;
+	border-top:1px solid #FC0;
+	border-bottom:1px solid #FC0;
+}
+#top ul li ul.tools{
+	display:none;
+	margin:0;
+	padding:0;
+	background-color:#CAFF70;
+	width:125px;
+	border-top:1px solid #FC0;
+	border-bottom:1px solid #FC0;
+}
+#top ul li ul li{
+	float:none;
+	background-color:#CAFF70;
+	border:0px 1px;
+}
+#top ul li ul li a{     
+	margin: 0;    
+	border: none;    
+	cursor:pointer;
+	border-bottom: 1px solid #FC0;
+}
+#top ul li:hover ul, #nav li.over ul{
+  display:block;
+}
+
+
+#sidebar {
+	width:179px;
+	height:1100px;
+	float:left;
+	border:1px solid #8B8970;
+	background:#EEE8AA;
+}
+#sidebar #sidetop {
+	width:180px;
+	height:1100px;
+	
+}
+#sidebar #sidetop h1 {
+	height:25px;
+	line-height:20px;
+	text-indent:10px;
+	font-family:Tahoma;
+	font-size:15px;
+	background:#CDCD00;
+}
+#sidebar #sidetop ul#conus {
+	line-height:150%;
+	text-indent:20px;
+	margin-top:15px;
+	margin-bottom:15px;
+	
+}
+#sidebar #sidetop ul#conus>li:hover{
+	background:#ADFF2F;
+}
+#sidebar #sidetop ul#links {
+	line-height:180%;
+	margin-top:15px;
+	margin-bottom:20px;
+	margin-left:15px;
+	width:150px;
+}
+#sidebar #sidetop ul#links li {
+	background:url(../images/side.gif) no-repeat left center;
+	padding-left:10px;
+	border-bottom:1px dotted #666;
+}
+#sidebar #sidetop ul#links li a {
+	text-decoration:none;
+}
+#sidebar #sidetop ul#links li a:hover {
+	color:#EE00EE;
+	text-decoration:underline;
+	padding-left:1px;
+}
+
+
+#content {
+	width:719px;
+	height:600px;
+	border:1px solid blue;
+	float:right;
+}
+
+#content form * {
+	display:block;
+	margin:10px 0;
+}
+#content form table tr td input.text {
+	width:160px;
+	height:23px;
+	border:1px solid #999;
+	background:#fff;
+	color:#999;
+}
+
+#content form table tr td input.submit {
+	height:30px;
+	width:65px;
+}
+#content  form table tr td input.reset {
+	height:30px;
+	width:65px;
+}
+#footer {
+	width:898px;
+	height:40px;
+	border:1px solid blue;
+	clear:both;
+}
+#footer ul {
+	height:40px;
+	line-height:40px;
+	float:right;
+	padding-right:20px;
+}
+#footer ul li {
+	display:inline;
+}
+#footer strong {
+	font-weight:normal;
+	height:40px;
+	line-height:40px;
+	float:left;
+	display:block;
+	padding-left:20px;
+}

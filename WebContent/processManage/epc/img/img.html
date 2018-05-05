@@ -1,0 +1,241 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>images</title>
+		<style type='text/css'>
+			body{
+				margin:0px;
+				background:#FF9900;
+			}
+			canvas{
+			border:1px dashed #FFFFFF;
+				display:inline-block;
+				margin:30px;
+			}
+		</style>
+		<script type='text/javascript'>
+			window.onload=function (){
+				var shape_event=document.getElementById("shape-event").getContext("2d");
+				shape_event.beginPath();
+				shape_event.moveTo(6,1);
+				shape_event.lineTo(34,1);
+				shape_event.lineTo(39,12);
+				shape_event.lineTo(34,23);
+				shape_event.lineTo(6,23);
+				shape_event.lineTo(1,12);
+				shape_event.closePath();
+				shape_event.fillStyle="#FF0000";
+				shape_event.fill();
+				shape_event.lineWidth=1;
+				shape_event.strokeStyle="#000000";
+				shape_event.stroke();
+				shape_event.imageSmoothingEnabled=false;
+				console.log(shape_event);
+				var shape_function =document.getElementById("shape-function").getContext("2d");
+				shape_function.beginPath();
+				shape_function.moveTo(7,1);
+				shape_function.lineTo(32,1);
+				shape_function.arc(31,9,8,Math.PI*3/2,Math.PI*2,false);
+				shape_function.lineTo(39,15);
+				shape_function.arc(31,15,8,0,Math.PI/2,false);
+				shape_function.lineTo(8,23);
+				shape_function.arc(9,15,8,Math.PI/2,Math.PI,false);
+				shape_function.lineTo(1,7);
+				shape_function.arc(9,9,8,Math.PI,Math.PI*3/2,false);
+				shape_function.closePath();
+				shape_function.fillStyle="#66FF66";
+				shape_function.fill();
+				shape_function.strokeStyle="#000000";
+				shape_function.lineWidth=2;
+				shape_function.stroke();
+				var shape_and=document.getElementById("shape-and").getContext("2d");
+				shape_and.arc(12,12,11,0,Math.PI*2,true);
+				shape_and.fillStyle="#DDDDDD";
+				shape_and.fill();
+				shape_and.lineWidth=2;
+				shape_and.strokeStyle="#000000";
+				shape_and.stroke();
+				shape_and.beginPath();
+				shape_and.moveTo(8,18);
+				shape_and.lineTo(12,6);
+				shape_and.lineTo(16,18);
+				shape_and.moveTo(8,18);
+				shape_and.closePath();
+				shape_and.stroke();
+				var shape_or=document.getElementById("shape-or").getContext("2d");
+				shape_or.arc(12,12,11,0,Math.PI*2,true);
+				shape_or.fillStyle="#DDDDDD";
+				shape_or.fill();
+				shape_or.lineWidth=2;
+				shape_or.strokeStyle="#000000";
+				shape_or.stroke();
+				shape_or.beginPath();
+				shape_or.moveTo(8,6);
+				shape_or.lineTo(12,18);
+				shape_or.lineTo(16,6);
+				shape_or.moveTo(8,18);
+				shape_or.closePath();
+				shape_or.stroke();		
+				var shape_xor=document.getElementById("shape-xor").getContext("2d");
+				shape_xor.arc(12,12,11,0,Math.PI*2,true);
+				shape_xor.fillStyle="#DDDDDD";
+				shape_xor.fill();
+				shape_xor.lineWidth=2;
+				shape_xor.strokeStyle="#000000";
+				shape_xor.stroke();
+				shape_xor.beginPath();
+				shape_xor.moveTo(8,8);
+				shape_xor.lineTo(16,16);
+				shape_xor.moveTo(8,16);
+				shape_xor.lineTo(16,8);
+				shape_xor.closePath();
+				shape_xor.stroke();
+				var canvas_bg=document.getElementById('canvas-bg').getContext('2d');
+				canvas_bg.rect(0,0,11,11);
+				canvas_bg.strokeStyle="#DDDDDD";
+				canvas_bg.lineWidth=1;
+				canvas_bg.stroke();
+				var icon_shape_event=document.getElementById('icon-shape-event').getContext('2d');
+				icon_shape_event.beginPath();
+				icon_shape_event.moveTo(4,2);
+				icon_shape_event.lineTo(12,2);
+				icon_shape_event.lineTo(15,8);
+				icon_shape_event.lineTo(12,14);
+				icon_shape_event.lineTo(4,14);
+				icon_shape_event.lineTo(1,8);
+				icon_shape_event.closePath();
+				icon_shape_event.fillStyle="#FF3333";
+				icon_shape_event.fill();
+				icon_shape_event.lineWidth=2;
+				icon_shape_event.strokeStyle="#000000";
+				icon_shape_event.stroke();
+				/**
+				 * ����Բ�Ǿ���,��arc��LineTo����
+				 */
+				function roundRectanglePath(context,rect,radius)
+				{
+					context.beginPath();
+					context.moveTo( rect.getX()+radius,rect.getY() );
+					context.lineTo( rect.getRight()-radius,rect.getY() );
+					context.arc( rect.getRight()-radius,rect.getY()+radius, radius, 3*Math.PI/2,2*Math.PI, false);
+					context.lineTo( rect.getRight(),rect.getBottom()-radius);
+					context.arc( rect.getRight()-radius,rect.getBottom()-radius, radius, 0, Math.PI/2, false);
+					context.lineTo( rect.getX()+radius,rect.getBottom() );
+					context.arc( rect.getX()+radius,rect.getBottom()-radius, radius, Math.PI/2, Math.PI, false);
+					context.lineTo( rect.getX(),rect.getY()+radius);
+					context.arc( rect.getX()+radius,rect.getY()+radius, radius,Math.PI, 3*Math.PI/2, false);
+					context.closePath();
+				}
+				function Rect(x,y,width,height)
+				{
+					this.x = x;
+					this.y = y;
+					this.width = width;
+					this.height= height;
+				}
+				Rect.prototype.getX = function()
+				{
+					return this.x;
+				};
+				Rect.prototype.getY = function()
+				{
+					return this.y;
+				};
+				Rect.prototype.getWidth = function()
+				{
+					return this.width;
+				};
+				Rect.prototype.getHeight = function()
+				{
+					return this.height;
+				};
+				Rect.prototype.getLeft = function()
+				{
+					return this.x;
+				};
+				Rect.prototype.getTop = function()
+				{
+					return this.y;
+				};
+				Rect.prototype.getRight = function()
+				{
+					return (this.x + this.width);
+				};
+				Rect.prototype.getBottom = function()
+				{
+					return (this.y + this.height);
+				};
+				var icon_shape_function=document.getElementById('icon-shape-function').getContext('2d');
+				roundRectanglePath(icon_shape_function,new Rect(1,2,14,12),4);
+				icon_shape_function.fillStyle="#33FF33";
+				icon_shape_function.fill();
+				icon_shape_function.strokeStyle="#000000";
+				icon_shape_function.lineWidth=2;
+				icon_shape_function.stroke();
+
+				//data
+					var data=document.getElementById("data");
+		var d=data.getContext("2d");
+		d.strokeStyle="000000";
+		d.lineWidth=10;
+		d.fillStyle="#AAEEFF";
+		d.rect(5,5,590,350);
+		d.fill();
+		d.stroke();
+		//icon
+		data=document.getElementById("icon");
+		d=data.getContext("2d");
+		d.strokeStyle="#000000";
+		d.lineWidth=2;
+		d.fillStyle="#AAEEFF";
+		d.rect(1,3,14,10);
+		d.fill();
+		d.stroke();
+
+		//unit
+		function BezierEllipse2(ctx, x, y, a, b) 
+	{ 
+	var k = .5522848, 
+	ox = a * k, // 水平控制点偏移量 
+	oy = b * k; // 垂直控制点偏移量 
+	ctx.beginPath(); 
+	//从椭圆的左端点开始顺时针绘制四条三次贝塞尔曲线 
+	ctx.moveTo(x - a, y); 
+	ctx.bezierCurveTo(x - a, y - oy, x - ox, y - b, x, y - b); 
+	ctx.bezierCurveTo(x + ox, y - b, x + a, y - oy, x + a, y); 
+	ctx.bezierCurveTo(x + a, y + oy, x + ox, y + b, x, y + b); 
+	ctx.bezierCurveTo(x - ox, y + b, x - a, y + oy, x - a, y); 
+	ctx.closePath(); 
+	ctx.stroke(); 
+	}; 
+		var data=document.getElementById("data");
+		var d=data.getContext("2d");
+		d.strokeStyle="#0000";
+		d.lineWidth=10;
+		d.fillStyle="#FFFF66";
+		BezierEllipse2(d,300,180,295,175);
+		d.rect(60,85,0,190);
+		d.fill();
+		d.stroke();
+		//icon
+		data=document.getElementById("icon");
+		d=data.getContext("2d");
+		d.strokeStyle="#0000";
+		d.lineWidth=2;
+		d.fillStyle="#FFFF66";
+		BezierEllipse2(d,8,8,7,5);
+		d.fill();
+		d.stroke();
+			};
+		</script>
+	</head>
+	<body>
+		<canvas id='shape-event' width="40" height="24"></canvas>
+		<canvas id='shape-function' width="40" height="24"></canvas>
+		<canvas id='shape-and' width="24" height="24"></canvas>
+		<canvas id='shape-or' width="24" height="24"></canvas>
+		<canvas id='shape-xor' width="24" height="24"></canvas>
+		<canvas id="shape-data" width="600" height="360"></canvas>
+		<canvas id="shape-unit" width="600" height="360" ></canvas>
+	</body>
+</html>

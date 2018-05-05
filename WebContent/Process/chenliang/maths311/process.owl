@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:process="http://www.daml.org/services/owl-s/1.1/Process.owl#"
+    xmlns:service="http://www.daml.org/services/owl-s/1.1/Service.owl#"
+    xmlns:list="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#"
+    xmlns:j.0="http://www.ifi.unizh.ch/ddis/ont/owl-s/OWLSExtensions.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:profile="http://www.daml.org/services/owl-s/1.1/Profile.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:grounding="http://www.daml.org/services/owl-s/1.1/Grounding.owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:expression="http://www.daml.org/services/owl-s/1.1/generic/Expression.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <service:Service rdf:nodeID="A0">
+    <service:presents>
+      <profile:Profile>
+        <service:presentedBy rdf:nodeID="A0"/>
+      </profile:Profile>
+    </service:presents>
+    <service:describedBy>
+      <process:CompositeProcess rdf:about="http://www.example.com/process.owl#CompositeProcess_1"/>
+    </service:describedBy>
+    <service:supports>
+      <grounding:WsdlGrounding>
+        <grounding:hasAtomicProcessGrounding>
+          <grounding:WsdlAtomicProcessGrounding>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap-1">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://hp.gov.in/csc/api/BlogImporter.asmx?wsdl#import</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#import">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://dotnetblogengine.net/#ImportPost</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap-2">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://hp.gov.in/csc/api/BlogImporter.asmx?wsdl#previousUrl</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#previousUrl">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlInput>
+              <grounding:WsdlInputMessageMap rdf:about="http://www.example.com/process.owl#InputMessageMap-3">
+                <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://hp.gov.in/csc/api/BlogImporter.asmx?wsdl#removeDuplicate</grounding:wsdlMessagePart>
+                <grounding:owlsParameter>
+                  <process:Input rdf:about="http://www.example.com/process.owl#removeDuplicate">
+                    <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                    >http://www.w3.org/2001/XMLSchema#boolean</process:parameterType>
+                  </process:Input>
+                </grounding:owlsParameter>
+              </grounding:WsdlInputMessageMap>
+            </grounding:wsdlInput>
+            <grounding:wsdlOutput rdf:resource="http://www.example.com/process.owl#InputMessageMap-1"/>
+            <grounding:wsdlOutput rdf:resource="http://www.example.com/process.owl#InputMessageMap-2"/>
+            <grounding:wsdlOutput rdf:resource="http://www.example.com/process.owl#InputMessageMap-3"/>
+            <grounding:wsdlOperation>
+              <grounding:WsdlOperationRef>
+                <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+                >http://hp.gov.in/csc/api/BlogImporter.asmx?wsdl#AddPost</grounding:operation>
+              </grounding:WsdlOperationRef>
+            </grounding:wsdlOperation>
+            <grounding:owlsProcess>
+              <process:AtomicProcess rdf:about="http://www.example.com/process.owl#AddPost"/>
+            </grounding:owlsProcess>
+          </grounding:WsdlAtomicProcessGrounding>
+        </grounding:hasAtomicProcessGrounding>
+        <service:supportedBy rdf:nodeID="A0"/>
+      </grounding:WsdlGrounding>
+    </service:supports>
+  </service:Service>
+  <process:AtomicProcess rdf:about="http://www.example.com/process.owl#AddPost">
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#import"/>
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#previousUrl"/>
+    <process:hasInput rdf:resource="http://www.example.com/process.owl#removeDuplicate"/>
+    <process:hasOutput>
+      <process:Output rdf:about="http://www.example.com/process.owl#AddPostResult">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+      </process:Output>
+    </process:hasOutput>
+    <j.0:hasPerform>
+      <process:Perform rdf:about="http://www.example.com/process.owl#Perform-1"/>
+    </j.0:hasPerform>
+  </process:AtomicProcess>
+  <process:CompositeProcess rdf:about="http://www.example.com/process.owl#CompositeProcess_1">
+    <process:composedOf>
+      <process:Sequence rdf:about="http://www.example.com/process.owl#Sequence_1">
+        <process:components>
+          <process:ControlConstructList>
+            <list:first>
+              <process:Perform rdf:about="http://www.example.com/process.owl#Perform-1"/>
+            </list:first>
+            <list:rest>
+              <process:ControlConstructList>
+                <list:first>
+                  <process:Perform rdf:about="http://www.example.com/process.owl#Perform-2"/>
+                </list:first>
+                <list:rest rdf:resource="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#nil"/>
+              </process:ControlConstructList>
+            </list:rest>
+          </process:ControlConstructList>
+        </process:components>
+      </process:Sequence>
+    </process:composedOf>
+    <service:describes rdf:nodeID="A0"/>
+  </process:CompositeProcess>
+  <process:Perform rdf:about="http://www.example.com/process.owl#Perform-1">
+    <process:process rdf:resource="http://www.example.com/process.owl#AddPost"/>
+  </process:Perform>
+  <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+  <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#boolean"/>
+  <owl:Class rdf:about="http://dotnetblogengine.net/#ImportPost"/>
+</rdf:RDF>

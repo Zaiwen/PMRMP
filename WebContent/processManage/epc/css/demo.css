@@ -1,0 +1,204 @@
+*{
+	-webkit-user-select:none;
+	font-family:"Microsoft YaHei";
+	margin:0;
+}
+
+body{
+	background-color:#06c;
+}
+
+#loading{
+	display:none;
+}
+
+#manage{
+	bottom:0;
+	display:none1;
+	left:0;
+	position:absolute;
+	right:0;
+	top:0;
+}
+
+#manage>.header>.name{
+	bottom:0;
+	color:#fff;
+	font-size:20px;
+	left:240px;
+	line-height:64px;
+	position:absolute;
+	right:360px;
+	text-align:center;
+	top:0;
+}
+
+
+#manage>.content{
+	background-color:#fff;
+	bottom:0;
+	left:0;
+	position:absolute;
+	right:0;
+	top:64px;
+}
+
+
+#editor{
+	bottom:0;
+	display:none;
+	left:0;
+	position:absolute;
+	right:0;
+	top:0;
+}
+
+.header{
+	height:64px;
+	left:0;
+	position:absolute;    
+	right:0;
+	top:0;
+}
+
+.header>.icon{
+	background-color:rgba(255,255,255,0.2);
+	border:0px solid #fff;
+	border-radius:0px;
+	display:block;
+	height:40px;
+	margin:10px;
+	padding:2px;
+	width:40px;
+}
+
+.header>.icon.left{
+	float:left;
+}
+
+.header>.icon.right{
+	float:right;
+}
+
+.icon:hover{
+	background-color:rgba(255,255,255,0.3);
+}
+
+.icon:active{
+	background-color:rgba(0,0,0,0.2);
+}
+
+#editor>.header>.name{
+	height:36px;
+	left:256px;
+	margin:14px 0px;
+	position:absolute;
+	right:320px;
+}
+
+#editor>.header>.name>input{
+	background-color:rgba(255,255,255,0.2);
+	border:none;
+	border-radius:0px;
+	color:#fff;
+	font-size:20px;
+	height:100%;
+	margin:0;
+	padding:0;
+	line-height:36px;
+	text-indent:20px;
+	width:100%;
+}
+
+#editor>.header>.name>input:hover{
+	background-color:rgba(255,255,255,0.3);
+}
+
+#editor>.header>.name>input:focus{
+	background-color:rgba(255,255,255,0.6);
+	outline:none;
+}
+
+.header>.list{
+	background-color:#fff;
+	border:2px solid #000;
+	border-radius:0px;
+	display:none;
+	padding:10px 0px;
+	position:absolute;
+	top:72px;
+	width:120px;
+	z-index:1000;
+}
+
+.header>.list>.item{
+	cursor:default;
+	font-size:15px;
+	font-weight:bold;
+	height:32px;
+	line-height:32px;
+	padding:0px 20px;
+}
+
+.header>.list>.item:hover{
+	background-color:#ddd;
+	
+}
+
+.header>.list>.split{
+	border-top:2px solid #333;
+	margin:4px;
+}
+
+.window{
+	border:2px solid #000;
+	display:none;
+	position:absolute;
+	z-index:10000;
+}
+
+
+
+
+.header>.list.download{
+	left:30px;
+}
+
+.header>.list.view{
+	right:162px;
+}
+
+.header>.list.more{
+	right:8px;
+}
+
+#editor>.left{
+	background-color:rgba(255,255,255,1);
+	bottom:0;
+	left:0;
+	overflow:auto;
+	position:absolute;
+	top:64px;
+	width:240px;
+}
+
+#editor>.left>.item{
+	cursor:default;
+	display:block;
+	float:left;
+	margin:24px 20px;
+	padding:0px;	
+}
+
+
+
+#editor>.right{
+	background-color:#fff;
+	background-image:url("../img/bg.png");
+	bottom:0;
+	left:240px;
+	overflow:auto;
+	position:absolute;
+	right:0;
+	top:64px;
+}

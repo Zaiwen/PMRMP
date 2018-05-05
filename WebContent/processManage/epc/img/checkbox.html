@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html>
+	<style type="text/css">
+		canvas{
+			border: 1px dashed #09F;
+		}
+	</style>
+	<body>
+		<canvas id='checkbox' width=13 height=13></canvas>
+		<canvas id='checkbox-checked' width=13 height=13></canvas>
+		<script>
+			// checkbox	
+			c=document.getElementById('checkbox');
+			c=c.getContext('2d');
+			c.rect(0,0,1,12);
+			c.rect(0,0,12,1);
+			c.rect(12,0,1,13);
+			c.rect(0,12,13,1);
+			c.fillStyle="#777777";
+			c.fill();
+			// checkbox-checked
+			c=document.getElementById('checkbox-checked');
+			c=c.getContext('2d');
+			c.rect(0,0,1,12);
+			c.rect(0,0,12,1);
+			c.rect(12,0,1,13);
+			c.rect(0,12,13,1);
+			c.fillStyle="#777777";
+			c.fill();
+			c.beginPath();
+			c.moveTo(3,6);
+			c.lineTo(6,9);
+			c.lineTo(10,3);
+			c.moveTo(3,4);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle="#000000";
+			c.stroke();
+		</script>
+	</body>
+</html>

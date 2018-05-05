@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="GBK"?>
+<rdf:RDF
+    xmlns:process="http://www.daml.org/services/owl-s/1.1/Process.owl#"
+    xmlns:service="http://www.daml.org/services/owl-s/1.1/Service.owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:profile="http://www.daml.org/services/owl-s/1.1/Profile.owl#"
+    xmlns:grounding="http://www.daml.org/services/owl-s/1.1/Grounding.owl#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:expression="http://www.daml.org/services/owl-s/1.1/generic/Expression.owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:list="http://www.daml.org/services/owl-s/1.1/generic/ObjectList.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://www.example.org/owls/checkHash.owl#"
+  xml:base="http://www.example.org/owls/checkHash.owl#">
+  <service:Service rdf:ID="checkHashService">
+    <service:presents>
+      <profile:Profile rdf:ID="checkHashProfile"/>
+    </service:presents>
+    <service:describedBy>
+      <process:AtomicProcess rdf:ID="checkHashProcess"/>
+    </service:describedBy>
+    <service:supports>
+      <grounding:WsdlGrounding rdf:ID="checkHashGrounding"/>
+    </service:supports>
+  </service:Service>
+  <profile:Profile rdf:about="#checkHashProfile">
+    <profile:hasInput>
+      <process:Input rdf:ID="hashType">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>hashType</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
+    <profile:hasInput>
+      <process:Input rdf:ID="hashString">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>hashString</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
+    <profile:serviceName>checkHash</profile:serviceName>
+    <profile:hasOutput>
+      <process:Output rdf:ID="checkHashReturn">
+        <rdfs:label>checkHashReturn</rdfs:label>
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#boolean</process:parameterType>
+      </process:Output>
+    </profile:hasOutput>
+    <profile:textDescription>Auto generated from http://localhost:8080/WebServiceProject/services/HashClass?wsdl</profile:textDescription>
+    <profile:hasInput>
+      <process:Input rdf:ID="originalString">
+        <process:parameterType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://www.w3.org/2001/XMLSchema#string</process:parameterType>
+        <rdfs:label>originalString</rdfs:label>
+      </process:Input>
+    </profile:hasInput>
+    <service:presentedBy rdf:resource="#checkHashService"/>
+  </profile:Profile>
+  <process:AtomicProcess rdf:about="#checkHashProcess">
+    <rdfs:label>checkHashProcess</rdfs:label>
+    <process:hasInput rdf:resource="#hashType"/>
+    <process:hasOutput rdf:resource="#checkHashReturn"/>
+    <process:hasInput rdf:resource="#originalString"/>
+    <service:describes rdf:resource="#checkHashService"/>
+    <process:hasInput rdf:resource="#hashString"/>
+  </process:AtomicProcess>
+  <grounding:WsdlGrounding rdf:about="#checkHashGrounding">
+    <grounding:hasAtomicProcessGrounding>
+      <grounding:WsdlAtomicProcessGrounding rdf:ID="checkHashAtomicProcessGrounding"/>
+    </grounding:hasAtomicProcessGrounding>
+    <service:supportedBy rdf:resource="#checkHashService"/>
+  </grounding:WsdlGrounding>
+  <grounding:WsdlAtomicProcessGrounding rdf:about="#checkHashAtomicProcessGrounding">
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
+        <grounding:owlsParameter rdf:resource="#hashString"/>
+        <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://localhost:8080/WebServiceProject/services/HashClass?wsdl#hashString</grounding:wsdlMessagePart>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
+        <grounding:owlsParameter rdf:resource="#hashType"/>
+        <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://localhost:8080/WebServiceProject/services/HashClass?wsdl#hashType</grounding:wsdlMessagePart>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:wsdlInputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://ws.apd.whu.cn#checkHashRequest</grounding:wsdlInputMessage>
+    <grounding:wsdlOutput>
+      <grounding:WsdlOutputMessageMap>
+        <grounding:owlsParameter rdf:resource="#checkHashReturn"/>
+        <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://localhost:8080/WebServiceProject/services/HashClass?wsdl#checkHashReturn</grounding:wsdlMessagePart>
+      </grounding:WsdlOutputMessageMap>
+    </grounding:wsdlOutput>
+    <grounding:wsdlDocument rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://localhost:8080/WebServiceProject/services/HashClass?wsdl</grounding:wsdlDocument>
+    <grounding:wsdlOperation>
+      <grounding:WsdlOperationRef>
+        <grounding:portType rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://localhost:8080/WebServiceProject/services/HashClass?wsdl#HashClass</grounding:portType>
+        <grounding:operation rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://localhost:8080/WebServiceProject/services/HashClass?wsdl#checkHash</grounding:operation>
+      </grounding:WsdlOperationRef>
+    </grounding:wsdlOperation>
+    <grounding:wsdlOutputMessage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+    >http://ws.apd.whu.cn#checkHashResponse</grounding:wsdlOutputMessage>
+    <grounding:wsdlInput>
+      <grounding:WsdlInputMessageMap>
+        <grounding:owlsParameter rdf:resource="#originalString"/>
+        <grounding:wsdlMessagePart rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://localhost:8080/WebServiceProject/services/HashClass?wsdl#originalString</grounding:wsdlMessagePart>
+      </grounding:WsdlInputMessageMap>
+    </grounding:wsdlInput>
+    <grounding:owlsProcess rdf:resource="#checkHashProcess"/>
+  </grounding:WsdlAtomicProcessGrounding>
+</rdf:RDF>

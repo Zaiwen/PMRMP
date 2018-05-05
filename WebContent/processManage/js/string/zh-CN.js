@@ -1,0 +1,9 @@
+string = {} ;
+string['add'] = '添加';
+string['input'] = '输入';
+string["name"] = "名称";
+string['output'] = '输出';
+string['precondition'] = '前置条件';
+string['rename'] = '重命名';
+string['retype'] = '标注';
+string['type'] = "类型";

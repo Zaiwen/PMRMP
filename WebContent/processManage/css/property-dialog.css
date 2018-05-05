@@ -1,0 +1,87 @@
+#property-dialog {
+	display: none;
+	font-size: 13px;
+}
+
+#property-dialog .label {
+	display: inline-block;
+	font-weight: bold;
+	line-height: 28px;
+	width: 48px;
+	font-weight: bold;
+}
+
+#property-dialog .value {
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+	color: #666666;
+	display: inline-block;
+	line-height: 28px;
+	margin: 0px 12px 0px 6px;
+	padding: 0px 8px;
+	width: 320px;
+}
+
+#property-dialog .name {
+	font-size: 14px;
+	margin: 20px;
+}
+
+#property-dialog .container {
+	width:100%;
+}
+
+
+#property-dialog .input {
+	margin: 20px;
+}
+
+#property-dialog .output {
+	margin: 20px;
+}
+
+#property-dialog .add {
+	border: none;
+	color: red;
+	cursor: pointer;
+	display:inline-block;
+	float: right;
+	line-height:28px;
+	text-decoration: underline;
+	text-align: center;
+	width: 32px;
+}
+
+#property-dialog .container table{
+	border-collapse:collapse;
+	width:100%;	
+}
+
+#property-dialog .container tr *{
+	text-indent:8px;
+}
+
+#property-dialog .container td{
+	border:1px solid #999999;
+	line-height:24px;
+	text-align:left;
+}
+
+#property-dialog .container th{
+	background-color:#4455FF;
+	border:1px solid #999999;
+	color:#FFFFFF;
+	line-height:24px;
+	text-align:left;
+}
+
+#property-dialog  .container table .edit, #property-dialog .container table .delete {
+	background-color:transparent;
+	border: none;
+	color: blue;
+	cursor: pointer;
+	font-size: 12px;
+	text-decoration: underline;
+	text-align: center;
+	width: 32px;
+}

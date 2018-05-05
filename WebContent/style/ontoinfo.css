@@ -1,0 +1,102 @@
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	width:900px;
+	margin:0 auto;
+	font-size:12px;
+	background:white;
+	position:relative;
+}
+#contentinfo {
+	width:719px;
+	height:480px;
+	text-align:center;
+	margin:10px auto;
+}
+#showdetails{
+	height:480px;
+	text-align:left;
+}
+a {
+	cursor: pointer;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+a:link,a:visited {
+	color: #0044DD;
+	text-decoration: none;
+}
+
+a:hover,a:active {
+	color: #FF5500;
+	text-decoration: underline;
+}
+.TreeMenu ul{
+	 /*子结点*/
+	font-size: 12px;
+	list-style-type: none;
+}
+.TreeMenu ul li { 
+    /* 结点 */
+	list-style-type: none;
+	font-size: 12px;
+}
+
+.linktype {
+	color: #0044DD;
+}
+
+.over {
+	color: #FF5500;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.out {
+	color: #0044DD;
+	text-decoration: none;
+	cursor: none;
+}
+
+.TreeMenu img.s
+{
+	cursor:hand;
+	vertical-align:middle;
+}
+.TreeMenu ul
+{
+	padding:0;
+}
+.TreeMenu li
+{
+	list-style:none;
+	padding:0;
+}
+.Closed ul
+{
+	display:none;
+}
+.Child img.s
+{
+	background:none;
+	cursor:default;
+}
+
+#CategoryTree ul
+{
+	margin:0 0 0 10px;
+}
+
+#CategoryTree
+{
+	float:left;
+	border: solid #99BEEF;
+	border-width:1px 0 0 0;
+	
+	color:inherit;
+	margin:3px;
+	padding:3px;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<!-- 局部的配置 -->
+<!--
+<constant name="struts.custom.i18n.resources" value="com/test/action/I18n"></constant>
+-->
+<!-- 全局的配置 -->
+<!-- -->
+<constant name="struts.action.extension" value="action"></constant>
+<constant name="struts.custom.i18n.resources" value="bpep"></constant>
+<package name="default" namespace="/" extends="struts-default">
+<action name="I18NAction" class="com.I18n.action.I18NAction">
+<result name = "index">/index.jsp</result>
+<result name = "about">/help/about.jsp</result>
+<result name = "help">/help/help.jsp</result>
+<result name = "login1">/login/login1.jsp</result>
+<result name = "login2">/login/login2.jsp</result>
+<result name = "login3">/login/login3.jsp</result>
+<result name = "adminlogin">/login/adminlogin.jsp</result>
+<result name = "userISV">/userManage/userISV.jsp</result>
+<result name = "userAdmin">/userManage/userAdmin.jsp</result>
+<result name = "userPP">/userManage/userPP.jsp</result>
+<result name = "userORG">/userManage/userORG.jsp</result>
+<result name = "register">/userManage/register.jsp</result>
+<result name = "index2">/processManage/index.jsp</result>
+<result name = "wsdetail">/wsManage/wsDetail.jsp</result>
+<result name = "indexISV">/processManage/index_forISV.jsp</result>
+</action>
+
+</package>
+<package name="default2" namespace="/processManage" extends="default">
+<action name="I18NAction" class="com.I18n.action.I18NAction">
+<result name = "org_editor">/processManage/org-editor.jsp</result>
+<result name = "index2">/processManage/index.jsp</result>
+<result name = "extension">/processManage/extension-editor.jsp</result>
+<result name = "indexISV">/processManage/index_forISV.jsp</result>
+</action></package>
+</struts>    

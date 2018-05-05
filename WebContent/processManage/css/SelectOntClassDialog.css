@@ -1,0 +1,47 @@
+#SelectOntClassDialog {
+	bottom: 0px;
+	left: 0px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+#SelectOntClassDialog .url {
+	border-bottom: 1px solid #999999;
+	height: 32px;
+	left: 0px;
+	overflow: hidden;
+	padding: 16px;
+	position: absolute;
+	right: 0px;
+}
+
+#SelectOntClassDialog  .url input {
+	border: 1px solid #999999;
+	margin: 0px 10px;
+	width: 540px;
+	margin: 0px 10px;
+}
+
+#SelectOntClassDialog .url button {
+	background: RGB(212, 212, 212);
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 4px 16px;
+}
+
+#SelectOntClassDialog  .url button:hover {
+	background: RGB(102, 179, 255);
+	color: #FFFFFF;
+}
+
+#SelectOntClassDialog .Tree{
+	bottom: 0px;
+	left: 0px;
+	overflow:auto;
+	padding:12px 20px;
+	position: absolute;
+	right: 0px;
+	top: 65px;
+}

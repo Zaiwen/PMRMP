@@ -1,0 +1,2 @@
+http://localhost:8080/OWL-S/ontology/travel.owl
+http://localhost:8080/OWL-S/ontology/Medical.owl

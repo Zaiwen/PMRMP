@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html>
+	<body style="background:rgb(33,115,70)">
+		<canvas id='save' width=24 height=24></canvas>
+		<script>
+			// view1
+			c=document.getElementById('save');
+			c=c.getContext('2d');
+			c.strokeStyle="#fff";
+			c.lineWidth=2;
+			c.beginPath();
+			c.moveTo(3,2);
+			c.lineTo(16,2);
+			c.lineTo(22,8);
+			c.lineTo(22,22);
+			c.lineTo(3,22);
+			c.closePath();
+			c.stroke();
+			c.beginPath();
+			c.moveTo(16,8);
+			c.lineTo(16,2);
+			c.lineTo(22,8);
+			c.closePath();
+			c.fillStyle="#fff";
+			c.fill();
+			
+		</script>
+	</body>
+</html>

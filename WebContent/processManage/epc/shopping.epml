@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epml:epml xmlns:epml="http://www.epml.de"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="epml_1_draft.xsd">
+  <epc EpcId="1" Name="EPC">
+    <event id="1">
+      <graphics>
+        <position height="41" width="101" x="160" y="25"/>
+      </graphics>
+      <name>Start Online&#xd;
+Shopping</name>
+    </event>
+    <xor id="2">
+      <graphics>
+        <position height="31" width="31" x="195" y="115"/>
+      </graphics>
+      <name/>
+    </xor>
+    <event id="3">
+      <graphics>
+        <position height="41" width="91" x="25" y="110"/>
+      </graphics>
+      <name>Products&#xd;
+found</name>
+    </event>
+    <function id="4">
+      <graphics>
+        <position height="41" width="101" x="20" y="210"/>
+      </graphics>
+      <name>Find futher&#xd;
+Products</name>
+    </function>
+    <event id="5">
+      <graphics>
+        <position height="41" width="121" x="10" y="305"/>
+      </graphics>
+      <name>More Products&#xd;
+to be bought</name>
+    </event>
+    <function id="6">
+      <graphics>
+        <position height="41" width="111" x="155" y="205"/>
+      </graphics>
+      <name>Add Product to&#xd;
+Shopping Cart</name>
+    </function>
+    <event id="7">
+      <graphics>
+        <position height="41" width="111" x="155" y="390"/>
+      </graphics>
+      <name>List of Products&#xd;
+ completed</name>
+    </event>
+    <xor id="8">
+      <graphics>
+        <position height="31" width="31" x="195" y="310"/>
+      </graphics>
+      <name/>
+    </xor>
+    <function id="9">
+      <graphics>
+        <position height="41" width="111" x="155" y="470"/>
+      </graphics>
+      <name>State Shopping&#xd;
+Adress</name>
+    </function>
+    <event id="10">
+      <graphics>
+        <position height="41" width="81" x="170" y="555"/>
+      </graphics>
+      <name>Order  &#xd;
+completed</name>
+    </event>
+    <arc id="11">
+      <graphics>
+        <position x="210" y="66"/>
+        <position x="210" y="115"/>
+      </graphics>
+      <flow source="1" target="2"/>
+    </arc>
+    <arc id="12">
+      <graphics>
+        <position x="210" y="146"/>
+        <position x="210" y="205"/>
+      </graphics>
+      <flow source="2" target="6"/>
+    </arc>
+    <arc id="13">
+      <graphics>
+        <position x="210" y="246"/>
+        <position x="210" y="310"/>
+      </graphics>
+      <flow source="6" target="8"/>
+    </arc>
+    <arc id="14">
+      <graphics>
+        <position x="210" y="341"/>
+        <position x="210" y="390"/>
+      </graphics>
+      <flow source="8" target="7"/>
+    </arc>
+    <arc id="15">
+      <graphics>
+        <position x="210" y="431"/>
+        <position x="210" y="470"/>
+      </graphics>
+      <flow source="7" target="9"/>
+    </arc>
+    <arc id="16">
+      <graphics>
+        <position x="210" y="511"/>
+        <position x="210" y="555"/>
+      </graphics>
+      <flow source="9" target="10"/>
+    </arc>
+    <arc id="17">
+      <graphics>
+        <position x="195" y="325"/>
+        <position x="131" y="325"/>
+      </graphics>
+      <flow source="8" target="5"/>
+    </arc>
+    <arc id="18">
+      <graphics>
+        <position x="70" y="305"/>
+        <position x="70" y="251"/>
+      </graphics>
+      <flow source="5" target="4"/>
+    </arc>
+    <arc id="19">
+      <graphics>
+        <position x="70" y="210"/>
+        <position x="70" y="151"/>
+      </graphics>
+      <flow source="4" target="3"/>
+    </arc>
+    <arc id="20">
+      <graphics>
+        <position x="116" y="130"/>
+        <position x="195" y="130"/>
+      </graphics>
+      <flow source="3" target="2"/>
+    </arc>
+  </epc>
+</epml:epml>

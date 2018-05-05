@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html>
+	<body>
+		<canvas id='delete' width=20 height=20></canvas>
+		<canvas id='delete-hover' width=20 height=20></canvas>
+		<canvas id='delete-active' width=20 height=20></canvas>
+		<script>
+			// delete	
+			c=document.getElementById('delete');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,8,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(137,190,229)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(6,6);
+			c.lineTo(14,14);
+			c.moveTo(6,14);
+			c.lineTo(14,6);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+			// delete-Hover
+			c=document.getElementById('delete-hover');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,8,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(161,204,235)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(6,6);
+			c.lineTo(14,14);
+			c.moveTo(6,14);
+			c.lineTo(14,6);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+			// delete-Active
+			c=document.getElementById('delete-active');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,8,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(184,216,240)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(6,6);
+			c.lineTo(14,14);
+			c.moveTo(6,14);
+			c.lineTo(14,6);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+		</script>
+	</body>
+</html>

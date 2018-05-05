@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/WSDL-INFO"
+	xmlns:tns="http://www.example.org/WSDL-INFO" elementFormDefault="qualified">
+	<element name="operations">
+		<complexType>
+			<all>
+				<element name="operation">
+					<complexType>
+						<all>
+							<element name="input">
+								<complexType>
+									<attribute name="name" type="string" />
+									<attribute name="type" type="QName" />
+								</complexType>
+							</element>
+							<element name="output">
+								<complexType>
+									<attribute name="name" type="string" />
+									<attribute name="type" type="QName" />
+								</complexType>
+							</element>
+						</all>
+						<attribute name="name" type="string" />
+					</complexType>
+				</element>
+			</all>
+		</complexType>
+	</element>
+</schema>

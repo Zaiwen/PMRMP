@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Control Construct</title>
+		<style type='text/css'>
+			canvas{
+				margin:20px;
+			}
+		</style>
+		<script type='text/javascript'>
+			window.onload=function(){
+				var canvas=document.getElementsByTagName('canvas');
+				for(var i=0;i<canvas.length;i++){
+					var c=canvas[i].getContext('2d');
+					c.beginPath();
+					c.moveTo(10,0);
+					c.lineTo(20,10);
+					c.lineTo(10,20);
+					c.lineTo(0,10);
+					c.closePath();
+					c.strokeStyle='#0000FF';
+					c.lineWidth=1;
+					c.stroke();
+					c.fillStyle='#DDEEFF';
+					c.fill();
+					c.font='normal 12px sans-serif';
+					c.fillStyle='#333300';
+					c.textAlign='center';
+					c.textBaseline='middle';
+					c.fillText(canvas[i].getAttribute('id'),10,10);
+				}
+			
+			};
+		</script>
+	</head>
+	<body>
+		<canvas id='P' width='20' height='20'></canvas>
+		<canvas id='S' width='20' height='20'></canvas>
+		<canvas id='Sp' width='20' height='20'></canvas>
+		<canvas id='Sj' width='20' height='20'></canvas>
+		<canvas id='A' width='20' height='20'></canvas>
+		<canvas id='C' width='20' height='20'></canvas>
+		<canvas id='If' width='20' height='20'></canvas>
+		<canvas id='Ru' width='20' height='20'></canvas>
+		<canvas id='Rw' width='20' height='20'></canvas>
+		<canvas id='Pr' width='20' height='20'></canvas>
+	</body>
+</html>

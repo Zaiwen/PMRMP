@@ -1,0 +1,84 @@
+package org.sklse.owlseditor.sparqldl;
+
+import edu.sussex.nlp.jws.JWS;
+import edu.sussex.nlp.jws.Lin;
+
+import java.util.ArrayList;
+
+public class ConditionQuery {
+	//private static String dir =ConditionQuery.class.getClassLoader().getResource("struts.xml").getPath().split("BPEP")[0]+"BPEP/wordnet2.1";//wordnet的路径
+	private static String dir ="G:\\毕业设计\\BPEP\\wordnet2.1";
+	private static JWS ws = new JWS(dir, "2.1");
+	private static Lin lin = ws.getLin();
+
+    public  static double SIMARITY_POINT=0.5;
+
+	// 计算precondition相似度请调用该方法
+	public static boolean findSimarity(String src, String dest)
+			throws Exception {
+		if (findSimarityResult(src,dest) >= SIMARITY_POINT) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+    @SuppressWarnings("unchecked")
+	public static double findSimarityResult(String src, String dest)
+            throws Exception {
+    	if(src.equalsIgnoreCase(dest)){
+    		return 1.0;
+    	}
+        // 1.截取src字符串为集合
+        ArrayList<String> srcArray = splitString(src);
+        ArrayList<String> tempArray1 = (ArrayList<String>) srcArray.clone();
+        int srcLength = srcArray.size();
+        // 2.将dest字符串截取为集合
+        ArrayList<String> destArray = splitString(dest);
+        ArrayList<String> tempArray2 = (ArrayList<String>) destArray.clone();
+        int destLength = destArray.size();
+        // 3.去掉相同字符串
+        destArray.removeAll(srcArray);
+        srcArray.removeAll(tempArray2);
+        tempArray1.retainAll(tempArray2);
+        int retainLength = tempArray1.size();
+        double sum = 0.0;
+        for (int m = 0; m < destArray.size(); ++m) {
+            for (int n = 0; n < srcArray.size(); ++n) {
+                sum += isSimarity(destArray.get(m), srcArray.get(n));
+            }
+        }
+        sum = sum / (srcLength + destLength + 0.0);
+        // 4.按照公式计算相似度
+        return ((1.0 * 2 * retainLength) + (0.75 * sum * 2)) / (srcLength + destLength + 0.0);
+    }
+
+	// 计算两个字符串的语义相似度
+	private static double isSimarity(String value1, String value2) {
+		if(value1.equalsIgnoreCase(value2)){
+			return 1.0;
+		}
+		double sc = getLin().max(value1, value2, "n");
+		if (Math.abs(sc) <= 0.01) {
+			sc = getLin().max(value1, value2, "v");
+		}
+		return (((int) ((sc + 0.005) * 100)) / 100.0);
+	}
+
+	// 将字符串转化为集合,便于操作
+	private static ArrayList<String> splitString(String str) {
+		str = str.trim();
+		String[] result = str.split("\\s+");
+		ArrayList<String> temp = new ArrayList<String>();
+		for (int i = 0; i < result.length; ++i) {
+			temp.add(result[i]);
+		}
+		return temp;
+	}
+
+	private static Lin getLin() {
+		return lin;
+	}
+
+
+}

@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html>
+	<body>
+		<canvas id='collapse' width=20 height=20></canvas>
+		<canvas id='collapse-hover' width=20 height=20></canvas>
+		<canvas id='collapse-active' width=20 height=20></canvas>
+		<script>
+			// collapse
+			c=document.getElementById('collapse');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(137,190,229)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(13,5);
+			c.lineTo(7,10);
+			c.lineTo(13,15);
+			c.moveTo(13,5);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+			// collapse-Hover
+			c=document.getElementById('collapse-hover');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(161,204,235)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(13,5);
+			c.lineTo(7,10);
+			c.lineTo(13,15);
+			c.moveTo(13,5);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+			// collapse-Active
+			c=document.getElementById('collapse-active');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(184,216,240)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(13,5);
+			c.lineTo(7,10);
+			c.lineTo(13,15);
+			c.moveTo(13,5);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+		</script>
+	</body>
+</html>

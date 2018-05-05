@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html>
+	<body>
+		<canvas id='undo' width=20 height=20></canvas>
+		<canvas id='undo-hover' width=20 height=20></canvas>
+		<canvas id='undo-active' width=20 height=20></canvas>
+		<script>
+			// undo	
+			c=document.getElementById('undo');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,8,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(137,190,229)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(9,6);
+			c.lineTo(4.5,10);
+			c.lineTo(9,14);
+			c.lineTo(9,11);
+			c.lineTo(15,11);
+			c.lineTo(15,9);
+			c.lineTo(9,9);
+			c.closePath();
+			c.fillStyle='RGB(21,127,204)';
+			c.fill();
+			// undo-Hover
+			c=document.getElementById('undo-hover');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,8,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(161,204,235)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(9,6);
+			c.lineTo(4.5,10);
+			c.lineTo(9,14);
+			c.lineTo(9,11);
+			c.lineTo(15,11);
+			c.lineTo(15,9);
+			c.lineTo(9,9);
+			c.closePath();
+			c.fillStyle='RGB(21,127,204)';
+			c.fill();
+			// undo-Active
+			c=document.getElementById('undo-active');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,8,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(184,216,240)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(9,6);
+			c.lineTo(4.5,10);
+			c.lineTo(9,14);
+			c.lineTo(9,11);
+			c.lineTo(15,11);
+			c.lineTo(15,9);
+			c.lineTo(9,9);
+			c.closePath();
+			c.fillStyle='RGB(21,127,204)';
+			c.fill();
+		</script>
+	</body>
+</html>

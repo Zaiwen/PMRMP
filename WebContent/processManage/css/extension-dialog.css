@@ -1,0 +1,191 @@
+#editor>.statusbar>.extension{
+	color:RGB(0,0,0);
+	display:none;
+}
+
+#editor>.statusbar>.extension>span{
+	color:#0000FF;
+	cursor:pointer;
+	font-weight:bold;
+	text-shadow:0px 0px 1px #000000;
+}
+
+#plugin-dialog{
+	display:none;
+	font-size:12px;
+	height:480px;
+	width:720px;
+}
+
+#plugin-dialog>.body{
+	overflow:hidden;
+}
+
+#plugin-dialog>.body>.navi{
+	background-color:#EEEEEE;
+	bottom:0px;
+	left:0px;
+	padding:0px 10px;
+	position:absolute;
+	top:0px;
+	width:120px;
+}
+
+#plugin-dialog>.body>.navi>ol>li{
+	font-size:13px;
+	line-height:30px;
+}
+
+#plugin-dialog>.body>.navi>ol>li.current{
+	font-weight:bold;
+}
+
+#plugin-dialog>.body>.content{
+	bottom:0px;
+	left:140px;
+	overflow:auto;
+	padding:0px 10px;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+
+#plugin-dialog>.body>.content>*>.title{
+	font-size:13px;
+	font-weight:bold;
+	line-height:48px;
+	text-indent:18px;
+}
+
+
+
+#plugin-dialog>.body>.content .label{
+	display:inline;
+	font-size:13px;
+	font-weight:bold;
+}
+
+
+#plugin-dialog>.body>.content>.query-variable{
+	display:none;
+}
+
+#plugin-dialog>.body>.content>.query-variable>.content p{
+	font-size:12px;
+	font-weight:bold;
+	margin:12px;
+}
+
+#plugin-dialog>.body>.content>.query-variable>.content ul{
+	border:1px solid #999999;
+	font-size:12px;
+	height:128px;
+	list-style-type:none;
+	margin:0px 12px;
+	padding:4px 8px;
+	overflow:auto;
+}
+
+#plugin-dialog>.body>.content>.query-variable>.content li{
+	line-height:24px;
+}
+
+#plugin-dialog>.body>.content>.query-result{
+	display:none;
+}
+
+#plugin-dialog>.body>.content>.query-result p{
+	padding:8px 12px;
+}
+
+#plugin-dialog>.body>.content>.query-result .minimize{
+	color:blue;
+	cursor:pointer;
+	text-decoration:underline;
+}
+
+#plugin-dialog>.body>.content>.query-result>.content div{
+	height:280px;
+	margin:12px 18px;
+	overflow:auto;
+	padding:4px 9px;
+}
+
+#plugin-dialog>.body>.content>.query-result>.content li{
+	line-height:24px;
+}
+
+#plugin-dialog>.body>.content>.pattern{
+	display:none;
+	margin:24px;
+}
+
+#plugin-dialog>.body>.content>.pattern a{
+	font-size:12px;
+	font-weight:normal;
+}
+
+#plugin-dialog>.body>.content>.pattern p{
+	font-size:13px;
+	font-weight:bold;
+	margin:18px 8px;
+}
+
+#plugin-dialog>.body>.content>.pattern ul{
+	font-size:13px;
+	list-style:none;
+	line-height:200%;
+	margin:0px;
+	padding:0px;
+}
+
+#plugin-dialog>.body>.content>.pattern li{
+	padding:2px 8px;
+}
+
+#plugin-dialog>.body>.content>.grounding-wsdl{
+	display:none;
+}
+
+#plugin-dialog>.body>.content>.grounding-wsdl span{
+	color:blue;
+	cursor:pointer;
+	float:right;
+	font-size:12px;
+	font-weight:normal;
+	text-decoration:underline;	
+}
+
+#plugin-dialog>.body>.content>.grounding-wsdl .content{
+	height:320px;
+	margin:12px 18px;
+	overflow:auto;
+	padding:4px 9px;
+}
+
+#plugin-dialog>.body>.content>.grounding-wsdl ol{
+	list-style-type:none;
+	margin:0px;
+	padding:4px 0px;
+}
+
+#plugin-dialog>.body>.content>.grounding-wsdl li{
+	line-height:28px;
+}
+
+#plugin-dialog>.body>.content>.grounding-operation{
+	display:none;
+}
+
+#plugin-dialog>.body>.content>.grounding{
+	display:none;
+}
+
+#plugin-dialog>.body>.content>.binding{
+	display:none;
+}
+
+#plugin-dialog>.body>.content>.complete{
+	display:none;
+}
+

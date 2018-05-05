@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<body>
+		<canvas id='c' width=20 height=20><canvas>
+		<script>
+			c=document.getElementById('c');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.moveTo(10,0);
+			c.lineTo(20,10);
+			c.lineTo(10,20);
+			c.lineTo(0,10);
+			c.closePath();
+			c.strokeStyle='#0000FF';
+			c.lineWidth=1;
+			c.stroke();
+			c.fillStyle='#DDEEFF';
+			c.fill();
+			c.beginPath();
+			c.moveTo(6,6);
+			c.lineTo(14,14);
+			c.moveTo(14,6);
+			c.lineTo(6,14);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle='#DD3333';
+			c.stroke();
+		</script>
+	</body>
+</html>

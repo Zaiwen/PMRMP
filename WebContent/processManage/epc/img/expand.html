@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html>
+	<body>
+		<canvas id='expand' width=20 height=20></canvas>
+		<canvas id='expand-hover' width=20 height=20></canvas>
+		<canvas id='expand-active' width=20 height=20></canvas>
+		<script>
+			// expand	
+			c=document.getElementById('expand');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(137,190,229)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(7,5);
+			c.lineTo(13,10);
+			c.lineTo(7,15);
+			c.moveTo(7,5);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+			// expand-Hover
+			c=document.getElementById('expand-hover');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(161,204,235)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(7,5);
+			c.lineTo(13,10);
+			c.lineTo(7,15);
+			c.moveTo(7,5);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+			// expand-Active
+			c=document.getElementById('expand-active');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(184,216,240)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(7,5);
+			c.lineTo(13,10);
+			c.lineTo(7,15);
+			c.moveTo(7,5);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+		</script>
+	</body>
+</html>

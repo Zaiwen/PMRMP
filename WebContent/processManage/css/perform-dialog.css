@@ -1,0 +1,52 @@
+#perform-dialog {
+	display: none;
+	font-size:13px;
+}
+
+#perform-dialog .name{
+	margin:8px 0px 24px 0px;
+}
+
+#perform-dialog .process{
+	margin:24px 0px 8px 0px;
+}
+
+#perform-dialog .label{
+	display:inline-block;
+	font-weight:bold;
+	line-height:28px;
+	width:48px;
+}
+
+#perform-dialog .value{
+	border:1px solid #CCCCCC;
+	border-radius:3px;
+	color:#666666;
+	display:inline-block;
+	line-height:28px;
+	margin:0px 12px 0px 6px;
+	padding:0px 8px;
+	width:240px;
+}
+
+#perform-dialog .container{
+	width:100%;
+}
+
+#perform-dialog .container th{
+	background-color:#4455FF;
+	border:1px solid #999999;
+	color:#FFFFFF;
+	line-height:24px;
+	text-align:left;
+}
+
+#perform-dialog .container .edit, #perform-dialog .container .reset{
+	border:none;
+	color:blue;
+	cursor:pointer;
+	font-size:12px;
+	text-decoration:underline;
+	text-align:center;
+	width:32px;
+}

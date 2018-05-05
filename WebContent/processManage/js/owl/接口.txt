@@ -1,0 +1,4 @@
+所有OWLS中的JS类都实现了以下方法
+remove() 删除该对象
+getId()  得到该对象对应的本体中的ID
+toJson() 得到JSON对象（未转换成字符串）

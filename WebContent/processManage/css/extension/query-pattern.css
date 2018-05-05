@@ -1,0 +1,12 @@
+#extension-query-pattern-dialog {
+	display: none;
+}
+
+#extension-query-pattern-dialog ul {
+	list-style-type: none;
+}
+
+#extension-query-pattern-dialog li {
+	font-size: 12px;
+	line-height: 32px;
+}

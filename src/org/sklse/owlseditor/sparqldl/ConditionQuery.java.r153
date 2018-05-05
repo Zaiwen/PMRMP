@@ -1,0 +1,169 @@
+package org.sklse.owlseditor.sparqldl;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+
+import edu.sussex.nlp.jws.JWS;
+import edu.sussex.nlp.jws.Lin;
+
+public class ConditionQuery {
+	//private static String dir =ConditionQuery.class.getClassLoader().getResource("struts.xml").getPath().split("BPEP")[0]+"BPEP/wordnet2.1";//wordnet的路径
+	private static String dir ="F://ACM//Java1workspace//BPEP//wordnet2.1";
+
+	//private static JWS ws = new JWS(dir, "2.1");
+	private static JWS ws = new BPEPJWS(dir, "2.1");
+	private static Lin lin = ws.getLin();
+
+    public  static double SIMARITY_POINT=0.84;
+
+	// 计算precondition相似度请调用该方法
+	public static boolean findSimilarity(String src, String dest)
+			throws Exception {
+		if (findSimilarityResult(src,dest) >= SIMARITY_POINT) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+    @SuppressWarnings("unchecked")
+	public static double findSimilarityResult(String src, String dest)
+            throws Exception {
+    	if(src.equalsIgnoreCase(dest)){
+    		return 1.0;
+    	}
+        // 1.截取src字符串为集合
+        ArrayList<String> srcArray = splitString(src);
+        ArrayList<String> tempArray1 = (ArrayList<String>) srcArray.clone();
+        int srcLength = srcArray.size();
+        // 2.将dest字符串截取为集合
+        ArrayList<String> destArray = splitString(dest);
+        ArrayList<String> tempArray2 = (ArrayList<String>) destArray.clone();
+        int destLength = destArray.size();
+        // 3.去掉相同字符串
+        destArray.removeAll(srcArray);
+        srcArray.removeAll(tempArray2);
+        tempArray1.retainAll(tempArray2);
+        int retainLength = tempArray1.size();
+        double sum = 0.0;
+		String value1,value2;
+		double result1=0.0,result2=0.0;
+        for (int m = 0; m < destArray.size(); ++m) {
+            for (int n = 0; n < srcArray.size(); ++n) {
+				value1=destArray.get(m);
+				value2=srcArray.get(n);
+				result1=SemanticSimilarity(value1,value2);
+				result2=SyntacticSimilarity(value1,value2);
+                sum += Math.max(result1,result2);
+            }
+        }
+        sum = sum / (srcLength + destLength + 0.0);
+        // 4.按照公式计算相似度
+	return ((1.0 * 2 * retainLength) + (0.75 * sum * 2)) / (srcLength + destLength + 0.0);
+}
+
+	// 计算两个字符串的语义相似度
+	public static double SemanticSimilarity(String value1, String value2) {
+		if(value1 == null || value2 == null || value1.equals("") || value2.equals(""))
+			return 0.0;
+		if(value1.equalsIgnoreCase(value2)){
+			return 1.0;
+		}
+		double sc = getLin().max(value1, value2, "n");
+		System.out.println(sc);
+		double temp=0.0;
+		if (!(Math.abs(sc) >= 0.5)) {
+			temp=getLin().max(value1, value2, "v");
+			if(sc<temp){
+				sc=temp;
+			}
+		}
+		System.out.println(sc);
+		if (!(Math.abs(sc) >= 0.5)) {
+			temp=getLin().max(value1, value2, "a");
+			if(sc<temp){
+				sc=temp;
+			}
+		}
+		System.out.println(sc);
+		if (!(Math.abs(sc) >= 0.5)) {
+			temp=getLin().max(value1, value2, "r");
+			if(sc<temp){
+				sc=temp;
+			}
+		}
+		return (((int) ((sc + 0.005) * 100)) / 100.0);
+	}
+	
+	
+	// 计算两个字符串的语法相似度
+	public static double SyntacticSimilarity(String value1, String value2) {
+		if(value1 == null || value2 == null || value1.equals("") || value2.equals(""))
+			return 0.0;
+		if(value1.equalsIgnoreCase(value2)){
+			return 1.0;
+		}
+		//矩阵D保存单词之间的距离
+		int[][] D = new int[value1.length()+1][value2.length()+1];
+		int i, j, d;
+		//初始化
+		for(i = 0; i <= value1.length(); i++)
+			D[i][0] = i;
+		for(j = 0; j <= value2.length(); j++)
+			D[0][j] = j;
+		//利用Floyd算法计算编辑距离
+		for(i = 1; i<= value1.length(); i++){
+			for(j = 1; j<=value2.length(); j++){
+				if(value1.charAt(i - 1) == value2.charAt(j - 1))
+					d = 0;
+				else
+					d = 1;
+				
+				D[i][j] = min(D[i-1][j-1] + d, D[i][j-1] + 1, D[i-1][j] + 1);
+			}
+		}
+		//此时D[value1.length()][value2.length()]保存的就是value1与value2的编辑距离ed(value1,value2)
+		int Max=0;
+		if(value1.length() > value2.length())
+			Max = value1.length();
+		else
+			Max = value2.length();
+		//max保存两个字符串的长度的最大值
+		//利用公式计算语法相似度
+		double result=(1- (double)D[value1.length()][value2.length()]/Max);
+		return (((int) ((result + 0.005) * 100)) / 100.0);
+	}
+	
+	
+	// 将字符串转化为集合,便于操作
+	private static ArrayList<String> splitString(String str) {
+		str = str.trim();
+		String[] result = str.split("\\s+");
+		ArrayList<String> temp = new ArrayList<String>();
+		for (int i = 0; i < result.length; ++i) {
+			temp.add(result[i]);
+		}
+		return temp;
+	}
+	
+	private static int min(int a, int b, int c)
+	{
+		int Min = a;
+		if(b < Min)
+			Min = b;
+		if(c < Min)
+			Min = c;
+		
+		return Min;
+	}
+
+	private static Lin getLin() {
+		return lin;
+	}
+	@Test
+	public void test(){
+		System.out.println(SemanticSimilarity("teaching", "tearchers"));
+		System.out.println(SyntacticSimilarity("teaching", "tearchers"));
+	}
+}

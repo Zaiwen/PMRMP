@@ -1,0 +1,75 @@
+#wsdl-dialog {
+	display: none;
+	overflow: hidden;
+	padding: 10px;
+}
+
+#wsdl-dialog .container {
+	bottom: 0px;
+	left: 0px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+#wsdl-dialog .url {
+	border-bottom: 1px solid #999999;
+	height: 32px;
+	left: 0px;
+	overflow: hidden;
+	padding: 24px;
+	position: absolute;
+	right: 0px;
+}
+
+#wsdl-dialog .url .label {
+	display: inline-block;
+	font-weight: bold;
+	line-height: 28px;
+}
+
+#wsdl-dialog .url .value {
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+	color: #666666;
+	display: inline-block;
+	line-height: 28px;
+	margin: 0px 12px 0px 6px;
+	padding: 0px 8px;
+	width: 480px;
+}
+
+#wsdl-dialog .operation {
+	bottom: 0px;
+	left: 0px;
+	overflow-x: auto;
+	overflow-y: scroll;
+	padding: 4px;
+	position: absolute;
+	top: 81px;
+	width: 180px;
+}
+
+#wsdl-dialog .operation .item {
+	margin: 2px 0px;
+	padding: 0px 12px;
+}
+
+#wsdl-dialog .detail {
+	bottom: 0px;
+	left: 181px;
+	overflow: auto;
+	position: absolute;
+	right: 0px;
+	top: 81px;
+}
+
+#wsdl-dialog .operation .item {
+	border-radius: 1px;
+	color: #000000;
+	cursor: default;
+	font-size: 12px;
+	line-height: 24px;
+	margin: 4px 2px;
+	padding: 0px 18px;
+}

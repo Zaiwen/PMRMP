@@ -1,0 +1,539 @@
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	width:900px;
+	margin:0 auto;
+	font-size:12px;
+	background:white;
+	position:relative;
+}
+ul {
+	list-style-type:none;
+}
+#header {
+	width:900px;
+	height:79px;
+	background:url(../images/logo.gif) no-repeat;
+	display:block;
+}
+#top{
+	width:897px;
+	height:51px;
+	border:2px solid blue;
+	border-radius:5px;
+}
+#top ul {
+	height:51px;
+	line-height:51px;
+	margin-left:auto;
+	position:relative;
+	z-index:100;
+}
+#top ul li.noneline{
+	font-size:16px;
+	text-align:center;
+	height:51px;
+	width:125px;
+	background:url(../images/linkr.gif) no-repeat right center;
+	float:left;
+	text-decoration:none;
+}
+#top ul li.noneline:hover{
+	font-size:18px;
+	text-decoration:none;
+}
+#top ul li.end {
+	width:125px;
+	background:none;
+	text-align:center;
+	height:51px;
+	float:left;
+}
+#top ul li a {
+	font-size:16px;
+	display:block;
+	width:125px;
+	height:51px;
+	text-decoration:none;
+}
+#top ul li a:hover {
+	font-size:18px;
+	text-decoration:none;
+}
+#top ul li.end a {
+	width:125px;
+}
+#top ul li ul.login{
+	display:none;
+	margin:0;
+	padding:0;
+	background-color:#FFFFFF;
+	border-bottom:1px solid blue;
+}
+#top ul li ul.user{
+	display:none;
+	margin:0;
+	padding:0;
+	background-color:#FFFFFF;
+	border-bottom:1px solid blue;
+}
+#top ul li ul.tools{
+	display:none;
+	margin:0;
+	padding:0;
+	background-color:#FFFFFF;
+	border-bottom:1px solid blue;
+}
+#top ul li ul li{
+	float:none;
+	background-color:#FFFFFF;
+	border:0px 1px;
+}
+#top ul li ul li a{     
+	margin: 0;    
+	border:1px solid blue;  
+	cursor:pointer;
+	border-bottom: 1px solid blue;
+}
+#top ul li:hover ul, #nav li.over ul{
+  display:block;
+}
+
+
+#sidebar {
+	width:179px;
+	height:600px;
+	float:left;
+	border:0px solid blue;
+}
+#sidebar #sidetop {
+	width:179px;
+	height:600px;
+	border:1px solid blue;
+}
+#sidebar #sidetop h1 {
+	height:25px;
+	line-height:20px;
+	text-indent:10px;
+	font-family:Tahoma;
+	font-size:15px;
+	background:#FFFFF0;
+	border:1px solid blue;
+}
+#sidebar #sidetop ul#conus {
+	line-height:150%;
+	text-indent:20px;
+	margin-top:15px;
+	margin-bottom:15px;
+}
+#sidebar #sidetop ul#conus>li:hover{
+	background:#CAFF70;
+}
+#sidebar #sidetop ul#conus>li#conus1{
+	border:1px solid #FFFFF0;
+	background:#CAFF70;
+	border-radius:0px 10px 10px 0px;
+	cursor:pointer;
+	margin:8px;
+	padding:5px 30px;
+}
+#sidebar #sidetop ul#conus>li#conus2{
+	border:1px solid #FFFFF0;
+	border-radius:0px 10px 10px 0px;
+	cursor:pointer;
+	margin:8px;
+	padding:5px 30px;
+}
+#sidebar #sidetop ul#conus>li#conus3{
+	border:1px solid #FFFFF0;
+	border-radius:0px 10px 10px 0px;
+	cursor:pointer;
+	margin:8px;
+	padding:5px 30px;
+}
+#sidebar #sidetop ul#conus>li#conus4{
+	border:1px solid #FFFFF0;
+	border-radius:0px 10px 10px 0px;
+	cursor:pointer;
+	margin:8px;
+	padding:5px 30px;
+}
+#sidebar #sidetop ul#conus>li#conus5{
+	border:1px solid #FFFFF0;
+	border-radius:0px 10px 10px 0px;
+	cursor:pointer;
+	margin:8px;
+	padding:5px 30px;
+}
+#sidebar #sidetop ul#conus>li#conus6{
+	border:1px solid #FFFFF0;
+	border-radius:0px 10px 10px 0px;
+	cursor:pointer;
+	margin:8px;
+	padding:5px 30px;
+}
+#sidebar #sidetop ul#conus>li#userlogout{
+    border:1px solid #FFFFF0;
+	border-radius:0px 10px 10px 0px;
+	cursor:pointer;
+	margin:8px;
+	padding:5px 30px;
+}
+#sidebar #sidetop ul#conus>li#userupdate{
+	border:1px solid #FFFFF0;
+	border-radius:0px 10px 10px 0px;
+	cursor:pointer;
+	margin:8px;
+	padding:5px 30px;
+}
+
+#sidebar #sidetop ul#links {
+	line-height:180%;
+	margin-top:15px;
+	margin-bottom:20px;
+	margin-left:15px;
+	width:150px;
+}
+#sidebar #sidetop ul#links li {
+	background:url(../images/side.gif) no-repeat left center;
+	padding-left:10px;
+	border-bottom:1px dotted blue;
+}
+#sidebar #sidetop ul#links li a {
+	text-decoration:none;
+}
+#sidebar #sidetop ul#links li a:hover {
+	color:#EE00EE;
+	text-decoration:underline;
+	padding-left:1px;
+}
+
+#content {
+	width:719px;
+	height:600px;
+	border:1px solid blue;
+	float:right;
+}
+.content{
+	display:none;
+}
+#content1{
+	padding:20px;
+	display:block;
+	background: url(../images/top1.gif) no-repeat left top;
+}
+#content1 input.inputbutton{
+	float:right;
+	height:30px;
+	width:50px;
+}
+#content1 table{
+	border:solid 3px #CCFF99;
+	margin-left:auto; 
+	margin-right:auto;
+}
+#content2{
+	padding:20px;
+	background:url(../images/top2-2.gif) no-repeat  left top;
+}
+#content2 input.inputbutton{
+	float:right;
+	height:30px;
+	width:50px;
+}
+#content2  form{
+	margin:6px 0;
+}
+#content2 form table.userchange{
+	margin-left:auto;
+	margin-right:auto;
+}
+#content2  form table tr td{
+	line-height:200%;
+	height:35px;
+	text-align:center;
+}
+#content2 form table tr td input.text {
+	width:160px;
+	height:23px;
+	border:1px solid #999;
+	background:#fff;
+	color:#999;
+}
+#content2 form table tr td input.username {
+	background:url(../images/username.gif) no-repeat 1px center;
+	padding:0 0 0 20px;
+}
+#content2 form table tr td input.password {
+	background:url(../images/password.gif) no-repeat 1px center;
+	padding:0 0 0 20px;
+}
+#content2 form table tr td input.useremail {
+	background:url(../images/email.gif) no-repeat 1px center;
+	padding:0 0 0 20px;
+}
+#content2 form table tr td input.useraddress{
+	background:url(../images/address.gif) no-repeat 1px center;
+	padding:0 0 0 20px;
+}
+#content2 form table tr td input.check{
+	background:url(../images/code.gif) no-repeat 1px center;
+	padding:0 0 0 20px;
+}
+#content2 form table tr td input.submit {
+	height:30px;
+	width:65px;
+}
+#content2  form table tr td input.reset {
+	height:30px;
+	margin:0px 60px;
+	width:65px;
+}
+#content3{
+	padding:20px;
+	background:url(../images/top03.gif) no-repeat left top;
+}
+#content3 input.inputbutton{
+	float:right;
+	height:30px;
+	width:50px;
+}
+#content3 table.templatecreate{
+	text-align:center;
+	margin-left:60px;
+	margin-right:auto;
+}
+#content3 table.templatebrowsers{
+	border:solid 2px #CCFF99;
+	margin-left:auto;
+	margin-right:auto;
+}
+#content3 table.processbrowsers{
+	border:solid 2px #CCFF99;
+	margin-left:auto;
+	margin-right:auto;
+}
+#content3  form table.templatecreate tr td{
+	width:180px;
+	height:45px;
+	text-align:right;
+}
+#content3 form table tr td input.templatename {
+	padding:0 0 0 0px;
+	height:20px;
+	width:196px;
+}
+#content3 form table tr td select{
+	padding:0 0 0 0px;
+	height:25px;
+	width:196px;
+}
+#content3 form table tr td input.submit {
+	height:27px;
+	width:65px;
+}
+#content3  form table tr td input.reset {
+	height:27px;
+	margin:0px 60px;
+	width:65px;
+}
+#content4{
+	padding:20px;
+	background:url(../images/top4-2.gif) no-repeat left top;
+}
+#content4 input.inputbutton{
+	float:right;
+	height:30px;
+	width:50px;
+}
+#content4  form{
+	margin:8px 0;
+}
+#content4 table.ontologymanage{
+	text-align:center; 
+	margin-left:90px; 
+	margin-right:auto;
+}
+#content4 table.ontologybrowsers{
+    border:solid 2px #CCFF99;
+    margin-left:auto;
+    margin-right:auto;
+}
+#content4  form table tr td{
+	line-height:200%;
+	width:180px;
+	height:50px;
+	text-align:right;
+}
+#showdetails1 form table tr td input.ontologyname {
+	padding:0 0 0 0px;
+	height:20px;
+	width:180px;
+}
+#showdetails1 form table tr td input.ontologyinputinfo {
+	padding:0 0 0 0px;
+	height:20px;
+	width:180px;
+}
+#showdetails1 form table tr td input.ontologyoutputinfo {
+	padding:0 0 0 0px;
+	height:20px;
+	width:180px;
+}
+#showdetails1 form table tr td select.ontologyselect{
+	padding:0 0 0 0px;
+	height:23px;
+	width:183px;
+}
+#showdetails1 form table tr td input.ontologyfunctioninfo{
+	padding:0 0 0 0px;
+	height:20px;
+	width:180px;
+}
+#accordion{
+	text-align:left;
+}
+#accordion2{
+	text-align:left;
+}
+#accordion3{
+	text-align:left;
+}
+#accordion4{
+	text-align:left;
+}
+#accordion5{
+	text-align:left;
+}
+#showdetails1{
+	height:320px;
+}
+#showdetails2{
+	height:320px;
+}
+#showdetails3{
+	height:320px;
+}
+#showdetails4{
+	height:320px;
+}
+#showdetails5{
+	height:370px;
+}
+#showdetails6{
+	height:320px;
+}
+#showdetails7{
+	height:285px;
+}
+#showdetails8{
+	height:285px;
+}
+#showdetails9{
+	height:285px;
+}
+#content4 form table tr td input.submit {
+	height:27px;
+	width:65px;
+}
+#content4  form table tr td input.reset {
+	height:27px;
+	margin:0px 60px;
+	width:65px;
+}
+#content5{
+	padding:20px;
+	background:url(../images/top5-2.gif) no-repeat left top;
+}
+#content5 input.inputbutton{
+	float:right;
+	height:30px;
+	width:50px;
+}
+#content5  form{
+	margin:8px 0;
+}
+#content5 table.wsmanage{
+	text-align:center; 
+	margin-left:90px; 
+	margin-right:auto;
+}
+#content5 table.wsbrowsers{
+	border:solid 2px #CCFF99;
+	margin-left:auto;
+	margin-right:auto;
+}
+#content5  form table tr td{
+	line-height:200%;
+	width:180px;
+	height:40px;
+	text-align:right;
+}
+#showdetails3 form table tr td input.wsname {
+	padding:0 0 0 0px;
+	height:20px;
+	width:180px;
+}
+#showdetails3 form table tr td input.wsinputinfo {
+	padding:0 0 0 0px;
+	height:20px;
+	width:180px;
+}
+#showdetails3 form table tr td input.wsoutputinfo {
+	padding:0 0 0 0px;
+	height:20px;
+	width:180px;
+}
+#showdetails3 form table tr td input.wsfunctioninfo{
+	padding:0 0 0 0px;
+	height:20px;
+	width:180px;
+}
+#showdetails3 form table tr td select.wsselect{
+	padding:0 0 0 0px;
+	height:25px;
+	width:183px;
+}
+#content5 form table tr td input.submit {
+	height:30px;
+	width:65px;
+}
+#content5  form table tr td input.reset {
+	height:30px;
+	margin:0px 60px;
+	width:65px;
+}
+#content6{
+	padding:20px;
+	background:url(../images/top6-2.gif) no-repeat left top;
+}
+#content6 input.inputbutton{
+	float:right;
+	height:30px;
+	width:50px;
+}
+#footer {
+	width:898px;
+	height:40px;
+	border:1px solid blue;
+	clear:both;
+}
+#footer ul {
+	height:40px;
+	line-height:40px;
+	float:right;
+	padding-right:20px;
+}
+#footer ul li {
+	display:inline;
+}
+#footer strong {
+	font-weight:normal;
+	height:40px;
+	line-height:40px;
+	float:left;
+	display:block;
+	padding-left:20px;
+}

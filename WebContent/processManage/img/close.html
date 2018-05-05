@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<canvas id='close' width=20 height=20></canvas>
+		<canvas id='close-hover' width=20 height=20></canvas>
+		<canvas id='close-active' width=20 height=20></canvas>
+		<script>
+			// close
+			c=document.getElementById('close');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(137,190,220)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(6,6);
+			c.lineTo(14,14);
+			c.moveTo(6,14);
+			c.lineTo(14,6);
+			c.moveTo(6,6);
+			c.lineCap="square";
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+			// close-hover
+			c=document.getElementById('close-hover');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(161,204,230)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(6,6);
+			c.lineTo(14,14);
+			c.moveTo(6,14);
+			c.lineTo(14,6);
+			c.moveTo(6,6);
+			c.lineCap="square";
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+			// close-active
+			c=document.getElementById('close-active');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(10,10,10,0,Math.PI*2,true);
+			c.closePath();
+			c.fillStyle='RGB(184,216,240)'
+			c.fill();
+			c.beginPath();
+			c.moveTo(6,6);
+			c.lineTo(14,14);
+			c.moveTo(6,14);
+			c.lineTo(14,6);
+			c.moveTo(6,6);
+			c.lineCap="square";
+			c.lineWidth=2;
+			c.strokeStyle='RGB(21,127,204)';
+			c.stroke();
+		</script>
+	</body>
+</html>

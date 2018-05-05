@@ -1,0 +1,341 @@
+body{
+	-webkit-user-select:none;
+	margin:0px;	
+}
+
+#viewer {
+	-webkit-user-select: none; bottom : 0px;
+	left: 0px;
+	overflow: hidden;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+}
+
+#viewer .head {
+	background-color: RGB(21, 127, 204);
+	height: 34px;
+	left: 0px;
+	position: absolute;
+	right: 0px;
+}
+
+#viewer .head .title {
+	color: #FFFFFF;
+	float: left;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 34px;
+	position: absolute;
+	text-indent: 18px;
+}
+
+#viewer .head .sub-title {
+	color: #FFFFFF;
+	float: left;
+	font-size: 13px;
+	line-height: 34px;
+	left: 110px;
+	overflow: hidden;
+	position: absolute;
+	right: 220px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+#viewer .head .icon {
+	background: #000;
+	cursor: pointer;
+	display: block;
+	float: right;
+	height: 20px;
+	margin: 7px;
+	width: 20px;
+}
+
+#viewer .head .help {
+	background: url('../img/help.png');
+}
+
+#viewer .head .help:hover {
+	background: url('../img/help-hover.png');
+}
+
+#viewer .head .help:active {
+	background: url('../img/help-active.png');
+}
+
+#viewer .head .refresh {
+	background: url('../img/refresh.png');
+}
+
+#viewer .head .refresh:hover {
+	background: url('../img/refresh-hover.png');
+}
+
+#viewer .head .refresh:active {
+	background: url('../img/refresh-active.png');
+}
+
+#viewer .head .list {
+	background: url('../img/list.png');
+}
+
+#viewer .head .list:hover {
+	background: url('../img/list-hover.png');
+}
+
+#viewer .head .list:active {
+	background: url('../img/list-active.png');
+}
+
+#viewer .body{
+	left: 0px;
+	overflow: hidden;
+	position: absolute;
+	right: 0px;
+	top: 34px;
+	bottom: 24px;
+}
+
+#viewer .foot {
+	background-color: RGB(21, 127, 204);
+	bottom: 0px;
+	height: 24px;
+	left: 0px;
+	position: absolute;
+	right: 0px;
+}
+
+#viewer .foot .info{
+	color:#FFFFFF;
+	float:left;
+	font-family:Consolas;
+	font-size:12px;
+	line-height:24px;
+	text-indent:16px;
+}
+
+.slider {
+	float: right;
+	font-family: 宋体;
+	height: 24px;
+	position: relative;
+	width: 280px;
+}
+
+.slider .base {
+	background-color: #FFFFFF;
+	height: 1px;
+	left: 20px;
+	position: absolute;
+	top: 11px;
+	width: 183px;
+}
+
+.slider .left {
+	color: #FFFFFF;
+	cursor: default;
+	font-size: 14px;
+	height: 14px;
+	left: 3px; 
+	line-height : 14px;
+	position: absolute;
+	text-align: center;
+	text-shadow:0px 0px 10px #FFFFFF;
+	top: 5px;
+	width: 14px;
+} 
+
+.slider .left:hover {
+	color: #CCDDFF;
+}
+
+.slider .left:active {
+	color: #4455FF;
+}
+
+.slider .center {
+	background-color: #FFFFFF;
+	height: 7px;
+	left: 101px;
+	position: absolute;
+	top: 8px;
+	width: 1px;
+}
+
+.slider .right {
+	color: #FFFFFF;
+	cursor: default;
+	font-family: 宋体;
+	font-size: 14px;
+	height: 14px;
+	left: 206px; 
+	line-height : 14px;
+	position: absolute;
+	text-align: center;
+	text-shadow:0px 0px 10px #FFFFFF;
+	top: 5px;
+	width: 14px;
+}
+
+.slider .right:hover {
+	color: #CCDDFF;
+}
+
+.slider .right:active {
+	color: #4455FF;
+}
+
+.slider .float {
+	background-color: #FFFFFF;
+	box-shadow: 0px 0px 8px #FFFFFF;
+	cursor: default;
+	height: 13px;
+	left: 100px;
+	position: absolute;
+	top: 5px;
+	width: 3px;
+	z-index: 10;
+}
+
+.slider .value {
+	color: #FFFFFF;
+	cursor: default;
+	font-size: 12px;
+	left: 235px;
+	line-height: 24px;
+	position: absolute;
+}
+
+#dialog-cover{
+	background-color:#000000;
+	bottom:0px;
+	display:none;
+	left:0px;
+	opacity:0.5;
+	position:absolute;
+	right:0px;
+	top:0px;
+	z-index:100;
+}
+
+#ontology-list-dialog{
+	border:5px solid RGB(21, 127, 204);
+	border-radius:0px;
+	display:none;
+	height:420px;
+	position:absolute;
+	width:720px;
+	z-index:101;
+}
+
+#ontology-list-dialog>.head{
+	background-color:RGB(21, 127, 204);
+	height:28px;
+	left:0px;
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+
+#ontology-list-dialog>.head>.title{
+	color:#FFFFFF;
+	cursor:default;
+	font-size:14px;
+	font-weight:bold;
+	line-height:24px;
+	position:absolute;
+	text-indent:12px;
+	width:200px;
+}
+
+#ontology-list-dialog>.head>.close{
+	background-image:url("../img/close.png");
+	cursor:default;
+	height:20px;
+	position:absolute;
+	right:6px;
+	top:2px;
+	width:20px;
+}
+
+#ontology-list-dialog>.head>.close:hover{
+	background-image:url("../img/close-hover.png");
+}
+
+#ontology-list-dialog>.head>.close:active{
+	background-image:url("../img/close-active.png");
+}
+
+#ontology-list-dialog>.body{
+	background-color:#FFFFFF;
+	bottom:35px;
+	left:0px;
+	overflow:auto;
+	padding:20px;
+	position:absolute;
+	right:0px;
+	top:28px;
+}
+
+#ontology-list-dialog table{
+	border:0px solid #999999;
+	border-collapse:collapse;
+	font-family:Consolas;
+	font-size:13px;
+	width:100%;
+}
+
+#ontology-list-dialog tr.ontology:hover{
+	background-color:RGB(209,232,255);
+}
+
+#ontology-list-dialog th{
+	background-color:#DDDDDD;
+	padding:6px 12px;
+	text-align:left;
+}
+
+#ontology-list-dialog td{
+	cursor:default;
+	padding:6px 12px;
+	text-align:left;
+}
+
+#ontology-list-dialog td.name{
+	color:#4455FF;
+	cursor:pointer;
+}
+
+#ontology-list-dialog>.foot{
+	background-color:RGB(240,240,240);
+	border-top:1px solid RGB(160,160,160);
+	bottom:0px;
+	height:34px;
+	left:0px;
+	position:absolute;
+	right:0px;	
+}
+
+#ontology-list-dialog>.foot>.button{
+	background-color:RGB(236,236,236);
+	border:1px solid RGB(172,172,172);
+	cursor:default;
+	float:right;
+	font-size:13px;
+	line-height:19px;
+	margin:7px 24px 6px 8px;
+	padding:0px 18px;
+}
+
+#ontology-list-dialog>.foot>.button:hover{
+	background-color:RGB(229,241,252);
+	border:1px solid RGB(126,180,234);
+}
+
+#ontology-list-dialog>.foot>.button:active{
+	background-color:RGB(213,233,252);
+	border:1px solid RGB(86,157,229);
+}

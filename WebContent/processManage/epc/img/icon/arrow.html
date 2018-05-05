@@ -1,0 +1,38 @@
+<canvas id="a" width="13" height="13"></canvas>
+<canvas id="h" width="13" height="13"></canvas>
+<canvas id="aa" width="13" height="13"></canvas>
+<script>
+a=document.getElementById("a");
+a=a.getContext("2d");
+a.beginPath();
+a.moveTo(11,1);
+a.lineTo(1,7);
+a.lineTo(11,13);
+a.moveTo(11,1);
+a.closePath();
+a.fillStyle="RGB(21,127,204)";
+a.lineCape="square";
+a.fill();
+a=document.getElementById("h");
+a=a.getContext("2d");
+a.beginPath();
+a.moveTo(11,1);
+a.lineTo(1,7);
+a.lineTo(11,13);
+a.moveTo(11,1);
+a.closePath();
+a.fillStyle="RGB(72,128,255)";
+a.lineCape="square";
+a.fill();
+a=document.getElementById("aa");
+a=a.getContext("2d");
+a.beginPath();
+a.moveTo(11,1);
+a.lineTo(1,7);
+a.lineTo(11,13);
+a.moveTo(11,1);
+a.closePath();
+a.fillStyle="#999999";
+a.lineCape="square";
+a.fill();
+</script>

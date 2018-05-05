@@ -1,0 +1,33 @@
+.WSDLOperationView {
+	
+}
+
+.WSDLOperationView h4 {
+	margin: 20px 0px 0px 20px;
+}
+
+.WSDLOperationView table {
+	border: 1px solid #999999;
+	border-collapse: collapse;
+	font-size: 13px;
+	margin: 20px;
+}
+
+.WSDLOperationView th {
+	border: 1px solid #999999;
+	padding: 4px 12px;
+	text-align: left;
+}
+
+.WSDLOperationView td.Name {
+	border: 1px solid #999999;
+	color: #009900;
+	padding: 4px 12px;
+	text-align: left;
+}
+
+.WSDLOperationView td.Type {
+	border: 1px solid #999999;
+	padding: 4px 12px;
+	text-align: left;
+}

@@ -1,0 +1,22 @@
+﻿<!doctype html>
+<html>
+	<body style="background:rgb(33,115,70)">
+		<canvas id='view1' width=24 height=24></canvas>
+		<script>
+			// view1
+			c=document.getElementById('view1');
+			c=c.getContext('2d');
+			c.beginPath();
+			c.arc(12,14,5,Math.PI/2,Math.PI*3/2,true);
+			c.lineTo(5,9);
+			c.moveTo(9,5);
+			c.lineTo(5,9);
+			c.lineTo(9,13);
+			c.moveTo(12,20);
+			c.closePath();
+			c.lineWidth=2;
+			c.strokeStyle="#fff";
+			c.stroke();
+		</script>
+	</body>
+</html>

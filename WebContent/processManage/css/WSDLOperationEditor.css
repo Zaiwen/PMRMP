@@ -1,0 +1,30 @@
+.WSDLOperationEditor {
+	
+}
+
+.WSDLOperationEditor .NameEditor {
+	
+}
+
+.WSDLOperationEditor .NameEditor input {
+	background-color: #FFFFFF;
+	border: 1px solid #999999;
+	margin:0px 8px;
+	padding:2px 4px;
+	text-align: left;
+	width: 320px;
+}
+
+.WSDLOperationEditor .NameEditor button {
+	background: RGB(212, 212, 212);
+	border: none;
+	cursor: pointer;
+	font-size:13px;
+	font-weight: bold;
+	padding: 4px 16px;
+}
+
+.WSDLOperationEditor .NameEditor button:hover {
+	background: RGB(102, 179, 255);
+	color: #FFFFFF;
+}

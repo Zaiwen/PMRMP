@@ -1,0 +1,24 @@
+<%@ page contentType="text/palin; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@include file="js/binding/InputBinding.js"%>
+<%@include file="js/binding/OutputBinding.js"%>
+<%@include file="js/construct/Sequence.js"%>
+<%@include file="js/construct/SplitJoin.js"%>
+<%@include file="js/construct/IfThenElse.js"%>
+<%@include file="js/construct/Produce.js"%>
+<%@include file="js/construct/Perform.js"%>
+<%@include file="js/grounding/InputMessageMap.js"%>
+<%@include file="js/grounding/OutputMessageMap.js"%>
+<%@include file="js/owl/OntClass.js"%>
+<%@include file="js/owl/OntModel.js"%>
+<%@include file="js/parameter/Input.js"%>
+<%@include file="js/parameter/Output.js"%>
+<%@include file="js/process/AtomicProcess.js"%>
+<%@include file="js/process/CompositeProcess.js"%>
+<%@include file="js/view/WSDLOperationEditor.js"%>
+<%@include file="js/view/QNameView.js"%>
+<%@include file="js/view/OntModelTreeView.js"%>
+<%@include file="js/view/WSDLOperationView.js"%>
+<%@include file="js/wsdl/QName.js"%>
+<%@include file="js/wsdl/WSDLParameter.js"%>
+<%@include file="js/wsdl/WSDLOperation.js"%>
+<%@include file="js/wsdl/WSDLService.js"%>

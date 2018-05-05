@@ -1,0 +1,41 @@
+#ontology-dialog{
+	height:420px;
+	width:720px;
+}
+
+#ontology-dialog .body{
+	bottom:0px;
+}
+
+#ontology-dialog .foot{
+	display:none;
+}
+
+#ontology-dialog table{
+	border:0px solid #999999;
+	border-collapse:collapse;
+	font-family:Consolas;
+	font-size:13px;
+	width:100%;
+}
+
+#ontology-dialog tr.ontology:hover{
+	background-color:RGB(209,232,255);
+}
+
+#ontology-dialog th{
+	background-color:#DDDDDD;
+	padding:6px 12px;
+	text-align:left;
+}
+
+#ontology-dialog td{
+	cursor:default;
+	padding:6px 12px;
+	text-align:left;
+}
+
+#ontology-dialog td.name{
+	color:#4455FF;
+	cursor:pointer;
+}

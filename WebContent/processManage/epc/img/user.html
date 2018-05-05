@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html>
+	<body style="background:rgb(33,115,70)">
+		<canvas id='user' width=24 height=24></canvas>
+		<script>
+			// view1
+			c=document.getElementById('user');
+			c=c.getContext('2d');
+			c.lineWidth=2;
+			c.fillStyle="#fff";
+			c.beginPath();
+			c.arc(12,6,5,0,Math.PI*2,true);
+			c.closePath();
+			c.fill();
+			c.beginPath();
+			c.moveTo(12,10);
+			c.arcTo(2,10,2,20,10);
+			c.lineTo(2,23);
+			c.lineTo(22,23);
+			//c.moveTo(12,9);
+			c.closePath();
+			c.fill();
+			c.beginPath();
+			c.moveTo(12,10);
+			c.arcTo(22,10,22,20,10);
+			c.lineTo(22,23);
+			c.lineTo(2,23);
+			//c.moveTo(12,9);
+			c.closePath();
+			c.fill();
+		</script>
+	</body>
+</html>

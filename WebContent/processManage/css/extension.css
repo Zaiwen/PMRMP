@@ -1,0 +1,23 @@
+body{
+	margin:0px;
+}
+
+#process-viewer{
+	background-color:#FF00FF;
+	border-right:3x solid #CCCCCC;
+	bottom:0;
+	left:0;
+	position:absolute;
+	right:50%;
+	top:0;
+}
+
+#extension-editor{
+	background-color:#FFFF00;
+	border-left:3px solid #CCCCCC;
+	bottom:0;
+	left:50%;
+	position:absolute;
+	right:0;
+	top:0;
+}
