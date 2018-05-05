@@ -15,8 +15,8 @@ Facilitating Cloud Process Family Co-Evolution by Reusable Process Plug-in: An O
 2. Chen Wang, Chong Wang, Zaiwen Feng, Dickson K.W. Chiu, Keqing He, Yi Zhao, An approach for business process model
 registration based on ISO 19763-5, Service Oriented Computing and Applications, Springer, under reviewed, 2018.
 
-PMRMP is implemented based on an ISO standard, which had been finished by Prof. Keqing He's team in Wuhan University by 2015.
-1. ISO/IEC 19763-5:2015 Information technology -- Metamodel framework for interoperability (MFI)	-- Part 5: Metamodel for process model registration
+PMRMP is implemented based on an ISO standard, which had been finished by business process management team in Wuhan University by 2015.
+1. Chong Wang, Keqing He, Zaiwen Feng and Jian Wang, ISO/IEC 19763-5:2015 Information technology -- Metamodel framework for interoperability (MFI)	-- Part 5: Metamodel for process model registration
 
 PMRMP is designed by Dr. Zaiwen Feng in Wuhan University and four students most contributed for PMRMP from 2013 to 2017. They are Chen Wang, Peidong Ai, Liang Chen and Shenglei Yuan.
 
