@@ -12,8 +12,8 @@ In a business cloud environment, a reference business process model needs to be 
 PMRMP is involved in these two articles shown below:
 1. Zaiwen Feng, Dickson K. W. Chiu, Rong Peng, Ping Gong, Keqing He, Yiwang Huang:
 Facilitating Cloud Process Family Co-Evolution by Reusable Process Plug-in: An Open-source Prototype. IEEE Trans. Services Computing 10(6): 854-867 (2017)
-2. Chen Wang, Chong Wang, Zaiwen Feng, Dickson K.W. Chiu, Keqing He, Yi Zhao, An approach for business process model
-registration based on ISO 19763-5, Service Oriented Computing and Applications, Springer, under reviewed, 2018.
+2. Zaiwen Feng, Chen Wang, Yi Zhao, Chong Wang, Dickson K. W. Chiu, Keqing He:
+An approach for business process model registration based on ISO/IEC 19763-5. Service Oriented Computing and Applications 12(3-4): 349-370 (2018)
 
 PMRMP is implemented based on an ISO standard, which had been finished by business process management team in Wuhan University by 2015.
 1. Chong Wang, Keqing He, Zaiwen Feng and Jian Wang, ISO/IEC 19763-5:2015 Information technology -- Metamodel framework for interoperability (MFI)	-- Part 5: Metamodel for process model registration
